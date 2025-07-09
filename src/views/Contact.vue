@@ -4,7 +4,7 @@
     <section class="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-16">
       <Container>
         <div class="max-w-3xl">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact SchoolVision.AI</h1>
           <p class="text-xl text-primary-100">
             Ready to transform your campus with AI? Our team is here to help you get started.
           </p>
@@ -27,20 +27,35 @@
             <div class="space-y-6">
               <div>
                 <h3 class="font-semibold text-gray-900 mb-2">Sales Inquiries</h3>
-                <p class="text-gray-600">sales@schoolvision.ai</p>
-                <p class="text-gray-600">1-800-SCHOOL-AI</p>
+                <p class="text-gray-600">
+                  <a href="mailto:sales@schoolvision.ai" class="hover:text-primary-600">sales@schoolvision.ai</a>
+                </p>
+                <p class="text-gray-600">
+                  <a href="tel:801-659-7778" class="hover:text-primary-600">801-659-7778</a>
+                </p>
               </div>
               
               <div>
                 <h3 class="font-semibold text-gray-900 mb-2">Support</h3>
-                <p class="text-gray-600">support@schoolvision.ai</p>
+                <p class="text-gray-600">
+                  <a href="mailto:support@schoolvision.ai" class="hover:text-primary-600">support@schoolvision.ai</a>
+                </p>
                 <p class="text-gray-600">Available 24/7 for existing customers</p>
               </div>
               
               <div>
                 <h3 class="font-semibold text-gray-900 mb-2">Office Hours</h3>
-                <p class="text-gray-600">Monday - Friday: 8:00 AM - 6:00 PM EST</p>
-                <p class="text-gray-600">Saturday - Sunday: Closed</p>
+                <p class="text-gray-600">Monday - Friday: 8:00 AM - 6:00 PM MT</p>
+                <p class="text-gray-600">Saturday - Sunday: Emergency support only</p>
+              </div>
+              
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2">Headquarters</h3>
+                <p class="text-gray-600">
+                  SchoolVision.AI<br>
+                  Salt Lake City, Utah<br>
+                  United States
+                </p>
               </div>
             </div>
           </div>

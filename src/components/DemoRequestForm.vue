@@ -160,7 +160,7 @@
         <div class="flex items-center justify-between">
           <p class="text-sm text-gray-500">
             By submitting, you agree to our 
-            <a href="#" class="text-primary-600 hover:text-primary-700">Privacy Policy</a>
+            <router-link to="/privacy" class="text-primary-600 hover:text-primary-700">Privacy Policy</router-link>
           </p>
           <Button
             type="submit"
@@ -174,6 +174,10 @@
         
         <p v-if="submitError" class="mt-4 text-sm text-red-600">
           {{ submitError }}
+          <br>
+          <a :href="fallbackMailto" class="underline hover:text-red-700 mt-2 inline-block">
+            Click here to send via email instead
+          </a>
         </p>
         <div v-else-if="submitSuccess" class="mt-4 p-4 bg-green-50 border border-green-200 rounded-md">
           <p class="text-sm text-green-800">
@@ -188,6 +192,7 @@
 <script setup>
 import { ref, computed, reactive } from 'vue'
 import { Card, Input, Textarea, Select, Button } from './ui'
+import { submitForm, getMailtoLink } from '../utils/formSubmission'
 
 const form = reactive({
   firstName: '',
@@ -220,6 +225,25 @@ const errors = reactive({
 const isSubmitting = ref(false)
 const submitError = ref('')
 const submitSuccess = ref('')
+
+const fallbackMailto = computed(() => {
+  const formData = {
+    type: 'Demo Request',
+    name: `${form.firstName} ${form.lastName}`,
+    email: form.email,
+    phone: form.phone,
+    company: form.organization,
+    message: `Organization Type: ${form.organizationType}
+Role: ${form.role}
+Student Count: ${form.studentCount}
+Interested Solutions: ${form.interestedSolutions.join(', ')}
+Timeline: ${form.timeline}
+Preferred Time: ${form.preferredTime || 'Not specified'}
+
+${form.additionalInfo || 'No additional information provided'}`
+  }
+  return getMailtoLink(formData)
+})
 
 const roleOptions = [
   { value: 'superintendent', label: 'Superintendent' },
@@ -349,24 +373,39 @@ const handleSubmit = async () => {
   submitSuccess.value = ''
   
   try {
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    const formData = {
+      type: 'demo',
+      name: `${form.firstName} ${form.lastName}`,
+      email: form.email,
+      phone: form.phone,
+      company: form.organization,
+      organizationType: form.organizationType,
+      role: form.role,
+      studentCount: form.studentCount,
+      interestedSolutions: form.interestedSolutions,
+      timeline: form.timeline,
+      preferredTime: form.preferredTime,
+      message: form.additionalInfo || 'No additional information provided'
+    }
     
-    // In a real app, you would send the form data to your API
-    console.log('Demo request submitted:', form)
+    const result = await submitForm(formData)
     
-    submitSuccess.value = 'Thank you! We\'ve received your demo request. Our team will contact you within 24 hours to schedule your personalized demo.'
-    
-    // Reset form
-    Object.keys(form).forEach(key => {
-      if (key === 'interestedSolutions') {
-        form[key] = []
-      } else {
-        form[key] = ''
-      }
-    })
+    if (result.success) {
+      submitSuccess.value = 'Thank you! We\'ve received your demo request. Our team will contact you within 24 hours to schedule your personalized demo.'
+      
+      // Reset form
+      Object.keys(form).forEach(key => {
+        if (key === 'interestedSolutions') {
+          form[key] = []
+        } else {
+          form[key] = ''
+        }
+      })
+    } else {
+      submitError.value = result.message || 'Sorry, there was an error submitting your request. Please try again or call us at 801-659-7778.'
+    }
   } catch (error) {
-    submitError.value = 'Sorry, there was an error submitting your request. Please try again or call us at 1-800-SCHOOL-AI.'
+    submitError.value = 'Sorry, there was an error submitting your request. Please try again or call us at 801-659-7778.'
   } finally {
     isSubmitting.value = false
   }

@@ -28,6 +28,8 @@
   },
   "homepage": "https://github.com/dbbuilder/schoolvision-ai-site#readme",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@vercel/blob": "^1.1.1",
     "vue": "^3.5.17",
     "vue-router": "^4.5.1"
   },

@@ -86,13 +86,19 @@
       />
       
       <div class="flex items-center justify-between">
-        <p v-if="submitError" class="text-sm text-red-600">
-          {{ submitError }}
-        </p>
-        <p v-else-if="submitSuccess" class="text-sm text-green-600">
-          {{ submitSuccess }}
-        </p>
-        <div class="ml-auto">
+        <div class="flex-1 mr-4">
+          <p v-if="submitError" class="text-sm text-red-600">
+            {{ submitError }}
+            <br>
+            <a :href="fallbackMailto" class="underline hover:text-red-700 mt-1 inline-block">
+              Send via email instead
+            </a>
+          </p>
+          <p v-else-if="submitSuccess" class="text-sm text-green-600">
+            {{ submitSuccess }}
+          </p>
+        </div>
+        <div>
           <Button
             type="submit"
             :disabled="isSubmitting || !isFormValid"
@@ -110,6 +116,7 @@
 <script setup>
 import { ref, computed, reactive } from 'vue'
 import { Card, Input, Textarea, Select, Button } from './ui'
+import { submitForm, getMailtoLink } from '../utils/formSubmission'
 
 const form = reactive({
   firstName: '',
@@ -136,6 +143,21 @@ const errors = reactive({
 const isSubmitting = ref(false)
 const submitError = ref('')
 const submitSuccess = ref('')
+
+const fallbackMailto = computed(() => {
+  const formData = {
+    type: 'Contact',
+    name: `${form.firstName} ${form.lastName}`,
+    email: form.email,
+    phone: form.phone,
+    company: form.organization,
+    message: `Role: ${form.role}
+Organization Type: ${form.organizationType}
+
+${form.message}`
+  }
+  return getMailtoLink(formData)
+})
 
 const roleOptions = [
   { value: 'administrator', label: 'Administrator' },
@@ -226,20 +248,31 @@ const handleSubmit = async () => {
   submitSuccess.value = ''
   
   try {
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    const formData = {
+      type: 'contact',
+      name: `${form.firstName} ${form.lastName}`,
+      email: form.email,
+      phone: form.phone,
+      company: form.organization,
+      role: form.role,
+      organizationType: form.organizationType,
+      message: form.message
+    }
     
-    // In a real app, you would send the form data to your API
-    console.log('Form submitted:', form)
+    const result = await submitForm(formData)
     
-    // Reset form
-    Object.keys(form).forEach(key => {
-      form[key] = ''
-    })
-    
-    submitSuccess.value = 'Thank you for your message! We\'ll get back to you within 24 hours.'
+    if (result.success) {
+      submitSuccess.value = 'Thank you for your message! We\'ll get back to you within 24 hours.'
+      
+      // Reset form
+      Object.keys(form).forEach(key => {
+        form[key] = ''
+      })
+    } else {
+      submitError.value = result.message
+    }
   } catch (error) {
-    submitError.value = 'Sorry, there was an error sending your message. Please try again.'
+    submitError.value = 'Sorry, there was an error sending your message. Please try again or contact us at admin@schoolvision.ai'
   } finally {
     isSubmitting.value = false
   }
