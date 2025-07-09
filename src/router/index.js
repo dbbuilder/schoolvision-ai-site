@@ -82,6 +82,15 @@ const routes = [
       title: 'Request a Demo - SchoolVision AI',
       description: 'Schedule a personalized demo of SchoolVision AI and see how it can benefit your institution.'
     }
+  },
+  {
+    path: '/roi-calculator',
+    name: 'ROICalculator',
+    component: () => import('../views/ROICalculator.vue'),
+    meta: {
+      title: 'ROI Calculator - SchoolVision AI',
+      description: 'Calculate your potential savings and return on investment with SchoolVision AI.'
+    }
   }
 ]
 

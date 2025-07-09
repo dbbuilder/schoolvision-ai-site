@@ -158,6 +158,7 @@ const navigation = [
   { name: 'Home', to: '/' },
   { name: 'Solutions', to: '/solutions' },
   { name: 'Pricing', to: '/pricing' },
+  { name: 'ROI Calculator', to: '/roi-calculator' },
   { name: 'About', to: '/about' }
 ]
 

@@ -73,6 +73,16 @@
             </div>
           </Card>
         </div>
+        
+        <!-- ROI Calculator CTA -->
+        <div class="mt-8 text-center">
+          <p class="text-gray-600 mb-4">Want to see your potential savings?</p>
+          <router-link to="/roi-calculator">
+            <Button variant="outline" size="md">
+              Try Our ROI Calculator
+            </Button>
+          </router-link>
+        </div>
       </Container>
     </section>
 

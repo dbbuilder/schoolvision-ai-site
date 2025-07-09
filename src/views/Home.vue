@@ -99,6 +99,9 @@
       </Container>
     </section>
 
+    <!-- Testimonials Section -->
+    <TestimonialsSection />
+
     <!-- CTA Section -->
     <section class="py-20 bg-primary-700 text-white">
       <Container>
@@ -129,6 +132,7 @@
 
 <script setup>
 import { Container, Button, Card } from '../components/ui'
+import TestimonialsSection from '../components/TestimonialsSection.vue'
 
 const features = [
   {
