@@ -13,56 +13,57 @@
           
           <!-- Desktop Navigation -->
           <div class="hidden sm:ml-8 sm:flex sm:space-x-8">
-            <router-link
-              v-for="item in navigation"
-              :key="item.name"
-              :to="item.to"
-              class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors duration-200"
-              active-class="text-primary-600 border-b-2 border-primary-600"
-            >
-              {{ item.name }}
-            </router-link>
-            
-            <!-- Dropdown for Why SV -->
-            <div class="relative inline-flex items-center">
-              <button
-                @click="marketsOpen = !marketsOpen"
-                @blur="closeMarketsDropdown"
+            <template v-for="item in navigation" :key="item.name">
+              <!-- Regular navigation link -->
+              <router-link
+                v-if="!item.dropdown"
+                :to="item.to"
                 class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors duration-200"
+                active-class="text-primary-600 border-b-2 border-primary-600"
               >
-                Why SV
-                <svg class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
+                {{ item.name }}
+              </router-link>
               
-              <!-- Dropdown Menu -->
-              <Transition
-                enter-active-class="transition ease-out duration-100"
-                enter-from-class="transform opacity-0 scale-95"
-                enter-to-class="transform opacity-100 scale-100"
-                leave-active-class="transition ease-in duration-75"
-                leave-from-class="transform opacity-100 scale-100"
-                leave-to-class="transform opacity-0 scale-95"
-              >
-                <div
-                  v-if="marketsOpen"
-                  class="absolute z-10 left-0 mt-12 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+              <div v-else class="relative inline-flex items-center">
+                <button
+                  @click="marketsOpen = !marketsOpen"
+                  @blur="closeMarketsDropdown"
+                  class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors duration-200"
                 >
-                  <div class="py-1">
-                    <router-link
-                      v-for="item in whySV"
-                      :key="item.name"
-                      :to="item.to"
-                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      @click="marketsOpen = false"
-                    >
-                      {{ item.name }}
-                    </router-link>
+                  {{ item.name }}
+                  <svg class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                
+                <!-- Dropdown Menu -->
+                <Transition
+                  enter-active-class="transition ease-out duration-100"
+                  enter-from-class="transform opacity-0 scale-95"
+                  enter-to-class="transform opacity-100 scale-100"
+                  leave-active-class="transition ease-in duration-75"
+                  leave-from-class="transform opacity-100 scale-100"
+                  leave-to-class="transform opacity-0 scale-95"
+                >
+                  <div
+                    v-if="marketsOpen"
+                    class="absolute z-10 left-0 mt-12 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+                  >
+                    <div class="py-1">
+                      <router-link
+                        v-for="subItem in whySV"
+                        :key="subItem.name"
+                        :to="subItem.to"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        @click="marketsOpen = false"
+                      >
+                        {{ subItem.name }}
+                      </router-link>
+                    </div>
                   </div>
-                </div>
-              </Transition>
-            </div>
+                </Transition>
+              </div>
+            </template>
           </div>
         </div>
         
@@ -105,32 +106,34 @@
     >
       <div v-if="mobileMenuOpen" class="sm:hidden bg-white border-t border-gray-200">
         <div class="pt-2 pb-3 space-y-1">
-          <router-link
-            v-for="item in navigation"
-            :key="item.name"
-            :to="item.to"
-            class="block pl-3 pr-4 py-2 text-base font-medium text-gray-600 hover:text-primary-600 hover:bg-gray-50"
-            active-class="text-primary-600 bg-primary-50 border-l-4 border-primary-600"
-            @click="mobileMenuOpen = false"
-          >
-            {{ item.name }}
-          </router-link>
-          
-          <!-- Why SV Section -->
-          <div class="pl-3 pr-4 py-2">
-            <div class="text-base font-medium text-gray-900 mb-2">Why SV</div>
-            <div class="ml-4 space-y-1">
-              <router-link
-                v-for="item in whySV"
-                :key="item.name"
-                :to="item.to"
-                class="block py-1 text-sm text-gray-600 hover:text-primary-600"
-                @click="mobileMenuOpen = false"
-              >
-                {{ item.name }}
-              </router-link>
+          <template v-for="item in navigation" :key="item.name">
+            <!-- Regular navigation links -->
+            <router-link
+              v-if="!item.dropdown"
+              :to="item.to"
+              class="block pl-3 pr-4 py-2 text-base font-medium text-gray-600 hover:text-primary-600 hover:bg-gray-50"
+              active-class="text-primary-600 bg-primary-50 border-l-4 border-primary-600"
+              @click="mobileMenuOpen = false"
+            >
+              {{ item.name }}
+            </router-link>
+            
+            <!-- Why SV Section -->
+            <div v-else class="pl-3 pr-4 py-2">
+              <div class="text-base font-medium text-gray-900 mb-2">{{ item.name }}</div>
+              <div class="ml-4 space-y-1">
+                <router-link
+                  v-for="subItem in whySV"
+                  :key="subItem.name"
+                  :to="subItem.to"
+                  class="block py-1 text-sm text-gray-600 hover:text-primary-600"
+                  @click="mobileMenuOpen = false"
+                >
+                  {{ subItem.name }}
+                </router-link>
+              </div>
             </div>
-          </div>
+          </template>
         </div>
         
         <!-- Mobile CTA buttons -->
@@ -157,9 +160,10 @@ const marketsOpen = ref(false)
 const navigation = [
   { name: 'Home', to: '/' },
   { name: 'Solutions', to: '/solutions' },
-  { name: 'Pricing', to: '/pricing' },
+  { name: 'Why SV', dropdown: true },
   { name: 'ROI Calculator', to: '/roi-calculator' },
   { name: 'Library', to: '/library' },
+  { name: 'Pricing', to: '/pricing' },
   { name: 'About', to: '/about' }
 ]
 
