@@ -3,7 +3,14 @@
     <Navigation />
     
     <main>
-      <router-view />
+      <router-view v-slot="{ Component }">
+        <Transition
+          name="page"
+          mode="out-in"
+        >
+          <component :is="Component" />
+        </Transition>
+      </router-view>
     </main>
     
     <footer class="bg-gray-900 text-white">
