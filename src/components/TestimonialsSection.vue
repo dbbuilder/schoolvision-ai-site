@@ -6,7 +6,7 @@
           Trusted by Education Leaders
         </h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          See what administrators and educators are saying about SchoolVision AI
+          See what administrators and educators are saying about SchoolVision.AI
         </p>
       </div>
       
@@ -36,7 +36,7 @@ import TestimonialCard from './TestimonialCard.vue'
 const testimonials = [
   {
     id: 1,
-    quote: "After 20 years of manual attendance tracking, SchoolVision AI reduced our daily attendance time from 45 minutes to under 5 minutes. The automated parent notifications alone have improved our chronic absenteeism rate by 27%. We're saving $127,000 annually.",
+    quote: "After 20 years of manual attendance tracking, SchoolVision.AI reduced our daily attendance time from 45 minutes to under 5 minutes. The automated parent notifications alone have improved our chronic absenteeism rate by 27%. We're saving $127,000 annually.",
     author: "Dr. Jennifer Martinez",
     role: "Superintendent",
     organization: "Westside K-12 District (1,200 students)",
@@ -52,7 +52,7 @@ const testimonials = [
   },
   {
     id: 3,
-    quote: "Managing 90/10 compliance was a nightmare with 6 campuses. SchoolVision AI automated our clock hour tracking across all locations. We went from 3 full-time compliance officers to 1, and our audit prep time dropped from 3 weeks to 3 days.",
+    quote: "Managing 90/10 compliance was a nightmare with 6 campuses. SchoolVision.AI automated our clock hour tracking across all locations. We went from 3 full-time compliance officers to 1, and our audit prep time dropped from 3 weeks to 3 days.",
     author: "Linda Chen",
     role: "CFO",
     organization: "Allied Career Centers (3,500 CTE students)",

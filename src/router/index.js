@@ -7,7 +7,7 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-      title: 'SchoolVision AI - Intelligent Campus Management Platform',
+      title: 'SchoolVision.AI - Intelligent Campus Management Platform',
       description: 'Transform your educational institution with AI-powered campus management solutions for K-12, Higher Ed, and Vocational schools.'
     }
   },
@@ -16,7 +16,7 @@ const routes = [
     name: 'Solutions',
     component: () => import('../views/Solutions.vue'),
     meta: {
-      title: 'Solutions - SchoolVision AI',
+      title: 'Solutions - SchoolVision.AI',
       description: 'Explore our comprehensive suite of AI-powered solutions for student management, academic planning, and campus operations.'
     }
   },
@@ -25,7 +25,7 @@ const routes = [
     name: 'K12',
     component: () => import('../views/markets/K12.vue'),
     meta: {
-      title: 'K-12 Solutions - SchoolVision AI',
+      title: 'K-12 Solutions - SchoolVision.AI',
       description: 'AI-powered solutions designed specifically for K-12 schools to enhance student safety, academic performance, and operational efficiency.'
     }
   },
@@ -34,7 +34,7 @@ const routes = [
     name: 'HigherEd',
     component: () => import('../views/markets/HigherEd.vue'),
     meta: {
-      title: 'Higher Education Solutions - SchoolVision AI',
+      title: 'Higher Education Solutions - SchoolVision.AI',
       description: 'Transform your university with AI-driven enrollment management, student success tools, and campus operations.'
     }
   },
@@ -43,7 +43,7 @@ const routes = [
     name: 'Vocational',
     component: () => import('../views/markets/Vocational.vue'),
     meta: {
-      title: 'Vocational School Solutions - SchoolVision AI',
+      title: 'Vocational School Solutions - SchoolVision.AI',
       description: 'Optimize career training programs with AI-powered student tracking, skills assessment, and industry partnerships.'
     }
   },
@@ -52,8 +52,8 @@ const routes = [
     name: 'Pricing',
     component: () => import('../views/Pricing.vue'),
     meta: {
-      title: 'Pricing - SchoolVision AI',
-      description: 'Flexible pricing plans for educational institutions of all sizes. Get started with SchoolVision AI today.'
+      title: 'Pricing - SchoolVision.AI',
+      description: 'Flexible pricing plans for educational institutions of all sizes. Get started with SchoolVision.AI today.'
     }
   },
   {
@@ -61,7 +61,7 @@ const routes = [
     name: 'About',
     component: () => import('../views/About.vue'),
     meta: {
-      title: 'About Us - SchoolVision AI',
+      title: 'About Us - SchoolVision.AI',
       description: 'Learn about our mission to transform education through AI-powered campus management solutions.'
     }
   },
@@ -70,8 +70,8 @@ const routes = [
     name: 'Contact',
     component: () => import('../views/Contact.vue'),
     meta: {
-      title: 'Contact Us - SchoolVision AI',
-      description: 'Get in touch with our team to learn how SchoolVision AI can transform your educational institution.'
+      title: 'Contact Us - SchoolVision.AI',
+      description: 'Get in touch with our team to learn how SchoolVision.AI can transform your educational institution.'
     }
   },
   {
@@ -79,8 +79,8 @@ const routes = [
     name: 'Demo',
     component: () => import('../views/Demo.vue'),
     meta: {
-      title: 'Request a Demo - SchoolVision AI',
-      description: 'Schedule a personalized demo of SchoolVision AI and see how it can benefit your institution.'
+      title: 'Request a Demo - SchoolVision.AI',
+      description: 'Schedule a personalized demo of SchoolVision.AI and see how it can benefit your institution.'
     }
   },
   {
@@ -88,8 +88,8 @@ const routes = [
     name: 'ROICalculator',
     component: () => import('../views/ROICalculator.vue'),
     meta: {
-      title: 'ROI Calculator - SchoolVision AI',
-      description: 'Calculate your potential savings and return on investment with SchoolVision AI.'
+      title: 'ROI Calculator - SchoolVision.AI',
+      description: 'Calculate your potential savings and return on investment with SchoolVision.AI.'
     }
   },
   {
@@ -97,7 +97,7 @@ const routes = [
     name: 'Library',
     component: () => import('../views/Library.vue'),
     meta: {
-      title: 'Resource Library - SchoolVision AI',
+      title: 'Resource Library - SchoolVision.AI',
       description: 'Explore articles, guides, and insights about educational technology and campus management.'
     }
   },
@@ -106,8 +106,8 @@ const routes = [
     name: 'WhySV-K12',
     component: () => import('../views/WhySV-K12.vue'),
     meta: {
-      title: 'Why SchoolVision AI for K-12 - SchoolVision AI',
-      description: 'Discover how SchoolVision AI transforms K-12 schools with AI-powered attendance, grading, and safety solutions.'
+      title: 'Why SchoolVision.AI for K-12 - SchoolVision.AI',
+      description: 'Discover how SchoolVision.AI transforms K-12 schools with AI-powered attendance, grading, and safety solutions.'
     }
   },
   {
@@ -115,8 +115,8 @@ const routes = [
     name: 'WhySV-HigherEd',
     component: () => import('../views/WhySV-HigherEd.vue'),
     meta: {
-      title: 'Why SchoolVision AI for Higher Education - SchoolVision AI',
-      description: 'Learn how universities use SchoolVision AI to improve retention, streamline operations, and enhance student success.'
+      title: 'Why SchoolVision.AI for Higher Education - SchoolVision.AI',
+      description: 'Learn how universities use SchoolVision.AI to improve retention, streamline operations, and enhance student success.'
     }
   },
   {
@@ -124,8 +124,26 @@ const routes = [
     name: 'WhySV-Vocational',
     component: () => import('../views/WhySV-Vocational.vue'),
     meta: {
-      title: 'Why SchoolVision AI for Vocational Schools - SchoolVision AI',
+      title: 'Why SchoolVision.AI for Vocational Schools - SchoolVision.AI',
       description: 'See how vocational schools optimize career training with AI-powered equipment scheduling and job placement tools.'
+    }
+  },
+  {
+    path: '/privacy',
+    name: 'Privacy',
+    component: () => import('../views/Privacy.vue'),
+    meta: {
+      title: 'Privacy Policy - SchoolVision.AI',
+      description: 'Learn how SchoolVision.AI protects student data and ensures FERPA compliance.'
+    }
+  },
+  {
+    path: '/terms',
+    name: 'Terms',
+    component: () => import('../views/Terms.vue'),
+    meta: {
+      title: 'Terms of Service - SchoolVision.AI',
+      description: 'Terms and conditions for using the SchoolVision.AI platform.'
     }
   }
 ]
@@ -144,7 +162,7 @@ const router = createRouter({
 
 // Update document title and meta tags
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title || 'SchoolVision AI'
+  document.title = to.meta.title || 'SchoolVision.AI'
   
   // Update meta description
   const metaDescription = document.querySelector('meta[name="description"]')

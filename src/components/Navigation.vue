@@ -7,7 +7,7 @@
           <!-- Logo -->
           <div class="flex-shrink-0 flex items-center">
             <router-link to="/" class="text-2xl font-bold text-primary-600">
-              SchoolVision AI
+              SchoolVision.AI
             </router-link>
           </div>
           

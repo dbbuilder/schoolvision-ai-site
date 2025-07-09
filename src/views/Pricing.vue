@@ -151,7 +151,7 @@
             Ready to Get Started?
           </h2>
           <p class="text-xl mb-8 text-primary-100">
-            Join hundreds of schools already using SchoolVision AI
+            Join hundreds of schools already using SchoolVision.AI
           </p>
           <router-link to="/demo">
             <Button size="lg" variant="secondary">

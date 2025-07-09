@@ -109,7 +109,7 @@
             Ready to Transform Your Campus?
           </h2>
           <p class="text-xl mb-8 text-primary-100">
-            Join hundreds of educational institutions already using SchoolVision AI
+            Join hundreds of educational institutions already using SchoolVision.AI
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <router-link to="/demo">

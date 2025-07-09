@@ -2,7 +2,7 @@
   <Card>
     <template #header>
       <h2 class="text-2xl font-bold text-gray-900">Request Your Personalized Demo</h2>
-      <p class="mt-1 text-gray-600">See how SchoolVision AI can transform your campus</p>
+      <p class="mt-1 text-gray-600">See how SchoolVision.AI can transform your campus</p>
     </template>
     
     <form @submit.prevent="handleSubmit" class="space-y-6">
@@ -259,7 +259,7 @@ const solutionOptions = [
   { value: 'reporting', label: 'Predictive Analytics & Reporting' },
   { value: 'communication', label: 'Parent & Student Communication' },
   { value: 'scheduling', label: 'Smart Scheduling' },
-  { value: 'full-suite', label: 'Full SchoolVision AI Suite' }
+  { value: 'full-suite', label: 'Full SchoolVision.AI Suite' }
 ]
 
 const timelineOptions = [

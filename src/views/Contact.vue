@@ -61,7 +61,7 @@
             Prefer a Live Demo?
           </h2>
           <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            See SchoolVision AI in action with a personalized demo tailored to your institution's needs.
+            See SchoolVision.AI in action with a personalized demo tailored to your institution's needs.
           </p>
           <router-link to="/demo">
             <Button size="lg" variant="primary">

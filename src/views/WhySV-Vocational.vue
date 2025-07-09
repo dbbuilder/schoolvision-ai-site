@@ -6,7 +6,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div>
             <h1 class="text-4xl md:text-5xl font-bold mb-4">
-              Why SchoolVision AI for Vocational Schools?
+              Why SchoolVision.AI for Vocational Schools?
             </h1>
             <p class="text-xl text-orange-100 mb-6">
               Optimize career training programs with AI-powered tools designed for hands-on learning environments

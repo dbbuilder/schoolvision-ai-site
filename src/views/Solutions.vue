@@ -205,7 +205,7 @@
         <div class="text-center max-w-3xl mx-auto mb-12">
           <h2 class="text-3xl font-bold text-gray-900 mb-4">Seamless Integration</h2>
           <p class="text-xl text-gray-600">
-            SchoolVision AI works with your existing systems, not against them. Our platform integrates with popular educational tools and databases.
+            SchoolVision.AI works with your existing systems, not against them. Our platform integrates with popular educational tools and databases.
           </p>
         </div>
         
@@ -246,7 +246,7 @@
             Ready to See These Solutions in Action?
           </h2>
           <p class="text-xl mb-8 text-primary-100">
-            Get a personalized demo and see how SchoolVision AI can transform your institution
+            Get a personalized demo and see how SchoolVision.AI can transform your institution
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <router-link to="/demo">

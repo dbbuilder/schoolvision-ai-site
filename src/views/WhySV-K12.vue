@@ -6,7 +6,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div>
             <h1 class="text-4xl md:text-5xl font-bold mb-4">
-              Why SchoolVision AI for K-12 Schools?
+              Why SchoolVision.AI for K-12 Schools?
             </h1>
             <p class="text-xl text-blue-100 mb-6">
               Join 500+ K-12 schools saving millions annually while improving student outcomes with our proven AI platform
@@ -109,7 +109,7 @@
     <section class="py-16">
       <Container>
         <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
-          K-12 SchoolVision AI Impact by the Numbers
+          K-12 SchoolVision.AI Impact by the Numbers
         </h2>
         
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -442,7 +442,7 @@
             Ready to Transform Your K-12 School?
           </h2>
           <p class="text-xl mb-8 text-gray-300">
-            Join hundreds of K-12 schools already using SchoolVision AI to improve outcomes and save time
+            Join hundreds of K-12 schools already using SchoolVision.AI to improve outcomes and save time
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <router-link to="/demo">

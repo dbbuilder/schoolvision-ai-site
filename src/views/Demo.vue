@@ -4,7 +4,7 @@
     <section class="bg-gradient-to-br from-secondary-600 to-secondary-800 text-white py-16">
       <Container>
         <div class="max-w-3xl">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">See SchoolVision AI in Action</h1>
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">See SchoolVision.AI in Action</h1>
           <p class="text-xl text-secondary-100">
             Get a personalized demo tailored to your institution's unique needs and challenges.
           </p>
@@ -92,7 +92,7 @@
       <Container>
         <div class="max-w-3xl mx-auto text-center">
           <blockquote class="text-xl text-gray-700 italic">
-            "The SchoolVision AI demo opened our eyes to what's possible. Within 30 minutes, 
+            "The SchoolVision.AI demo opened our eyes to what's possible. Within 30 minutes, 
             we saw exactly how it could solve our biggest challenges. Implementation was even smoother than promised."
           </blockquote>
           <div class="mt-6">

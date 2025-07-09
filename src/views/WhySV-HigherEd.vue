@@ -6,7 +6,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div>
             <h1 class="text-4xl md:text-5xl font-bold mb-4">
-              Why SchoolVision AI for Higher Education?
+              Why SchoolVision.AI for Higher Education?
             </h1>
             <p class="text-xl text-purple-100 mb-6">
               Empower your university with AI-driven insights to improve student success, streamline operations, and enhance campus life
@@ -224,7 +224,7 @@
                 State University Success Story
               </h3>
               <blockquote class="text-lg text-gray-700 italic mb-4">
-                "SchoolVision AI helped us increase our retention rate from 72% to 85% in just two years. The early warning system identified struggling students we would have missed."
+                "SchoolVision.AI helped us increase our retention rate from 72% to 85% in just two years. The early warning system identified struggling students we would have missed."
               </blockquote>
               <div class="text-gray-600">
                 <div class="font-semibold">Dr. Sarah Chen</div>

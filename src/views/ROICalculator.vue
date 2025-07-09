@@ -6,7 +6,7 @@
         <div class="max-w-3xl">
           <h1 class="text-4xl md:text-5xl font-bold mb-4">Calculate Your ROI</h1>
           <p class="text-xl text-green-100">
-            Discover how much time and money SchoolVision AI can save your institution
+            Discover how much time and money SchoolVision.AI can save your institution
           </p>
         </div>
       </Container>
@@ -103,7 +103,7 @@
               </div>
             </div>
             <blockquote class="text-gray-700 italic">
-              "SchoolVision AI paid for itself in just over 3 months. The time savings alone justified the investment, 
+              "SchoolVision.AI paid for itself in just over 3 months. The time savings alone justified the investment, 
               but the improved student outcomes and operational efficiency made it invaluable."
             </blockquote>
             <div class="mt-4 text-sm text-gray-600">

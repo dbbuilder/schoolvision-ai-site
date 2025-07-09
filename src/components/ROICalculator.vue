@@ -2,7 +2,7 @@
   <Card>
     <template #header>
       <h2 class="text-2xl font-bold text-gray-900">ROI Calculator</h2>
-      <p class="mt-1 text-gray-600">See how much you could save with SchoolVision AI</p>
+      <p class="mt-1 text-gray-600">See how much you could save with SchoolVision.AI</p>
     </template>
     
     <div class="space-y-6">
@@ -132,7 +132,7 @@
         <!-- CTA -->
         <div class="mt-8 text-center">
           <p class="text-gray-600 mb-4">
-            Based on your inputs, SchoolVision AI could save your institution 
+            Based on your inputs, SchoolVision.AI could save your institution 
             <strong class="text-green-600">${{ results.totalSavings.toLocaleString() }}</strong> annually.
           </p>
           <router-link to="/demo">
