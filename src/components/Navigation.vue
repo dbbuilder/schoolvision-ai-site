@@ -23,14 +23,14 @@
               {{ item.name }}
             </router-link>
             
-            <!-- Dropdown for Markets -->
+            <!-- Dropdown for Why SV -->
             <div class="relative inline-flex items-center">
               <button
                 @click="marketsOpen = !marketsOpen"
                 @blur="closeMarketsDropdown"
                 class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors duration-200"
               >
-                Markets
+                Why SV
                 <svg class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
@@ -51,13 +51,13 @@
                 >
                   <div class="py-1">
                     <router-link
-                      v-for="market in markets"
-                      :key="market.name"
-                      :to="market.to"
+                      v-for="item in whySV"
+                      :key="item.name"
+                      :to="item.to"
                       class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       @click="marketsOpen = false"
                     >
-                      {{ market.name }}
+                      {{ item.name }}
                     </router-link>
                   </div>
                 </div>
@@ -116,18 +116,18 @@
             {{ item.name }}
           </router-link>
           
-          <!-- Markets Section -->
+          <!-- Why SV Section -->
           <div class="pl-3 pr-4 py-2">
-            <div class="text-base font-medium text-gray-900 mb-2">Markets</div>
+            <div class="text-base font-medium text-gray-900 mb-2">Why SV</div>
             <div class="ml-4 space-y-1">
               <router-link
-                v-for="market in markets"
-                :key="market.name"
-                :to="market.to"
+                v-for="item in whySV"
+                :key="item.name"
+                :to="item.to"
                 class="block py-1 text-sm text-gray-600 hover:text-primary-600"
                 @click="mobileMenuOpen = false"
               >
-                {{ market.name }}
+                {{ item.name }}
               </router-link>
             </div>
           </div>
@@ -159,13 +159,14 @@ const navigation = [
   { name: 'Solutions', to: '/solutions' },
   { name: 'Pricing', to: '/pricing' },
   { name: 'ROI Calculator', to: '/roi-calculator' },
+  { name: 'Library', to: '/library' },
   { name: 'About', to: '/about' }
 ]
 
-const markets = [
-  { name: 'K-12 Schools', to: '/markets/k12' },
-  { name: 'Higher Education', to: '/markets/higher-ed' },
-  { name: 'Vocational Schools', to: '/markets/vocational' }
+const whySV = [
+  { name: 'For K-12 Schools', to: '/why-sv/k12' },
+  { name: 'For Higher Education', to: '/why-sv/higher-ed' },
+  { name: 'For Vocational Schools', to: '/why-sv/vocational' }
 ]
 
 const closeMarketsDropdown = () => {

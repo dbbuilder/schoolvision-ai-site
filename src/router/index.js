@@ -91,6 +91,42 @@ const routes = [
       title: 'ROI Calculator - SchoolVision AI',
       description: 'Calculate your potential savings and return on investment with SchoolVision AI.'
     }
+  },
+  {
+    path: '/library',
+    name: 'Library',
+    component: () => import('../views/Library.vue'),
+    meta: {
+      title: 'Resource Library - SchoolVision AI',
+      description: 'Explore articles, guides, and insights about educational technology and campus management.'
+    }
+  },
+  {
+    path: '/why-sv/k12',
+    name: 'WhySV-K12',
+    component: () => import('../views/WhySV-K12.vue'),
+    meta: {
+      title: 'Why SchoolVision AI for K-12 - SchoolVision AI',
+      description: 'Discover how SchoolVision AI transforms K-12 schools with AI-powered attendance, grading, and safety solutions.'
+    }
+  },
+  {
+    path: '/why-sv/higher-ed',
+    name: 'WhySV-HigherEd',
+    component: () => import('../views/WhySV-HigherEd.vue'),
+    meta: {
+      title: 'Why SchoolVision AI for Higher Education - SchoolVision AI',
+      description: 'Learn how universities use SchoolVision AI to improve retention, streamline operations, and enhance student success.'
+    }
+  },
+  {
+    path: '/why-sv/vocational',
+    name: 'WhySV-Vocational',
+    component: () => import('../views/WhySV-Vocational.vue'),
+    meta: {
+      title: 'Why SchoolVision AI for Vocational Schools - SchoolVision AI',
+      description: 'See how vocational schools optimize career training with AI-powered equipment scheduling and job placement tools.'
+    }
   }
 ]
 
