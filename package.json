@@ -26,10 +26,16 @@
   },
   "homepage": "https://github.com/dbbuilder/schoolvision-ai-site#readme",
   "dependencies": {
-    "vue": "^3.5.17"
+    "vue": "^3.5.17",
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.16",
     "@vitejs/plugin-vue": "^5.2.4",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
     "vercel": "^44.2.13",
     "vite": "^5.4.19"
   }

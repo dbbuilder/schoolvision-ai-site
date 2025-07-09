@@ -1,373 +1,353 @@
-# Autonomous Development Protocol for Enterprise Marketing Sites
+# CLAUDE.md
 
-## Primary Directive
-Build and maintain a high-converting enterprise marketing website autonomously using modern web development best practices. Make decisions based on marketing effectiveness, user experience, and conversion optimization without requesting clarification unless encountering critical blockers.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Marketing Site Development Protocol
+## Project Overview
 
-### Phase 1: Strategic Analysis & Planning
+SchoolVision AI Marketing Site - A Vue.js 3 marketing website for an intelligent campus management platform targeting K-12, Higher Ed, and Vocational education markets.
 
-#### Current State Assessment
-- Review all existing documentation, brand guidelines, and content strategy
-- Analyze competitor websites and industry best practices
-- Identify target audiences and user personas from documentation
-- Map customer journey and conversion funnels
-- Cross-reference progress against TODO.md and project requirements
+## Development Commands
 
-#### Content & SEO Strategy
-- Audit existing content for SEO opportunities
-- Identify high-value keywords for each market segment
-- Plan content hierarchy for optimal user flow
-- Design conversion paths for different user intents
-- Create schema markup strategy for rich snippets
-
-### Phase 2: Frontend Development Protocol
-
-#### Step 1: Project Setup & Configuration
 ```bash
-# Initialize Vue.js project with Vite
-npm create vite@latest . -- --template vue
+# Install dependencies
 npm install
 
-# Install essential dependencies
-npm install -D tailwindcss postcss autoprefixer @tailwindcss/forms @tailwindcss/typography
-npm install vue-router@4 @vueuse/core @headlessui/vue @heroicons/vue
+# Start development server (http://localhost:5173)
+npm run dev
 
-# Configure Tailwind CSS
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Deploy to Vercel
+npm run deploy
+```
+
+## Architecture Overview
+
+### Technology Stack
+- **Frontend**: Vue.js 3 with Composition API
+- **Build Tool**: Vite
+- **Deployment**: Vercel (auto-deploys from main branch)
+- **Repository**: https://github.com/dbbuilder/schoolvision-ai-site
+- **Live Site**: https://schoolvisionaisite-izhxozoww-teds-projects-d50f6fce.vercel.app
+
+### Project Structure
+```
+src/
+├── App.vue          # Main application component
+├── main.js          # Application entry point
+├── components/      # Reusable Vue components (to be created)
+├── views/           # Page components (to be created)
+├── composables/     # Vue composables for shared logic
+├── assets/          # Static assets
+└── styles/          # Global styles (to be created)
+
+public/              # Static files served directly
+dist/                # Production build output (gitignored)
+```
+
+### Key Development Patterns
+
+#### Vue 3 Composition API Pattern
+```vue
+<script setup>
+import { ref, computed, onMounted } from 'vue'
+
+// Props definition
+const props = defineProps({
+  title: String,
+  variant: {
+    type: String,
+    default: 'primary'
+  }
+})
+
+// Reactive state
+const isLoading = ref(false)
+
+// Computed properties
+const buttonClass = computed(() => `btn-${props.variant}`)
+
+// Lifecycle hooks
+onMounted(() => {
+  // Track component view for analytics
+})
+
+// Methods
+const handleClick = () => {
+  // Track conversion event
+  gtag('event', 'cta_click', {
+    component: 'hero',
+    variant: props.variant
+  })
+}
+</script>
+```
+
+### Vercel Deployment Configuration
+
+The site automatically deploys from the main branch with these settings:
+- **Framework Preset**: Vue.js
+- **Build Command**: `npm run build`
+- **Output Directory**: `dist`
+- **Node Version**: 18.x
+
+### Development Workflow
+
+1. **Local Development**
+   ```bash
+   npm run dev  # Start Vite dev server with hot reload
+   ```
+
+2. **Testing Changes**
+   - Test responsive design at mobile (375px), tablet (768px), and desktop (1024px+)
+   - Verify all CTAs and forms work correctly
+   - Check console for any errors
+   - Test page load performance
+
+3. **Deployment**
+   ```bash
+   git add .
+   git commit -m "feat: descriptive commit message"
+   git push origin main  # Auto-deploys to Vercel
+   ```
+
+## Current Project Status
+
+- Basic Vue.js app initialized with Vite
+- Homepage with hero section and features grid
+- Deployed to Vercel with continuous deployment
+- No routing, state management, or testing configured yet
+- Following TODO.md for development priorities
+
+## Common Development Tasks
+
+### Adding a New Page/View
+1. Create component in `src/views/[PageName].vue`
+2. Install Vue Router if not already: `npm install vue-router@4`
+3. Configure router in `src/router/index.js`
+4. Update navigation in App.vue
+5. Test responsiveness and deploy
+
+### Installing Tailwind CSS (Planned)
+```bash
+# Install Tailwind and dependencies
+npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 
-# Git commit
-git add . && git commit -m "feat: initialize Vue.js marketing site with Tailwind CSS"
+# Update tailwind.config.js content paths
+content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}']
+
+# Add Tailwind directives to src/style.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 ```
 
-#### Step 2: Component Development Approach
-- Build reusable, accessible components first
-- Follow atomic design principles (atoms → molecules → organisms)
-- Implement responsive-first design patterns
-- Use semantic HTML for SEO benefits
-- Add structured data to all components
-- Include loading states and error handling
+### Setting Up Testing
+```bash
+# Install Vitest for Vue testing
+npm install -D vitest @vue/test-utils happy-dom
 
-#### Step 3: Performance Optimization
-- Implement lazy loading for images and components
-- Use modern image formats (WebP, AVIF) with fallbacks
-- Configure aggressive caching strategies
-- Minimize JavaScript bundle sizes
-- Implement Critical CSS
-- Use CDN for static assets
-
-### Phase 3: Content Management Protocol
-
-#### Static Content Strategy
-- Use markdown files for blog posts and documentation
-- Implement a simple file-based CMS structure
-- Create content templates for consistency
-- Build automated sitemap generation
-- Set up RSS feed for blog content
-
-#### Dynamic Features
-- Contact forms with client-side validation
-- Newsletter signup with email service integration
-- Interactive calculators and tools
-- Live chat widget integration
-- A/B testing framework setup
-
-### Phase 4: Marketing Integration Protocol
-
-#### Analytics Implementation
-```javascript
-// Google Analytics 4 setup
-gtag('config', 'GA_MEASUREMENT_ID', {
-  send_page_view: false,
-  custom_map: {
-    'dimension1': 'user_type',
-    'dimension2': 'content_category'
-  }
-});
-
-// Custom event tracking
-gtag('event', 'generate_lead', {
-  'event_category': 'engagement',
-  'event_label': 'header_cta',
-  'value': 'high_intent'
-});
-```
-
-#### Lead Generation
-- Implement progressive profiling
-- Create smart CTAs based on user behavior
-- Set up exit-intent popups
-- Configure lead scoring parameters
-- Integrate with CRM systems
-
-### Phase 5: Testing & Optimization Protocol
-
-#### Automated Testing
-```javascript
-// Example Vitest configuration for marketing site
-export default {
-  test: {
-    environment: 'jsdom',
-    coverage: {
-      reporter: ['text', 'html'],
-      exclude: ['node_modules/', 'test/']
-    }
-  }
+# Add test script to package.json
+"scripts": {
+  "test": "vitest",
+  "test:ui": "vitest --ui"
 }
 ```
 
-#### Performance Monitoring
-- Core Web Vitals optimization
-- Regular Lighthouse audits
-- Real user monitoring (RUM)
-- Conversion rate tracking
-- Heatmap analysis
-- Form abandonment tracking
+### Component Development Best Practices
 
-## Autonomous Decision Framework
+1. **File Naming**: Use PascalCase for component files (e.g., `HeroSection.vue`)
+2. **Props Validation**: Always define prop types and defaults
+3. **Composition API**: Use `<script setup>` for cleaner code
+4. **Scoped Styles**: Use `<style scoped>` to prevent style leaks
+5. **Accessibility**: Include proper ARIA labels and semantic HTML
 
-### Make Decisions Based On:
-1. **Conversion Impact**: Will this improve conversion rates?
-2. **User Experience**: Does this make the site easier to use?
-3. **SEO Value**: Will this improve search rankings?
-4. **Performance**: Does this make the site faster?
-5. **Brand Consistency**: Does this align with brand guidelines?
+### SEO Optimization
 
-### Development Priorities:
-1. **Mobile-First**: Every feature must work perfectly on mobile
-2. **Speed**: Page load time under 2 seconds
-3. **Accessibility**: WCAG 2.1 AA compliance minimum
-4. **SEO**: Technical SEO best practices
-5. **Conversion**: Clear CTAs and user paths
+1. **Meta Tags**: Update in `index.html` for static pages
+2. **Vue Meta**: Install `@unhead/vue` for dynamic meta tags
+3. **Structured Data**: Add JSON-LD scripts for rich snippets
+4. **Image Optimization**: Use WebP format with fallbacks
+5. **Performance**: Keep Lighthouse scores above 90
 
-## Git Management for Marketing Sites
+### Analytics Integration
 
-### Commit Strategy
+When implementing analytics:
+```javascript
+// In main.js or a plugin
+import { createGtag } from 'vue-gtag'
+
+app.use(createGtag({
+  config: { id: 'GA_MEASUREMENT_ID' }
+}))
+
+// Track events in components
+import { useGtag } from 'vue-gtag'
+
+const { event } = useGtag()
+event('click', {
+  event_category: 'cta',
+  event_label: 'hero_button'
+})
+```
+
+## Git Workflow
+
+### Commit Conventions
 ```bash
-# Feature branches for major sections
-git checkout -b feature/homepage-hero
-git checkout -b feature/market-landing-pages
-git checkout -b feature/blog-system
+# Use semantic commit messages
+git commit -m "feat: add hero section with CTA"
+git commit -m "fix: mobile navigation menu"
+git commit -m "perf: optimize image loading"
+git commit -m "docs: update setup instructions"
 
-# Semantic commits
-git commit -m "feat(homepage): add animated hero section with A/B test variants"
-git commit -m "perf(images): implement lazy loading and WebP format"
-git commit -m "seo(blog): add schema markup for articles"
-git commit -m "a11y(forms): improve keyboard navigation and screen reader support"
+# Feature branches (optional for small changes)
+git checkout -b feature/pricing-page
+git checkout -b fix/contact-form-validation
 ```
 
-### Deployment Pipeline
-```yaml
-# Example GitHub Actions for marketing site
-name: Deploy Marketing Site
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+### Deployment Process
+1. Push to main branch triggers automatic Vercel deployment
+2. Preview deployments created for pull requests
+3. Check Vercel dashboard for deployment status
+4. Production URL updates within 1-2 minutes
 
-jobs:
-  test-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Install and Build
-        run: |
-          npm ci
-          npm run build
-      - name: Run Tests
-        run: npm test
-      - name: Deploy to Production
-        if: github.ref == 'refs/heads/main'
-        run: npm run deploy
-```
+## Vue.js Component Patterns
 
-## Marketing-Specific Development Patterns
-
-### Landing Page Template
+### Marketing Landing Page Component
 ```vue
 <template>
   <div class="landing-page">
     <!-- Hero Section -->
-    <section class="hero" :class="{ 'variant-b': isVariantB }">
-      <h1 v-text="heroHeadline" />
-      <p v-text="heroSubtext" />
-      <CTAButton @click="trackConversion('hero_cta')" />
+    <section class="hero">
+      <h1>{{ headline }}</h1>
+      <p>{{ subheadline }}</p>
+      <button @click="handleCTA" class="cta-button">
+        {{ ctaText }}
+      </button>
     </section>
     
-    <!-- Social Proof -->
-    <section class="social-proof">
-      <CustomerLogos />
-      <Testimonials :items="testimonials" />
-      <TrustBadges />
-    </section>
-    
-    <!-- Feature Grid -->
+    <!-- Features Grid -->
     <section class="features">
-      <FeatureCard v-for="feature in features" :key="feature.id" v-bind="feature" />
-    </section>
-    
-    <!-- Conversion Section -->
-    <section class="conversion">
-      <DemoRequestForm @submit="handleDemoRequest" />
-      <ValueProps :metrics="roiMetrics" />
+      <div v-for="feature in features" :key="feature.id" class="feature-card">
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.description }}</p>
+      </div>
     </section>
   </div>
 </template>
 
 <script setup>
-import { useABTest } from '@/composables/abtest'
-import { useAnalytics } from '@/composables/analytics'
+import { ref } from 'vue'
 
-const { isVariantB } = useABTest('hero-messaging')
-const { trackConversion } = useAnalytics()
+const props = defineProps({
+  headline: String,
+  subheadline: String,
+  ctaText: String,
+  features: Array
+})
+
+const handleCTA = () => {
+  // Track event when analytics is set up
+  console.log('CTA clicked')
+  // Navigate to demo request form
+}
 </script>
-```
 
-### SEO Component Pattern
-```vue
-<template>
-  <article itemscope itemtype="https://schema.org/Article">
-    <h1 itemprop="headline">{{ title }}</h1>
-    <div itemprop="author" itemscope itemtype="https://schema.org/Person">
-      <span itemprop="name">{{ author }}</span>
-    </div>
-    <time :datetime="publishDate" itemprop="datePublished">
-      {{ formatDate(publishDate) }}
-    </time>
-    <div itemprop="articleBody" v-html="content" />
-  </article>
-</template>
-```
-
-## Quality Assurance Checklist
-
-### Before Each Commit:
-- [ ] Responsive design tested on mobile, tablet, desktop
-- [ ] Cross-browser testing (Chrome, Safari, Firefox, Edge)
-- [ ] Accessibility audit passed
-- [ ] Performance budget maintained
-- [ ] SEO checklist completed
-- [ ] Analytics tracking verified
-- [ ] Forms tested with various inputs
-- [ ] Error states handled gracefully
-
-### Marketing Metrics to Track:
-- Page load time
-- Bounce rate
-- Time on page
-- Conversion rate
-- Form completion rate
-- Click-through rate on CTAs
-- Search engine rankings
-- Core Web Vitals scores
-
-## Content Update Protocol
-
-### Blog Post Workflow:
-1. Create new markdown file in `/content/blog/`
-2. Add frontmatter with SEO metadata
-3. Write content with proper heading hierarchy
-4. Add internal links to related content
-5. Optimize images and add alt text
-6. Preview and test all links
-7. Commit with descriptive message
-8. Update sitemap and RSS feed
-
-### Landing Page Updates:
-1. Create feature branch for changes
-2. Update components with new content
-3. Test all interactive elements
-4. Verify analytics tracking
-5. Run A/B test if applicable
-6. Get stakeholder preview (if needed)
-7. Merge to main after approval
-
-## Error Handling for Marketing Sites
-
-### User-Facing Errors:
-- Friendly error messages (no technical jargon)
-- Clear next steps for users
-- Maintain brand voice even in errors
-- Track errors in analytics
-- Provide fallback content when possible
-
-### Form Error Handling:
-```javascript
-const handleFormError = (error) => {
-  // Log to analytics
-  gtag('event', 'form_error', {
-    error_type: error.type,
-    form_id: error.formId
-  });
-  
-  // Show user-friendly message
-  showNotification({
-    type: 'error',
-    title: 'Oops! Something went wrong',
-    message: 'Please try again or contact us at support@schoolvision.ai'
-  });
-  
-  // Don't lose user's input
-  preserveFormData();
-};
-```
-
-## Deployment & Monitoring
-
-### Pre-Deployment Checklist:
-- [ ] All tests passing
-- [ ] Build successful with no warnings
-- [ ] Lighthouse score > 90
-- [ ] SEO meta tags present on all pages
-- [ ] Sitemap updated
-- [ ] Redirects configured
-- [ ] Analytics verified
-- [ ] Forms tested in production environment
-
-### Post-Deployment Monitoring:
-- Set up uptime monitoring
-- Configure performance alerts
-- Monitor 404 errors
-- Track conversion rates
-- Review user session recordings
-- Check search console for errors
-- Monitor Core Web Vitals
-
-## Marketing Site Specific Patterns
-
-### Progressive Enhancement:
-```javascript
-// Feature detection before using advanced features
-if ('IntersectionObserver' in window) {
-  // Implement lazy loading
-} else {
-  // Fallback to eager loading
+<style scoped>
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
 }
 
-// Smooth scrolling with fallback
-if ('scrollBehavior' in document.documentElement.style) {
-  // Use CSS smooth scrolling
-} else {
-  // JavaScript fallback
+.cta-button {
+  background: #007bff;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1.1rem;
 }
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+</style>
 ```
 
-### Conversion Optimization:
-- Test different CTA colors and text
-- Implement social proof near conversion points
-- Use urgency and scarcity appropriately
-- Reduce form fields to minimum required
-- Show security badges near sensitive forms
-- Implement multi-step forms for complex conversions
+## Performance Guidelines
 
-## Execution Motto
-"Every pixel should drive conversion" - Build fast, accessible, and SEO-friendly marketing experiences that convert visitors into customers. Focus on user intent and remove friction from the conversion path.
+### Vite Optimization
+- Vite handles code splitting automatically
+- Use dynamic imports for large components: `const HeavyComponent = () => import('./HeavyComponent.vue')`
+- Images in `public/` are served as-is
+- Import images in components for optimization: `import logo from './assets/logo.png'`
 
-## Critical Reminders
-- Never sacrifice page speed for fancy animations
-- Always provide fallbacks for JavaScript features
-- Test on real devices, not just browser DevTools
-- Content is king - make it scannable and valuable
-- Track everything but respect user privacy
-- Mobile experience is not optional, it's primary
+### Performance Targets
+- First Contentful Paint: < 1.5s
+- Largest Contentful Paint: < 2.5s
+- Total Blocking Time: < 300ms
+- Cumulative Layout Shift: < 0.1
+
+## Troubleshooting
+
+### Common Issues
+
+1. **Port 5173 already in use**
+   ```bash
+   npm run dev -- --port 3000
+   ```
+
+2. **Build errors**
+   - Check for TypeScript errors even without TS setup
+   - Ensure all imports have proper file extensions
+   - Clear node_modules and reinstall: `rm -rf node_modules && npm install`
+
+3. **Vercel deployment fails**
+   - Check build logs in Vercel dashboard
+   - Ensure all environment variables are set
+   - Verify output directory is `dist`
+
+## Future Enhancements (per TODO.md)
+
+### Week 1-2: Foundation
+- Tailwind CSS setup
+- Vue Router implementation
+- Basic component library
+- ESLint/Prettier configuration
+
+### Week 3-4: Core Pages
+- Homepage optimization
+- Market-specific landing pages
+- Pricing page with calculator
+- Contact and demo request forms
+
+### Week 5-6: Content & Tools
+- Blog system (consider Nuxt Content)
+- ROI calculator tool
+- Case studies section
+- Resource center
+
+### Week 7-8: Optimization
+- Performance optimization
+- SEO implementation
+- Analytics integration
+- A/B testing setup
+
+## Important Notes
+
+- This is a marketing site - prioritize conversions and user experience
+- Keep the codebase simple and maintainable
+- Test all changes on mobile devices
+- Follow Vue.js 3 best practices and Composition API patterns
+- Leverage Vite's fast HMR for rapid development
+- Monitor Vercel Analytics for performance insights
