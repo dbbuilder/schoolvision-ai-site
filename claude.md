@@ -32,21 +32,42 @@ npm run deploy
 - **Build Tool**: Vite
 - **Deployment**: Vercel (auto-deploys from main branch)
 - **Repository**: https://github.com/dbbuilder/schoolvision-ai-site
-- **Live Site**: https://schoolvisionaisite-izhxozoww-teds-projects-d50f6fce.vercel.app
+- **Live Site**: https://schoolvisionaisite.vercel.app
 
 ### Project Structure
 ```
 src/
 ├── App.vue          # Main application component
 ├── main.js          # Application entry point
-├── components/      # Reusable Vue components (to be created)
-├── views/           # Page components (to be created)
+├── style.css        # Global styles with Tailwind directives
+├── components/      # Reusable Vue components
+│   ├── ui/          # Base UI components (Button, Card, etc.)
+│   ├── Navigation.vue
+│   ├── ContactForm.vue
+│   ├── DemoRequestForm.vue
+│   ├── ROICalculator.vue
+│   ├── ROICalculatorModal.vue
+│   └── TestimonialsSection.vue
+├── views/           # Page components
+│   ├── Home.vue
+│   ├── Solutions.vue
+│   ├── Pricing.vue
+│   ├── About.vue
+│   ├── Contact.vue
+│   ├── Demo.vue
+│   ├── ROICalculator.vue
+│   ├── Library.vue
+│   ├── WhySV-K12.vue
+│   ├── WhySV-HigherEd.vue
+│   ├── WhySV-Vocational.vue
+│   └── markets/     # Legacy market pages
+├── router/          # Vue Router configuration
 ├── composables/     # Vue composables for shared logic
-├── assets/          # Static assets
-└── styles/          # Global styles (to be created)
+└── assets/          # Static assets
 
 public/              # Static files served directly
 dist/                # Production build output (gitignored)
+e2e/                 # Playwright E2E tests
 ```
 
 ### Key Development Patterns

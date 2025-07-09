@@ -6,11 +6,10 @@
       <Container class="relative py-24 lg:py-32">
         <div class="text-center max-w-4xl mx-auto">
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Intelligent Campus Management
+            Complete Campus Intelligence Through Seamless Integration
           </h1>
           <p class="text-xl md:text-2xl mb-8 text-primary-100">
-            Transform your educational institution with AI-powered solutions. 
-            20+ years of experience, now enhanced with cutting-edge artificial intelligence.
+            Your SIS captures grades. We capture everything else. Together, we reveal the complete picture of student success with AI-powered insights that help you understand the past, measure the present, and predict the future.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <router-link to="/demo">
@@ -136,38 +135,38 @@ import TestimonialsSection from '../components/TestimonialsSection.vue'
 
 const features = [
   {
-    title: 'Intelligent Point of Sale',
-    description: 'Predictive inventory, fraud detection, and voice-activated ordering'
+    title: 'SIS Integration Intelligence',
+    description: 'Seamlessly connects with your SIS to capture operational data, revealing patterns between academics and campus life'
   },
   {
-    title: 'Smart Attendance',
-    description: 'Facial recognition, predictive analytics, and multi-modal tracking'
+    title: 'Predictive Analytics',
+    description: 'AI identifies at-risk students before grades drop by analyzing attendance, cafeteria, and engagement patterns'
   },
   {
-    title: 'AI-Powered Grading',
-    description: 'Automated feedback, performance prediction, and plagiarism detection'
+    title: 'Complete Compliance',
+    description: 'Automated federal reporting, 90/10 tracking, clock hour verification, and audit-ready documentation'
   },
   {
-    title: 'Intelligent Reporting',
-    description: 'Natural language queries, predictive dashboards, and automated insights'
+    title: 'Real-Time Dashboards',
+    description: 'Natural language queries across all campus data with role-based views for students, faculty, and administrators'
   }
 ]
 
 const markets = [
   {
     name: 'K-12 Schools',
-    description: 'Comprehensive solutions for elementary and secondary education',
-    to: '/markets/k12'
+    description: 'Parent portals, bus tracking, cafeteria management, and early intervention systems. Serving 500+ districts with 97% attendance accuracy.',
+    to: '/why-sv/k12'
   },
   {
     name: 'Higher Education',
-    description: 'Advanced tools for colleges and universities',
-    to: '/markets/higher-ed'
+    description: 'Bookstore integration, lab management, retention analytics, and multi-campus support. Helping universities improve retention by 18%.',
+    to: '/why-sv/higher-ed'
   },
   {
     name: 'Vocational Schools',
-    description: 'Specialized features for career and technical education',
-    to: '/markets/vocational'
+    description: 'Clock hour tracking, clinical rotations, 90/10 compliance, and industry partnerships. 100% audit success rate for CTE programs.',
+    to: '/why-sv/vocational'
   }
 ]
 </script>

@@ -36,50 +36,50 @@ import TestimonialCard from './TestimonialCard.vue'
 const testimonials = [
   {
     id: 1,
-    quote: "SchoolVision AI transformed how we manage our campus. The attendance system alone saved us 2 hours daily, and the predictive analytics helped us identify at-risk students before it was too late.",
-    author: "Dr. Sarah Johnson",
+    quote: "After 20 years of manual attendance tracking, SchoolVision AI reduced our daily attendance time from 45 minutes to under 5 minutes. The automated parent notifications alone have improved our chronic absenteeism rate by 27%. We're saving $127,000 annually.",
+    author: "Dr. Jennifer Martinez",
     role: "Superintendent",
-    organization: "Riverside School District",
+    organization: "Westside K-12 District (1,200 students)",
     rating: 5
   },
   {
     id: 2,
-    quote: "The AI-powered grading system is a game-changer. Teachers now spend more time actually teaching instead of grading papers. Parent satisfaction has increased dramatically.",
-    author: "Michael Chen",
-    role: "Principal",
-    organization: "Lincoln High School",
+    quote: "The integration with our SIS revealed patterns we never saw before. When we noticed declining cafeteria visits correlating with dropping grades, we identified 47 food-insecure students. The predictive analytics helped us increase our retention rate from 72% to 85%.",
+    author: "Dr. Michael Thompson",
+    role: "VP of Student Success",
+    organization: "State University (18,000 students)",
     rating: 5
   },
   {
     id: 3,
-    quote: "Implementation was smooth and the support team was exceptional. Within a month, we saw measurable improvements in operational efficiency and student outcomes.",
-    author: "Maria Rodriguez",
-    role: "IT Director",
-    organization: "Valley Unified School District",
+    quote: "Managing 90/10 compliance was a nightmare with 6 campuses. SchoolVision AI automated our clock hour tracking across all locations. We went from 3 full-time compliance officers to 1, and our audit prep time dropped from 3 weeks to 3 days.",
+    author: "Linda Chen",
+    role: "CFO",
+    organization: "Allied Career Centers (3,500 CTE students)",
     rating: 5
   },
   {
     id: 4,
-    quote: "The ROI was immediate. Reduced food waste in our cafeteria by 30% and improved attendance tracking accuracy to 98%. This system pays for itself.",
-    author: "James Thompson",
-    role: "Business Manager",
-    organization: "Oakwood Academy",
+    quote: "In our dental hygiene program, the per-tooth grading system transformed our assessments. Clinical supervisors save 20 hours weekly, and students get detailed feedback instantly. Pass rates on state boards improved from 78% to 94%.",
+    author: "Dr. Patricia Williams",
+    role: "Program Director",
+    organization: "Regional Health Sciences Institute",
     rating: 5
   },
   {
     id: 5,
-    quote: "As a vocational school, we needed specialized features. SchoolVision AI delivered with custom modules for tracking skills development and industry partnerships.",
-    author: "Dr. Patricia Williams",
-    role: "Dean of Students",
-    organization: "TechVoc Institute",
+    quote: "The AI detected unusual POS patterns and prevented $45,000 in cafeteria fraud in our first year. But the real win was reducing food waste by 32% through predictive ordering. That's $180,000 saved annually across our 8 schools.",
+    author: "Robert Martinez",
+    role: "Business Manager",
+    organization: "Metro Unified School District",
     rating: 5
   },
   {
     id: 6,
-    quote: "The predictive analytics helped us intervene early with struggling students. Our graduation rate improved by 12% in just one year. Absolutely worth the investment.",
-    author: "Robert Martinez",
-    role: "Assistant Superintendent",
-    organization: "Metro Public Schools",
+    quote: "Our CDL program struggled with in-truck attendance verification across 15 training routes. SchoolVision's GPS tracking with rotating QR codes solved it completely. DOT compliance is automatic, and we can finally prove our 1,200 behind-the-wheel hours.",
+    author: "James Wilson",
+    role: "Director of Transportation Training",
+    organization: "Interstate Trucking Academy",
     rating: 5
   }
 ]
@@ -87,19 +87,19 @@ const testimonials = [
 const stats = [
   {
     value: '500+',
-    label: 'Schools Using SchoolVision'
+    label: 'Campuses Served'
   },
   {
-    value: '2.5M',
-    label: 'Students Served'
+    value: '2.8M+',
+    label: 'Students Tracked Daily'
   },
   {
-    value: '98%',
-    label: 'Customer Satisfaction'
+    value: '$47M',
+    label: 'Total Client Savings'
   },
   {
-    value: '45%',
-    label: 'Average Time Saved'
+    value: '20+',
+    label: 'Years of Experience'
   }
 ]
 </script>

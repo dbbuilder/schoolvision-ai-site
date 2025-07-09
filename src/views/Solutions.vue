@@ -4,9 +4,9 @@
     <section class="bg-gradient-to-r from-primary-700 to-secondary-700 text-white py-16">
       <Container>
         <div class="max-w-3xl">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">AI-Powered Solutions for Every Campus Need</h1>
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Complete Campus Intelligence: Where Your SIS Ends, We Begin</h1>
           <p class="text-xl text-primary-100">
-            From attendance tracking to predictive analytics, our comprehensive suite transforms how educational institutions operate.
+            Capture every transaction, track every interaction, analyze every pattern. Our AI-powered platform integrates with your SIS to reveal the complete picture of campus operations.
           </p>
         </div>
       </Container>
@@ -24,28 +24,28 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h2 class="text-3xl font-bold text-gray-900 mb-4">Smart Attendance & Safety</h2>
+              <h2 class="text-3xl font-bold text-gray-900 mb-4">Advanced Time & Attendance</h2>
               <p class="text-lg text-gray-600 mb-6">
-                Revolutionary attendance tracking that goes beyond simple check-ins. Our AI-powered system ensures student safety while providing real-time insights.
+                While your SIS knows class enrollment, we capture actual presence everywhere - classrooms, labs, cafeterias, clinicals. Our AI reveals engagement levels, at-risk behaviors, and success correlations.
               </p>
               <ul class="space-y-3">
                 <li class="flex items-start">
                   <svg class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                   </svg>
-                  <span class="text-gray-700">Facial recognition for touchless check-in</span>
+                  <span class="text-gray-700">Multi-modal tracking: facial recognition, QR codes, biometrics</span>
                 </li>
                 <li class="flex items-start">
                   <svg class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                   </svg>
-                  <span class="text-gray-700">Real-time parent notifications</span>
+                  <span class="text-gray-700">Automated parent notifications - improved chronic absenteeism by 27%</span>
                 </li>
                 <li class="flex items-start">
                   <svg class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                   </svg>
-                  <span class="text-gray-700">Predictive absence patterns</span>
+                  <span class="text-gray-700">Clock hour tracking for CTE programs - 100% compliance rate</span>
                 </li>
                 <li class="flex items-start">
                   <svg class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
