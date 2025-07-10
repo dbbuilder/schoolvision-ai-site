@@ -14,7 +14,9 @@
     "deploy": "vercel --prod",
     "test": "playwright test",
     "test:ui": "playwright test --ui",
-    "test:report": "playwright show-report"
+    "test:report": "playwright show-report",
+    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "prebuild": "npm run generate:sitemap"
   },
   "repository": {
     "type": "git",
