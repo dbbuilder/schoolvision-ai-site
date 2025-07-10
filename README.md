@@ -9,6 +9,7 @@ SchoolVision AI is an intelligent campus management platform that leverages arti
 - **Current Version**: 1.0.0
 - **Live Site**: https://schoolvisionaisite.vercel.app
 - **Last Updated**: January 10, 2025
+- **Deployment**: Vercel (Automatic from main branch)
 
 ## Key Features
 
