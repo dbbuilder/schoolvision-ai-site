@@ -172,6 +172,33 @@ const routes = [
       title: 'Terms of Service - SchoolVision.AI',
       description: 'Terms and conditions for using the SchoolVision.AI platform.'
     }
+  },
+  {
+    path: '/accessibility',
+    name: 'Accessibility',
+    component: () => import('../views/Accessibility.vue'),
+    meta: {
+      title: 'Accessibility Statement - SchoolVision.AI',
+      description: 'Learn about our commitment to digital accessibility and WCAG compliance.'
+    }
+  },
+  {
+    path: '/ferpa',
+    name: 'FERPA',
+    component: () => import('../views/FERPA.vue'),
+    meta: {
+      title: 'FERPA Compliance - SchoolVision.AI',
+      description: 'How SchoolVision.AI ensures complete FERPA compliance and student data privacy.'
+    }
+  },
+  {
+    path: '/sitemap',
+    name: 'Sitemap',
+    component: () => import('../views/Sitemap.vue'),
+    meta: {
+      title: 'Sitemap - SchoolVision.AI',
+      description: 'Navigate through all pages and resources available on SchoolVision.AI.'
+    }
   }
 ]
 

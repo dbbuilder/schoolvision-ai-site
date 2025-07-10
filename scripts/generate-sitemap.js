@@ -15,6 +15,11 @@ const routes = [
   { path: '/blog', priority: 0.8, changefreq: 'daily' },
   { path: '/faq', priority: 0.8, changefreq: 'monthly' },
   
+  // Compliance pages
+  { path: '/accessibility', priority: 0.6, changefreq: 'yearly' },
+  { path: '/ferpa', priority: 0.7, changefreq: 'yearly' },
+  { path: '/sitemap', priority: 0.5, changefreq: 'monthly' },
+  
   // Market pages
   { path: '/markets/k12', priority: 0.8, changefreq: 'weekly' },
   { path: '/markets/higher-ed', priority: 0.8, changefreq: 'weekly' },
