@@ -1,0 +1,194 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - link "SchoolVision.AI":
+    - /url: /
+  - link "Home":
+    - /url: /
+  - link "Solutions":
+    - /url: /solutions
+  - button "Why SV":
+    - text: Why SV
+    - img
+  - link "ROI Calculator":
+    - /url: /roi-calculator
+  - link "Resources":
+    - /url: /library
+  - link "Blog":
+    - /url: /blog
+  - link "Pricing":
+    - /url: /pricing
+  - link "About":
+    - /url: /about
+  - link "Contact Sales":
+    - /url: /contact
+    - button "Contact Sales"
+  - link "Request Demo":
+    - /url: /demo
+    - button "Request Demo"
+- main:
+  - navigation:
+    - link "← Back to Vocational Schools":
+      - /url: /markets/vocational
+  - heading "Why SchoolVision.AI for CDL/Trucking Programs" [level=1]
+  - paragraph: Purpose-built for commercial driving schools with deep understanding of DOT compliance, fleet management, and the unique challenges of preparing professional drivers.
+  - heading "Built by Industry Experts, For Industry Leaders" [level=2]
+  - paragraph: Our team includes former CDL instructors, fleet managers, and DOT compliance specialists who understand the complexities of running a successful trucking school. We've built SchoolVision.AI to address the real challenges you face every day.
+  - heading "DOT Compliance Made Simple" [level=3]
+  - paragraph: Stay ahead of changing regulations with automated tracking of driver qualifications, medical certifications, and hours of service. Our system alerts you before certifications expire and generates required reports with one click.
+  - list:
+    - listitem:
+      - img
+      - text: Automated medical card expiration tracking
+    - listitem:
+      - img
+      - text: Electronic driver qualification file management
+    - listitem:
+      - img
+      - text: Real-time hours of service tracking for training
+  - heading "Fleet Management That Saves Money" [level=3]
+  - paragraph: Reduce maintenance costs and maximize vehicle uptime with predictive maintenance scheduling, real-time GPS tracking, and comprehensive vehicle history tracking.
+  - paragraph: "Average fleet savings: $12,000 per truck annually"
+  - heading "Student Success Through Better Training" [level=3]
+  - paragraph: Digital pre-trip inspection checklists, road test evaluations, and progress tracking help instructors identify areas where students need additional support, leading to higher CDL exam pass rates.
+  - heading "Features No Other Platform Offers" [level=2]
+  - heading "Integrated ELD Training Mode" [level=3]
+  - paragraph: Train students on electronic logging devices with our built-in ELD simulator that mirrors real-world systems they'll use as professional drivers.
+  - text: Image Placeholder
+  - heading "AI-Powered Route Planning" [level=3]
+  - paragraph: Optimize training routes based on student skill level, traffic patterns, and specific maneuvers that need practice. Ensures every minute of road time is valuable.
+  - text: Image Placeholder
+  - heading "Employer Connection Portal" [level=3]
+  - paragraph: Connect graduating students with trucking companies actively hiring. Track job placement rates and maintain relationships with industry partners.
+  - text: Image Placeholder
+  - heading "Mobile Pre-Trip Inspection App" [level=3]
+  - paragraph: Students use tablets to complete digital pre-trip inspections with photo documentation. Instructors grade in real-time and track common problem areas.
+  - text: Image Placeholder
+  - heading "Trusted by Leading CDL Schools" [level=2]
+  - text: Image Placeholder
+  - blockquote: "\"SchoolVision.AI transformed how we manage our fleet and track student progress. We've reduced maintenance costs by 40% and increased our pass rate to 94%.\""
+  - text: Mike Thompson
+  - paragraph: Director, Professional Driving Academy
+  - text: Image Placeholder
+  - blockquote: "\"The DOT compliance features alone are worth it. We used to spend hours on paperwork that now takes minutes. It's a game-changer for trucking schools.\""
+  - text: Sarah Martinez
+  - paragraph: Owner, Interstate Trucking Institute
+  - heading "Implementation Designed for Trucking Schools" [level=2]
+  - paragraph: We understand that switching systems can be daunting. That's why we've developed a trucking school-specific implementation process that gets you up and running quickly without disrupting your operations.
+  - text: "1"
+  - heading "Fleet & Equipment Setup (Week 1)" [level=3]
+  - paragraph: We'll configure your vehicles, set up maintenance schedules, and integrate any existing GPS or ELD systems. Your fleet data is imported automatically.
+  - text: "2"
+  - heading "Compliance Configuration (Week 2)" [level=3]
+  - paragraph: Our DOT compliance experts help configure the system for your state's specific requirements and import existing driver qualification files.
+  - text: "3"
+  - heading "Staff Training & Go-Live (Week 3)" [level=3]
+  - paragraph: Comprehensive training for instructors, office staff, and management. We'll be on-site (or virtual) for your first day to ensure a smooth transition.
+  - heading "Calculate Your CDL School's Potential Savings" [level=2]
+  - paragraph: See how much time and money SchoolVision.AI can save your trucking school with our specialized ROI calculator.
+  - button "Calculate Your ROI"
+  - button "Schedule a Demo"
+  - heading "Ready to Transform Your CDL Training Program?" [level=2]
+  - paragraph: Join the growing number of trucking schools using SchoolVision.AI to streamline operations, ensure compliance, and graduate better drivers.
+  - text: 30-Day Free Trial 100% Data Migration 24/7 Support
+  - button "Get Started Today"
+- contentinfo:
+  - text: SchoolVision.AI
+  - paragraph: Complete Campus Intelligence Platform. Where your SIS ends, we begin. Serving 523 campuses with 20+ years of experience.
+  - link:
+    - /url: https://linkedin.com/company/schoolvision-ai
+    - img
+  - link:
+    - /url: https://twitter.com/schoolvisionai
+    - img
+  - link:
+    - /url: https://youtube.com/schoolvisionai
+    - img
+  - heading "Solutions" [level=3]
+  - list:
+    - listitem:
+      - link "All Solutions":
+        - /url: /solutions
+    - listitem:
+      - link "Attendance & Safety":
+        - /url: /solutions/attendance-safety
+    - listitem:
+      - link "Point of Sale":
+        - /url: /solutions/point-of-sale
+    - listitem:
+      - link "AI Grading":
+        - /url: /solutions/ai-grading
+    - listitem:
+      - link "Compliance Tracking":
+        - /url: /solutions/compliance-tracking
+    - listitem:
+      - link "Predictive Analytics":
+        - /url: /solutions/predictive-analytics
+  - heading "Markets" [level=3]
+  - list:
+    - listitem:
+      - link "K-12 Schools":
+        - /url: /why-sv/k12
+    - listitem:
+      - link "Higher Education":
+        - /url: /why-sv/higher-ed
+    - listitem:
+      - link "Vocational/CTE":
+        - /url: /why-sv/vocational
+    - listitem:
+      - link "CDL Programs":
+        - /url: /markets/cdl-programs
+    - listitem:
+      - link "Healthcare Training":
+        - /url: /markets/healthcare-training
+    - listitem:
+      - link "Trade Schools":
+        - /url: /markets/trade-schools
+  - heading "Resources" [level=3]
+  - list:
+    - listitem:
+      - link "Resource Library":
+        - /url: /library
+    - listitem:
+      - link "Blog":
+        - /url: /blog
+    - listitem:
+      - link "ROI Calculator":
+        - /url: /roi-calculator
+    - listitem:
+      - link "FAQ":
+        - /url: /faq
+    - listitem:
+      - link "API Documentation":
+        - /url: /api-docs
+    - listitem:
+      - link "Support Center":
+        - /url: https://support.schoolvision.ai
+  - img
+  - text: Sales & Support
+  - link "801-659-7778":
+    - /url: tel:801-659-7778
+  - img
+  - text: Email Us
+  - link "info@schoolvision.ai":
+    - /url: mailto:info@schoolvision.ai
+  - img
+  - text: Headquarters Salt Lake City, Utah © 2025 SchoolVision.AI. All rights reserved. | 20+ Years Serving Education
+  - link "Privacy Policy":
+    - /url: /privacy
+  - link "Terms of Service":
+    - /url: /terms
+  - link "FERPA Compliance":
+    - /url: /ferpa
+  - link "Accessibility":
+    - /url: /accessibility
+  - link "Sitemap":
+    - /url: /sitemap
+  - text: Trusted Partners & Certifications SOC 2 Type II FERPA Compliant Ed-Fi Certified ISO 27001 COPPA Compliant
+- heading "We value your privacy" [level=3]
+- paragraph: We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences by clicking "Cookie Settings".
+- button "Accept All"
+- button "Cookie Settings"
+- button "Reject All"
+```

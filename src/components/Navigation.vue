@@ -6,8 +6,12 @@
         <div class="flex">
           <!-- Logo -->
           <div class="flex-shrink-0 flex items-center">
-            <router-link to="/" class="text-2xl font-bold text-primary-600">
-              SchoolVision.AI
+            <router-link to="/" class="flex items-center">
+              <img 
+                src="/images/logo-primary.svg" 
+                alt="SchoolVision.AI" 
+                class="h-8 w-auto"
+              />
             </router-link>
           </div>
           

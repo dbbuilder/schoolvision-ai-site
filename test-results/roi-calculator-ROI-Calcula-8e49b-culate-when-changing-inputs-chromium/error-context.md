@@ -1,0 +1,200 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - link "SchoolVision.AI":
+    - /url: /
+  - link "Home":
+    - /url: /
+  - link "Solutions":
+    - /url: /solutions
+  - button "Why SV":
+    - text: Why SV
+    - img
+  - link "ROI Calculator":
+    - /url: /roi-calculator
+  - link "Resources":
+    - /url: /library
+  - link "Blog":
+    - /url: /blog
+  - link "Pricing":
+    - /url: /pricing
+  - link "About":
+    - /url: /about
+  - link "Contact Sales":
+    - /url: /contact
+    - button "Contact Sales"
+  - link "Request Demo":
+    - /url: /demo
+    - button "Request Demo"
+- main:
+  - heading "Calculate Your ROI" [level=1]
+  - paragraph: Discover how much time and money SchoolVision.AI can save your institution
+  - heading "ROI Calculator" [level=2]
+  - paragraph: See how much you could save with SchoolVision.AI
+  - text: Number of Students
+  - spinbutton: "1000"
+  - paragraph: Total enrolled students
+  - text: Number of Staff
+  - spinbutton: "50"
+  - paragraph: Teachers and administrative staff
+  - text: Average Staff Hourly Rate $
+  - spinbutton: "35"
+  - paragraph: Average hourly compensation
+  - text: Current Attendance Method
+  - combobox:
+    - option "Paper-based" [selected]
+    - option "Basic Digital"
+    - option "Partial Automation"
+  - paragraph: Your current system
+  - text: Which features are you interested in?
+  - checkbox "Smart Attendance & Safety" [checked]
+  - text: Smart Attendance & Safety
+  - checkbox "Intelligent Point of Sale"
+  - text: Intelligent Point of Sale
+  - checkbox "AI-Powered Grading" [checked]
+  - text: AI-Powered Grading
+  - checkbox "Predictive Analytics"
+  - text: Predictive Analytics
+  - heading "Your Estimated Annual Savings" [level=3]
+  - text: $469,000 Total Annual Savings 258 Hours Saved Per Week 1 Months to ROI
+  - heading "Savings Breakdown:" [level=4]
+  - text: Attendance Management $364,000/year Grading & Assessment $105,000/year
+  - paragraph:
+    - text: Based on your inputs, SchoolVision.AI could save your institution
+    - strong: $469,000
+    - text: annually.
+  - link "Get Your Personalized Demo":
+    - /url: /demo
+    - button "Get Your Personalized Demo"
+  - heading "Where Your Savings Come From" [level=2]
+  - heading "Time Savings" [level=3]
+  - list:
+    - listitem:
+      - img
+      - text: Automated attendance saves 15-30 minutes daily per teacher
+    - listitem:
+      - img
+      - text: AI grading reduces assessment time by 70%
+    - listitem:
+      - img
+      - text: Automated reporting saves 5+ hours weekly
+  - heading "Cost Reductions" [level=3]
+  - list:
+    - listitem:
+      - img
+      - text: 30% reduction in cafeteria food waste
+    - listitem:
+      - img
+      - text: Fraud detection saves thousands annually
+    - listitem:
+      - img
+      - text: Better resource allocation through predictive analytics
+  - heading "Real-World Example" [level=3]
+  - text: 1,200 Students $127,000 Annual Savings 3.2 Month Payback
+  - blockquote: "\"SchoolVision.AI paid for itself in just over 3 months. The time savings alone justified the investment, but the improved student outcomes and operational efficiency made it invaluable.\""
+  - text: "- Jennifer Martinez, CFO, Westside School District"
+  - heading "Ready to Start Saving?" [level=2]
+  - paragraph: Get a detailed ROI analysis customized for your institution
+  - link "Schedule Your Demo":
+    - /url: /demo
+    - button "Schedule Your Demo"
+- contentinfo:
+  - text: SchoolVision.AI
+  - paragraph: Complete Campus Intelligence Platform. Where your SIS ends, we begin. Serving 523 campuses with 20+ years of experience.
+  - link:
+    - /url: https://linkedin.com/company/schoolvision-ai
+    - img
+  - link:
+    - /url: https://twitter.com/schoolvisionai
+    - img
+  - link:
+    - /url: https://youtube.com/schoolvisionai
+    - img
+  - heading "Solutions" [level=3]
+  - list:
+    - listitem:
+      - link "All Solutions":
+        - /url: /solutions
+    - listitem:
+      - link "Attendance & Safety":
+        - /url: /solutions/attendance-safety
+    - listitem:
+      - link "Point of Sale":
+        - /url: /solutions/point-of-sale
+    - listitem:
+      - link "AI Grading":
+        - /url: /solutions/ai-grading
+    - listitem:
+      - link "Compliance Tracking":
+        - /url: /solutions/compliance-tracking
+    - listitem:
+      - link "Predictive Analytics":
+        - /url: /solutions/predictive-analytics
+  - heading "Markets" [level=3]
+  - list:
+    - listitem:
+      - link "K-12 Schools":
+        - /url: /why-sv/k12
+    - listitem:
+      - link "Higher Education":
+        - /url: /why-sv/higher-ed
+    - listitem:
+      - link "Vocational/CTE":
+        - /url: /why-sv/vocational
+    - listitem:
+      - link "CDL Programs":
+        - /url: /markets/cdl-programs
+    - listitem:
+      - link "Healthcare Training":
+        - /url: /markets/healthcare-training
+    - listitem:
+      - link "Trade Schools":
+        - /url: /markets/trade-schools
+  - heading "Resources" [level=3]
+  - list:
+    - listitem:
+      - link "Resource Library":
+        - /url: /library
+    - listitem:
+      - link "Blog":
+        - /url: /blog
+    - listitem:
+      - link "ROI Calculator":
+        - /url: /roi-calculator
+    - listitem:
+      - link "FAQ":
+        - /url: /faq
+    - listitem:
+      - link "API Documentation":
+        - /url: /api-docs
+    - listitem:
+      - link "Support Center":
+        - /url: https://support.schoolvision.ai
+  - img
+  - text: Sales & Support
+  - link "801-659-7778":
+    - /url: tel:801-659-7778
+  - img
+  - text: Email Us
+  - link "info@schoolvision.ai":
+    - /url: mailto:info@schoolvision.ai
+  - img
+  - text: Headquarters Salt Lake City, Utah © 2025 SchoolVision.AI. All rights reserved. | 20+ Years Serving Education
+  - link "Privacy Policy":
+    - /url: /privacy
+  - link "Terms of Service":
+    - /url: /terms
+  - link "FERPA Compliance":
+    - /url: /ferpa
+  - link "Accessibility":
+    - /url: /accessibility
+  - link "Sitemap":
+    - /url: /sitemap
+  - text: Trusted Partners & Certifications SOC 2 Type II FERPA Compliant Ed-Fi Certified ISO 27001 COPPA Compliant
+- heading "We value your privacy" [level=3]
+- paragraph: We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences by clicking "Cookie Settings".
+- button "Accept All"
+- button "Cookie Settings"
+- button "Reject All"
+```

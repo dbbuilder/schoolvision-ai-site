@@ -1,0 +1,185 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - link "SchoolVision.AI":
+    - /url: /
+  - button "Open main menu":
+    - text: Open main menu
+    - img
+- main:
+  - heading "Complete Campus Intelligence Through Seamless Integration" [level=1]
+  - paragraph: Your SIS captures grades. We capture everything else. Together, we reveal the complete picture of student success with AI-powered insights that help you understand the past, measure the present, and predict the future.
+  - link "Request Demo":
+    - /url: /demo
+    - button "Request Demo"
+  - button "Watch Video"
+  - img
+  - heading "AI-Enhanced Solutions" [level=2]
+  - paragraph: Comprehensive suite of intelligent tools designed to streamline campus operations and enhance educational outcomes
+  - img
+  - heading "SIS Integration Intelligence" [level=3]
+  - paragraph: Seamlessly connects with your SIS to capture operational data, revealing patterns between academics and campus life
+  - img
+  - heading "Predictive Analytics" [level=3]
+  - paragraph: AI identifies at-risk students before grades drop by analyzing attendance, cafeteria, and engagement patterns
+  - img
+  - heading "Complete Compliance" [level=3]
+  - paragraph: Automated federal reporting, 90/10 tracking, clock hour verification, and audit-ready documentation
+  - img
+  - heading "Real-Time Dashboards" [level=3]
+  - paragraph: Natural language queries across all campus data with role-based views for students, faculty, and administrators
+  - heading "Serving Every Educational Level" [level=2]
+  - paragraph: Tailored solutions for K-12, Higher Education, and Vocational institutions
+  - link "K-12 Schools Parent portals, bus tracking, cafeteria management, and early intervention systems. Serving 500+ districts with 97% attendance accuracy. Learn more →":
+    - /url: /why-sv/k12
+    - img
+    - heading "K-12 Schools" [level=3]
+    - paragraph: Parent portals, bus tracking, cafeteria management, and early intervention systems. Serving 500+ districts with 97% attendance accuracy.
+    - text: Learn more →
+  - link "Higher Education Bookstore integration, lab management, retention analytics, and multi-campus support. Helping universities improve retention by 18%. Learn more →":
+    - /url: /why-sv/higher-ed
+    - img
+    - heading "Higher Education" [level=3]
+    - paragraph: Bookstore integration, lab management, retention analytics, and multi-campus support. Helping universities improve retention by 18%.
+    - text: Learn more →
+  - link "Vocational Schools Clock hour tracking, clinical rotations, 90/10 compliance, and industry partnerships. 100% audit success rate for CTE programs. Learn more →":
+    - /url: /why-sv/vocational
+    - img
+    - heading "Vocational Schools" [level=3]
+    - paragraph: Clock hour tracking, clinical rotations, 90/10 compliance, and industry partnerships. 100% audit success rate for CTE programs.
+    - text: Learn more →
+  - heading "Trusted by Education Leaders" [level=2]
+  - paragraph: See what administrators and educators are saying about SchoolVision.AI
+  - img
+  - paragraph: SchoolVision.AI transformed our district operations. We've reduced administrative tasks by 40% and improved student attendance by 15% in just one semester. The predictive analytics helped us identify at-risk students before problems arose.
+  - text: DS Dr. Sarah Johnson Superintendent Riverside Unified School District
+  - img
+  - img
+  - img
+  - img
+  - img
+  - img
+  - paragraph: The seamless integration with our existing SIS was impressive. What used to take our IT team weeks to implement was up and running in days. The AI insights have helped us improve retention rates by 22%.
+  - text: MC Michael Chen IT Director Metro Community College
+  - img
+  - img
+  - img
+  - img
+  - img
+  - img
+  - paragraph: For our vocational programs, tracking equipment usage and student hours was always a challenge. SchoolVision.AI automated everything. We now have 100% compliance with state reporting requirements.
+  - text: JM Jennifer Martinez Principal Valley Technical Institute
+  - img
+  - img
+  - img
+  - img
+  - img
+  - text: 523 Campuses Served 1.2M+ Students Tracked Daily 97% Customer Satisfaction 20+ Years of Experience
+  - heading "Ready to Transform Your Campus?" [level=2]
+  - paragraph: Join 523 educational institutions already using SchoolVision.AI
+  - link "Schedule a Demo":
+    - /url: /demo
+    - button "Schedule a Demo"
+  - link "Contact Sales":
+    - /url: /contact
+    - button "Contact Sales"
+- contentinfo:
+  - text: SchoolVision.AI
+  - paragraph: Complete Campus Intelligence Platform. Where your SIS ends, we begin. Serving 523 campuses with 20+ years of experience.
+  - link:
+    - /url: https://linkedin.com/company/schoolvision-ai
+    - img
+  - link:
+    - /url: https://twitter.com/schoolvisionai
+    - img
+  - link:
+    - /url: https://youtube.com/schoolvisionai
+    - img
+  - heading "Solutions" [level=3]
+  - list:
+    - listitem:
+      - link "All Solutions":
+        - /url: /solutions
+    - listitem:
+      - link "Attendance & Safety":
+        - /url: /solutions/attendance-safety
+    - listitem:
+      - link "Point of Sale":
+        - /url: /solutions/point-of-sale
+    - listitem:
+      - link "AI Grading":
+        - /url: /solutions/ai-grading
+    - listitem:
+      - link "Compliance Tracking":
+        - /url: /solutions/compliance-tracking
+    - listitem:
+      - link "Predictive Analytics":
+        - /url: /solutions/predictive-analytics
+  - heading "Markets" [level=3]
+  - list:
+    - listitem:
+      - link "K-12 Schools":
+        - /url: /why-sv/k12
+    - listitem:
+      - link "Higher Education":
+        - /url: /why-sv/higher-ed
+    - listitem:
+      - link "Vocational/CTE":
+        - /url: /why-sv/vocational
+    - listitem:
+      - link "CDL Programs":
+        - /url: /markets/cdl-programs
+    - listitem:
+      - link "Healthcare Training":
+        - /url: /markets/healthcare-training
+    - listitem:
+      - link "Trade Schools":
+        - /url: /markets/trade-schools
+  - heading "Resources" [level=3]
+  - list:
+    - listitem:
+      - link "Resource Library":
+        - /url: /library
+    - listitem:
+      - link "Blog":
+        - /url: /blog
+    - listitem:
+      - link "ROI Calculator":
+        - /url: /roi-calculator
+    - listitem:
+      - link "FAQ":
+        - /url: /faq
+    - listitem:
+      - link "API Documentation":
+        - /url: /api-docs
+    - listitem:
+      - link "Support Center":
+        - /url: https://support.schoolvision.ai
+  - img
+  - text: Sales & Support
+  - link "801-659-7778":
+    - /url: tel:801-659-7778
+  - img
+  - text: Email Us
+  - link "info@schoolvision.ai":
+    - /url: mailto:info@schoolvision.ai
+  - img
+  - text: Headquarters Salt Lake City, Utah © 2025 SchoolVision.AI. All rights reserved. | 20+ Years Serving Education
+  - link "Privacy Policy":
+    - /url: /privacy
+  - link "Terms of Service":
+    - /url: /terms
+  - link "FERPA Compliance":
+    - /url: /ferpa
+  - link "Accessibility":
+    - /url: /accessibility
+  - link "Sitemap":
+    - /url: /sitemap
+  - text: Trusted Partners & Certifications SOC 2 Type II FERPA Compliant Ed-Fi Certified ISO 27001 COPPA Compliant
+- heading "We value your privacy" [level=3]
+- paragraph: We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences by clicking "Cookie Settings".
+- button "Accept All"
+- button "Cookie Settings"
+- button "Reject All"
+```

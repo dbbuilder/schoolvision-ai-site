@@ -1,0 +1,193 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - link "SchoolVision.AI":
+    - /url: /
+  - link "Home":
+    - /url: /
+  - link "Solutions":
+    - /url: /solutions
+  - button "Why SV":
+    - text: Why SV
+    - img
+  - link "ROI Calculator":
+    - /url: /roi-calculator
+  - link "Resources":
+    - /url: /library
+  - link "Blog":
+    - /url: /blog
+  - link "Pricing":
+    - /url: /pricing
+  - link "About":
+    - /url: /about
+  - link "Contact Sales":
+    - /url: /contact
+    - button "Contact Sales"
+  - link "Request Demo":
+    - /url: /demo
+    - button "Request Demo"
+- main:
+  - heading "Contact SchoolVision.AI" [level=1]
+  - paragraph: Ready to transform your campus with AI? Our team is here to help you get started.
+  - heading "Let's Start a Conversation" [level=2]
+  - paragraph: Whether you're looking to modernize your campus operations or have questions about our solutions, we're here to help. Fill out the form and we'll get back to you within 24 hours.
+  - heading "Sales Inquiries" [level=3]
+  - paragraph:
+    - link "sales@schoolvision.ai":
+      - /url: mailto:sales@schoolvision.ai
+  - paragraph:
+    - link "801-659-7778":
+      - /url: tel:801-659-7778
+  - heading "Support" [level=3]
+  - paragraph:
+    - link "support@schoolvision.ai":
+      - /url: mailto:support@schoolvision.ai
+  - paragraph: Available 24/7 for existing customers
+  - heading "Office Hours" [level=3]
+  - paragraph: "Monday - Friday: 8:00 AM - 6:00 PM MT"
+  - paragraph: "Saturday - Sunday: Emergency support only"
+  - heading "Headquarters" [level=3]
+  - paragraph: SchoolVision.AI 123 Innovation Way, Suite 400 Salt Lake City, Utah 84101 USA
+  - text: First Name *
+  - textbox "First Name *"
+  - text: Last Name *
+  - textbox "Last Name *"
+  - text: Email *
+  - textbox "Email *"
+  - text: Phone Number
+  - textbox "Phone Number"
+  - text: School/Organization *
+  - textbox "School/Organization *"
+  - text: Your Role *
+  - combobox "Your Role *":
+    - option "Select your role" [disabled] [selected]
+    - option "Administrator"
+    - option "Principal"
+    - option "IT Director"
+    - option "Teacher"
+    - option "Superintendent"
+    - option "Other"
+  - text: Organization Type *
+  - combobox "Organization Type *":
+    - option "Select organization type" [disabled] [selected]
+    - option "K-12 Public School"
+    - option "K-12 Private School"
+    - option "Higher Education"
+    - option "Vocational/Technical School"
+    - option "School District"
+    - option "Other"
+  - text: Message *
+  - textbox "Message *"
+  - button "Send Message" [disabled]
+  - text: This site is protected by reCAPTCHA and the Google
+  - link "Privacy Policy":
+    - /url: https://policies.google.com/privacy
+  - text: and
+  - link "Terms of Service":
+    - /url: https://policies.google.com/terms
+  - text: apply.
+  - heading "Prefer a Live Demo?" [level=2]
+  - paragraph: See SchoolVision.AI in action with a personalized demo tailored to your institution's needs.
+  - link "Schedule a Demo":
+    - /url: /demo
+    - button "Schedule a Demo"
+- contentinfo:
+  - text: SchoolVision.AI
+  - paragraph: Complete Campus Intelligence Platform. Where your SIS ends, we begin. Serving 523 campuses with 20+ years of experience.
+  - link:
+    - /url: https://linkedin.com/company/schoolvision-ai
+    - img
+  - link:
+    - /url: https://twitter.com/schoolvisionai
+    - img
+  - link:
+    - /url: https://youtube.com/schoolvisionai
+    - img
+  - heading "Solutions" [level=3]
+  - list:
+    - listitem:
+      - link "All Solutions":
+        - /url: /solutions
+    - listitem:
+      - link "Attendance & Safety":
+        - /url: /solutions/attendance-safety
+    - listitem:
+      - link "Point of Sale":
+        - /url: /solutions/point-of-sale
+    - listitem:
+      - link "AI Grading":
+        - /url: /solutions/ai-grading
+    - listitem:
+      - link "Compliance Tracking":
+        - /url: /solutions/compliance-tracking
+    - listitem:
+      - link "Predictive Analytics":
+        - /url: /solutions/predictive-analytics
+  - heading "Markets" [level=3]
+  - list:
+    - listitem:
+      - link "K-12 Schools":
+        - /url: /why-sv/k12
+    - listitem:
+      - link "Higher Education":
+        - /url: /why-sv/higher-ed
+    - listitem:
+      - link "Vocational/CTE":
+        - /url: /why-sv/vocational
+    - listitem:
+      - link "CDL Programs":
+        - /url: /markets/cdl-programs
+    - listitem:
+      - link "Healthcare Training":
+        - /url: /markets/healthcare-training
+    - listitem:
+      - link "Trade Schools":
+        - /url: /markets/trade-schools
+  - heading "Resources" [level=3]
+  - list:
+    - listitem:
+      - link "Resource Library":
+        - /url: /library
+    - listitem:
+      - link "Blog":
+        - /url: /blog
+    - listitem:
+      - link "ROI Calculator":
+        - /url: /roi-calculator
+    - listitem:
+      - link "FAQ":
+        - /url: /faq
+    - listitem:
+      - link "API Documentation":
+        - /url: /api-docs
+    - listitem:
+      - link "Support Center":
+        - /url: https://support.schoolvision.ai
+  - img
+  - text: Sales & Support
+  - link "801-659-7778":
+    - /url: tel:801-659-7778
+  - img
+  - text: Email Us
+  - link "info@schoolvision.ai":
+    - /url: mailto:info@schoolvision.ai
+  - img
+  - text: Headquarters Salt Lake City, Utah © 2025 SchoolVision.AI. All rights reserved. | 20+ Years Serving Education
+  - link "Privacy Policy":
+    - /url: /privacy
+  - link "Terms of Service":
+    - /url: /terms
+  - link "FERPA Compliance":
+    - /url: /ferpa
+  - link "Accessibility":
+    - /url: /accessibility
+  - link "Sitemap":
+    - /url: /sitemap
+  - text: Trusted Partners & Certifications SOC 2 Type II FERPA Compliant Ed-Fi Certified ISO 27001 COPPA Compliant
+- heading "We value your privacy" [level=3]
+- paragraph: We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences by clicking "Cookie Settings".
+- button "Accept All"
+- button "Cookie Settings"
+- button "Reject All"
+```

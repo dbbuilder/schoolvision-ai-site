@@ -1,0 +1,194 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - link "SchoolVision.AI":
+    - /url: /
+  - link "Home":
+    - /url: /
+  - link "Solutions":
+    - /url: /solutions
+  - button "Why SV":
+    - text: Why SV
+    - img
+  - link "ROI Calculator":
+    - /url: /roi-calculator
+  - link "Resources":
+    - /url: /library
+  - link "Blog":
+    - /url: /blog
+  - link "Pricing":
+    - /url: /pricing
+  - link "About":
+    - /url: /about
+  - link "Contact Sales":
+    - /url: /contact
+    - button "Contact Sales"
+  - link "Request Demo":
+    - /url: /demo
+    - button "Request Demo"
+- main:
+  - navigation:
+    - link "← Back to Vocational Schools":
+      - /url: /markets/vocational
+  - heading "Why SchoolVision.AI for Nursing Programs" [level=1]
+  - paragraph: Purpose-built for nursing education with comprehensive clinical tracking, simulation management, and the tools needed to prepare tomorrow's healthcare heroes.
+  - heading "Designed by Nursing Educators, For Nursing Educators" [level=2]
+  - paragraph: Our team includes nurse educators, clinical coordinators, and simulation lab directors who understand the complexities of nursing education. We've built SchoolVision.AI to address the unique challenges of preparing students for the demands of modern healthcare.
+  - heading "Clinical Rotation Excellence" [level=3]
+  - paragraph: Streamline the complex process of coordinating clinical placements across multiple healthcare facilities. Track requirements, manage documentation, and ensure every student gets the experiences they need.
+  - list:
+    - listitem:
+      - img
+      - text: Automated clinical site matching based on requirements
+    - listitem:
+      - img
+      - text: Real-time tracking of clinical hours by specialty
+    - listitem:
+      - img
+      - text: Mobile app for preceptor evaluations
+  - heading "Simulation Lab Optimization" [level=3]
+  - paragraph: Maximize your simulation lab investment with intelligent scheduling, scenario management, and competency tracking. Every minute in the lab becomes a valuable learning experience.
+  - paragraph: 35% increase in simulation lab utilization
+  - heading "NCLEX Success Tracking" [level=3]
+  - paragraph: Identify at-risk students early with predictive analytics. Track practice exam performance, remediation efforts, and correlate clinical performance with NCLEX readiness.
+  - heading "Features Built for Nursing Education Excellence" [level=2]
+  - heading "Clinical Passport System" [level=3]
+  - paragraph: Students carry a digital passport documenting every clinical experience, skill performed, and competency achieved. Preceptors sign off electronically in real-time.
+  - text: Image Placeholder
+  - heading "Medication Administration Training" [level=3]
+  - paragraph: Practice medication calculations, MAR documentation, and drug interaction checking in a safe, simulated environment that mirrors hospital systems.
+  - text: Image Placeholder
+  - heading "Automated Scenario Programming" [level=3]
+  - paragraph: Pre-programmed simulation scenarios that automatically control high-fidelity mannequins. Consistent experiences for every student with detailed performance analytics.
+  - text: Image Placeholder
+  - heading "Immunization & Compliance Tracking" [level=3]
+  - paragraph: Never miss a required immunization or certification. Automated alerts ensure students maintain compliance for all clinical sites.
+  - text: Image Placeholder
+  - heading "Trusted by Leading Nursing Programs" [level=2]
+  - text: Image Placeholder
+  - blockquote: "\"SchoolVision.AI transformed our clinical coordination. What used to take days now takes hours, and our NCLEX pass rates improved to 92% first-time.\""
+  - text: Dr. Patricia Williams, RN
+  - paragraph: Dean of Nursing, Regional Nursing Institute
+  - text: Image Placeholder
+  - blockquote: "\"The simulation lab scheduling alone justified the investment. We're seeing 35% better utilization and students are more prepared for clinical rotations.\""
+  - text: James Mitchell, MSN
+  - paragraph: Simulation Director, Healthcare Training Academy
+  - heading "Implementation Designed for Nursing Programs" [level=2]
+  - paragraph: We understand the critical nature of nursing education. Our implementation process ensures zero disruption to your clinical schedules while getting you up and running quickly.
+  - text: "1"
+  - heading "Clinical Site Setup (Week 1)" [level=3]
+  - paragraph: Import clinical site agreements, configure rotation schedules, and set up requirement tracking for each facility. Integrate with existing systems.
+  - text: "2"
+  - heading "Skills & Simulation Configuration (Week 2)" [level=3]
+  - paragraph: Set up competency checklists, configure simulation scenarios, and import existing student records. Train simulation staff on new capabilities.
+  - text: "3"
+  - heading "Faculty Training & Launch (Week 3)" [level=3]
+  - paragraph: Comprehensive training for faculty, clinical coordinators, and lab staff. Soft launch with pilot group before full deployment.
+  - heading "Calculate Your Nursing Program's ROI" [level=2]
+  - paragraph: See how SchoolVision.AI can improve outcomes while reducing administrative burden with our nursing program-specific ROI calculator.
+  - button "Calculate Your ROI"
+  - button "Schedule a Demo"
+  - heading "Ready to Elevate Your Nursing Program?" [level=2]
+  - paragraph: Join nursing programs nationwide using SchoolVision.AI to streamline operations, improve clinical coordination, and achieve better student outcomes.
+  - text: 92% Average NCLEX Pass Rate 100% Clinical Compliance 24/7 Support Available
+  - button "Request Your Demo Today"
+- contentinfo:
+  - text: SchoolVision.AI
+  - paragraph: Complete Campus Intelligence Platform. Where your SIS ends, we begin. Serving 523 campuses with 20+ years of experience.
+  - link:
+    - /url: https://linkedin.com/company/schoolvision-ai
+    - img
+  - link:
+    - /url: https://twitter.com/schoolvisionai
+    - img
+  - link:
+    - /url: https://youtube.com/schoolvisionai
+    - img
+  - heading "Solutions" [level=3]
+  - list:
+    - listitem:
+      - link "All Solutions":
+        - /url: /solutions
+    - listitem:
+      - link "Attendance & Safety":
+        - /url: /solutions/attendance-safety
+    - listitem:
+      - link "Point of Sale":
+        - /url: /solutions/point-of-sale
+    - listitem:
+      - link "AI Grading":
+        - /url: /solutions/ai-grading
+    - listitem:
+      - link "Compliance Tracking":
+        - /url: /solutions/compliance-tracking
+    - listitem:
+      - link "Predictive Analytics":
+        - /url: /solutions/predictive-analytics
+  - heading "Markets" [level=3]
+  - list:
+    - listitem:
+      - link "K-12 Schools":
+        - /url: /why-sv/k12
+    - listitem:
+      - link "Higher Education":
+        - /url: /why-sv/higher-ed
+    - listitem:
+      - link "Vocational/CTE":
+        - /url: /why-sv/vocational
+    - listitem:
+      - link "CDL Programs":
+        - /url: /markets/cdl-programs
+    - listitem:
+      - link "Healthcare Training":
+        - /url: /markets/healthcare-training
+    - listitem:
+      - link "Trade Schools":
+        - /url: /markets/trade-schools
+  - heading "Resources" [level=3]
+  - list:
+    - listitem:
+      - link "Resource Library":
+        - /url: /library
+    - listitem:
+      - link "Blog":
+        - /url: /blog
+    - listitem:
+      - link "ROI Calculator":
+        - /url: /roi-calculator
+    - listitem:
+      - link "FAQ":
+        - /url: /faq
+    - listitem:
+      - link "API Documentation":
+        - /url: /api-docs
+    - listitem:
+      - link "Support Center":
+        - /url: https://support.schoolvision.ai
+  - img
+  - text: Sales & Support
+  - link "801-659-7778":
+    - /url: tel:801-659-7778
+  - img
+  - text: Email Us
+  - link "info@schoolvision.ai":
+    - /url: mailto:info@schoolvision.ai
+  - img
+  - text: Headquarters Salt Lake City, Utah © 2025 SchoolVision.AI. All rights reserved. | 20+ Years Serving Education
+  - link "Privacy Policy":
+    - /url: /privacy
+  - link "Terms of Service":
+    - /url: /terms
+  - link "FERPA Compliance":
+    - /url: /ferpa
+  - link "Accessibility":
+    - /url: /accessibility
+  - link "Sitemap":
+    - /url: /sitemap
+  - text: Trusted Partners & Certifications SOC 2 Type II FERPA Compliant Ed-Fi Certified ISO 27001 COPPA Compliant
+- heading "We value your privacy" [level=3]
+- paragraph: We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences by clicking "Cookie Settings".
+- button "Accept All"
+- button "Cookie Settings"
+- button "Reject All"
+```

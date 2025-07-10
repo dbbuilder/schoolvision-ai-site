@@ -1,0 +1,194 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - link "SchoolVision.AI":
+    - /url: /
+  - link "Home":
+    - /url: /
+  - link "Solutions":
+    - /url: /solutions
+  - button "Why SV":
+    - text: Why SV
+    - img
+  - link "ROI Calculator":
+    - /url: /roi-calculator
+  - link "Resources":
+    - /url: /library
+  - link "Blog":
+    - /url: /blog
+  - link "Pricing":
+    - /url: /pricing
+  - link "About":
+    - /url: /about
+  - link "Contact Sales":
+    - /url: /contact
+    - button "Contact Sales"
+  - link "Request Demo":
+    - /url: /demo
+    - button "Request Demo"
+- main:
+  - navigation:
+    - link "← Back to Vocational Schools":
+      - /url: /markets/vocational
+  - heading "Why SchoolVision.AI for Dental Programs" [level=1]
+  - paragraph: Specifically designed for dental assisting and hygiene programs with comprehensive patient management, clinical tracking, and the tools needed for accreditation success.
+  - heading "Created by Dental Educators Who Understand Your Needs" [level=2]
+  - paragraph: Our team includes dental hygienists, clinic directors, and accreditation specialists who understand the unique requirements of dental education. We've built SchoolVision.AI to solve the real challenges dental programs face every day.
+  - heading "Patient Care Excellence" [level=3]
+  - paragraph: Manage your teaching clinic like a professional practice. From patient screening to treatment planning, provide exceptional care while meeting educational requirements.
+  - list:
+    - listitem:
+      - img
+      - text: HIPAA-compliant digital patient records
+    - listitem:
+      - img
+      - text: Online patient screening and scheduling
+    - listitem:
+      - img
+      - text: Automated treatment plan approvals
+  - heading "Accreditation-Ready Documentation" [level=3]
+  - paragraph: Track every procedure, competency, and clinical experience exactly as CODA requires. Generate accreditation reports instantly and stay inspection-ready year-round.
+  - paragraph: 100% CODA compliance with automated tracking
+  - heading "Instrument & Supply Management" [level=3]
+  - paragraph: Track expensive instruments and supplies with RFID technology. Know exactly what's in use, what's in sterilization, and what needs replacement.
+  - heading "Features Designed for Dental Education Success" [level=2]
+  - heading "Digital Treatment Planning" [level=3]
+  - paragraph: Students create comprehensive treatment plans with faculty approval workflows. Integrated with patient records and automatically tracks completed procedures.
+  - text: Image Placeholder
+  - heading "Periodontal Charting System" [level=3]
+  - paragraph: Voice-activated perio charting allows students to work efficiently while maintaining infection control. Automatic calculations and risk assessments included.
+  - text: Image Placeholder
+  - heading "Radiograph Quality Tracking" [level=3]
+  - paragraph: Digital X-ray submission with instructor critique tools. Track technique errors and ensure students meet radiograph requirements for graduation.
+  - text: Image Placeholder
+  - heading "Smart Patient Matching" [level=3]
+  - paragraph: AI matches patients to students based on procedure requirements, skill level, and time availability. Maximize educational value of every appointment.
+  - text: Image Placeholder
+  - heading "Trusted by Top Dental Programs" [level=2]
+  - text: Image Placeholder
+  - blockquote: "\"SchoolVision.AI revolutionized our clinic operations. Patient volume increased 40% and our students are completing requirements faster than ever before.\""
+  - text: Dr. Jennifer Lee, DDS
+  - paragraph: Program Director, Advanced Dental Institute
+  - text: Image Placeholder
+  - blockquote: "\"The instrument tracking alone saves us thousands annually. But the real win is how it streamlines accreditation - what took weeks now takes hours.\""
+  - text: Robert Chen, RDH
+  - paragraph: Clinic Director, Regional Dental Academy
+  - heading "Implementation Tailored for Dental Programs" [level=2]
+  - paragraph: We know you can't close your clinic for a system implementation. Our dental-specific process ensures continuous patient care while transitioning to SchoolVision.AI.
+  - text: "1"
+  - heading "Clinic Setup & Patient Import (Week 1)" [level=3]
+  - paragraph: Configure operatories, fee schedules, and procedure codes. Import existing patient records and active treatment plans securely.
+  - text: "2"
+  - heading "Requirements & Competencies (Week 2)" [level=3]
+  - paragraph: Set up procedure requirements, competency checklists, and grading rubrics. Configure CODA-compliant tracking and reporting.
+  - text: "3"
+  - heading "Training & Launch Support (Week 3)" [level=3]
+  - paragraph: Hands-on training for faculty, students, and clinic staff. Full support during first week of patient care to ensure smooth operations.
+  - heading "Calculate Your Dental Program's ROI" [level=2]
+  - paragraph: Discover how SchoolVision.AI can increase patient volume, reduce supply costs, and streamline operations with our dental program calculator.
+  - button "Calculate Your ROI"
+  - button "Schedule a Demo"
+  - heading "Ready to Modernize Your Dental Program?" [level=2]
+  - paragraph: Join leading dental programs using SchoolVision.AI to provide better patient care, streamline clinic operations, and achieve accreditation excellence.
+  - text: 40% Increase in Patient Volume 25% Faster Graduation $15K Annual Supply Savings
+  - button "Start Your Free Trial"
+- contentinfo:
+  - text: SchoolVision.AI
+  - paragraph: Complete Campus Intelligence Platform. Where your SIS ends, we begin. Serving 523 campuses with 20+ years of experience.
+  - link:
+    - /url: https://linkedin.com/company/schoolvision-ai
+    - img
+  - link:
+    - /url: https://twitter.com/schoolvisionai
+    - img
+  - link:
+    - /url: https://youtube.com/schoolvisionai
+    - img
+  - heading "Solutions" [level=3]
+  - list:
+    - listitem:
+      - link "All Solutions":
+        - /url: /solutions
+    - listitem:
+      - link "Attendance & Safety":
+        - /url: /solutions/attendance-safety
+    - listitem:
+      - link "Point of Sale":
+        - /url: /solutions/point-of-sale
+    - listitem:
+      - link "AI Grading":
+        - /url: /solutions/ai-grading
+    - listitem:
+      - link "Compliance Tracking":
+        - /url: /solutions/compliance-tracking
+    - listitem:
+      - link "Predictive Analytics":
+        - /url: /solutions/predictive-analytics
+  - heading "Markets" [level=3]
+  - list:
+    - listitem:
+      - link "K-12 Schools":
+        - /url: /why-sv/k12
+    - listitem:
+      - link "Higher Education":
+        - /url: /why-sv/higher-ed
+    - listitem:
+      - link "Vocational/CTE":
+        - /url: /why-sv/vocational
+    - listitem:
+      - link "CDL Programs":
+        - /url: /markets/cdl-programs
+    - listitem:
+      - link "Healthcare Training":
+        - /url: /markets/healthcare-training
+    - listitem:
+      - link "Trade Schools":
+        - /url: /markets/trade-schools
+  - heading "Resources" [level=3]
+  - list:
+    - listitem:
+      - link "Resource Library":
+        - /url: /library
+    - listitem:
+      - link "Blog":
+        - /url: /blog
+    - listitem:
+      - link "ROI Calculator":
+        - /url: /roi-calculator
+    - listitem:
+      - link "FAQ":
+        - /url: /faq
+    - listitem:
+      - link "API Documentation":
+        - /url: /api-docs
+    - listitem:
+      - link "Support Center":
+        - /url: https://support.schoolvision.ai
+  - img
+  - text: Sales & Support
+  - link "801-659-7778":
+    - /url: tel:801-659-7778
+  - img
+  - text: Email Us
+  - link "info@schoolvision.ai":
+    - /url: mailto:info@schoolvision.ai
+  - img
+  - text: Headquarters Salt Lake City, Utah © 2025 SchoolVision.AI. All rights reserved. | 20+ Years Serving Education
+  - link "Privacy Policy":
+    - /url: /privacy
+  - link "Terms of Service":
+    - /url: /terms
+  - link "FERPA Compliance":
+    - /url: /ferpa
+  - link "Accessibility":
+    - /url: /accessibility
+  - link "Sitemap":
+    - /url: /sitemap
+  - text: Trusted Partners & Certifications SOC 2 Type II FERPA Compliant Ed-Fi Certified ISO 27001 COPPA Compliant
+- heading "We value your privacy" [level=3]
+- paragraph: We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences by clicking "Cookie Settings".
+- button "Accept All"
+- button "Cookie Settings"
+- button "Reject All"
+```

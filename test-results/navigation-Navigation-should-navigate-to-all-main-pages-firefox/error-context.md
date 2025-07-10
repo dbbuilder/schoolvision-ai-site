@@ -1,0 +1,221 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - link "SchoolVision.AI":
+    - /url: /
+  - link "Home":
+    - /url: /
+  - link "Solutions":
+    - /url: /solutions
+  - button "Why SV":
+    - text: Why SV
+    - img
+  - link "ROI Calculator":
+    - /url: /roi-calculator
+  - link "Resources":
+    - /url: /library
+  - link "Blog":
+    - /url: /blog
+  - link "Pricing":
+    - /url: /pricing
+  - link "About":
+    - /url: /about
+  - link "Contact Sales":
+    - /url: /contact
+    - button "Contact Sales"
+  - link "Request Demo":
+    - /url: /demo
+    - button "Request Demo"
+- main:
+  - 'heading "Complete Campus Intelligence: Where Your SIS Ends, We Begin" [level=1]'
+  - paragraph: Capture every transaction, track every interaction, analyze every pattern. Our AI-powered platform integrates with your SIS to reveal the complete picture of campus operations.
+  - img
+  - heading "Advanced Time & Attendance" [level=2]
+  - paragraph: While your SIS knows class enrollment, we capture actual presence everywhere - classrooms, labs, cafeterias, clinicals. Our AI reveals engagement levels, at-risk behaviors, and success correlations.
+  - list:
+    - listitem:
+      - img
+      - text: "Multi-modal tracking: facial recognition, QR codes, biometrics"
+    - listitem:
+      - img
+      - text: Automated parent notifications - improved chronic absenteeism by 27%
+    - listitem:
+      - img
+      - text: Clock hour tracking for CTE programs - 100% compliance rate
+    - listitem:
+      - img
+      - text: Emergency location tracking
+  - text: 98%
+  - paragraph: Attendance accuracy improvement
+  - text: 45%
+  - paragraph: Reduction in cafeteria wait times
+  - img
+  - heading "Intelligent Point of Sale" [level=2]
+  - paragraph: Transform your cafeteria and bookstore operations with AI-driven inventory management and predictive ordering.
+  - list:
+    - listitem:
+      - img
+      - text: Voice-activated ordering
+    - listitem:
+      - img
+      - text: Predictive inventory management
+    - listitem:
+      - img
+      - text: Automated fraud detection
+    - listitem:
+      - img
+      - text: Nutritional tracking & allergen alerts
+  - img
+  - heading "AI-Powered Grading & Assessment" [level=2]
+  - paragraph: Save hours while providing more detailed feedback. Our AI assists teachers in grading and identifies learning gaps instantly.
+  - list:
+    - listitem:
+      - img
+      - text: Automated essay scoring with feedback
+    - listitem:
+      - img
+      - text: Plagiarism detection
+    - listitem:
+      - img
+      - text: Performance trend analysis
+    - listitem:
+      - img
+      - text: Personalized learning recommendations
+  - text: 70%
+  - paragraph: Time saved on grading
+  - text: 85%
+  - paragraph: Accuracy in predicting at-risk students
+  - img
+  - heading "Predictive Analytics & Reporting" [level=2]
+  - paragraph: Make data-driven decisions with AI-powered insights. Predict trends, identify at-risk students, and optimize resources.
+  - list:
+    - listitem:
+      - img
+      - text: Early warning system for at-risk students
+    - listitem:
+      - img
+      - text: Natural language report queries
+    - listitem:
+      - img
+      - text: Budget optimization recommendations
+    - listitem:
+      - img
+      - text: Automated compliance reporting
+  - heading "Seamless Integration" [level=2]
+  - paragraph: SchoolVision.AI works with your existing systems, not against them. Our platform integrates with popular educational tools and databases.
+  - text: Google
+  - paragraph: Classroom & Workspace
+  - text: Microsoft
+  - paragraph: Teams & Office 365
+  - text: Canvas
+  - paragraph: LMS Integration
+  - text: PowerSchool
+  - paragraph: SIS Integration
+  - heading "Ready to See These Solutions in Action?" [level=2]
+  - paragraph: Get a personalized demo and see how SchoolVision.AI can transform your institution
+  - link "Request a Demo":
+    - /url: /demo
+    - button "Request a Demo"
+  - link "View Pricing":
+    - /url: /pricing
+    - button "View Pricing"
+- contentinfo:
+  - text: SchoolVision.AI
+  - paragraph: Complete Campus Intelligence Platform. Where your SIS ends, we begin. Serving 523 campuses with 20+ years of experience.
+  - link:
+    - /url: https://linkedin.com/company/schoolvision-ai
+    - img
+  - link:
+    - /url: https://twitter.com/schoolvisionai
+    - img
+  - link:
+    - /url: https://youtube.com/schoolvisionai
+    - img
+  - heading "Solutions" [level=3]
+  - list:
+    - listitem:
+      - link "All Solutions":
+        - /url: /solutions
+    - listitem:
+      - link "Attendance & Safety":
+        - /url: /solutions/attendance-safety
+    - listitem:
+      - link "Point of Sale":
+        - /url: /solutions/point-of-sale
+    - listitem:
+      - link "AI Grading":
+        - /url: /solutions/ai-grading
+    - listitem:
+      - link "Compliance Tracking":
+        - /url: /solutions/compliance-tracking
+    - listitem:
+      - link "Predictive Analytics":
+        - /url: /solutions/predictive-analytics
+  - heading "Markets" [level=3]
+  - list:
+    - listitem:
+      - link "K-12 Schools":
+        - /url: /why-sv/k12
+    - listitem:
+      - link "Higher Education":
+        - /url: /why-sv/higher-ed
+    - listitem:
+      - link "Vocational/CTE":
+        - /url: /why-sv/vocational
+    - listitem:
+      - link "CDL Programs":
+        - /url: /markets/cdl-programs
+    - listitem:
+      - link "Healthcare Training":
+        - /url: /markets/healthcare-training
+    - listitem:
+      - link "Trade Schools":
+        - /url: /markets/trade-schools
+  - heading "Resources" [level=3]
+  - list:
+    - listitem:
+      - link "Resource Library":
+        - /url: /library
+    - listitem:
+      - link "Blog":
+        - /url: /blog
+    - listitem:
+      - link "ROI Calculator":
+        - /url: /roi-calculator
+    - listitem:
+      - link "FAQ":
+        - /url: /faq
+    - listitem:
+      - link "API Documentation":
+        - /url: /api-docs
+    - listitem:
+      - link "Support Center":
+        - /url: https://support.schoolvision.ai
+  - img
+  - text: Sales & Support
+  - link "801-659-7778":
+    - /url: tel:801-659-7778
+  - img
+  - text: Email Us
+  - link "info@schoolvision.ai":
+    - /url: mailto:info@schoolvision.ai
+  - img
+  - text: Headquarters Salt Lake City, Utah © 2025 SchoolVision.AI. All rights reserved. | 20+ Years Serving Education
+  - link "Privacy Policy":
+    - /url: /privacy
+  - link "Terms of Service":
+    - /url: /terms
+  - link "FERPA Compliance":
+    - /url: /ferpa
+  - link "Accessibility":
+    - /url: /accessibility
+  - link "Sitemap":
+    - /url: /sitemap
+  - text: Trusted Partners & Certifications SOC 2 Type II FERPA Compliant Ed-Fi Certified ISO 27001 COPPA Compliant
+- heading "We value your privacy" [level=3]
+- paragraph: We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences by clicking "Cookie Settings".
+- button "Accept All"
+- button "Cookie Settings"
+- button "Reject All"
+```

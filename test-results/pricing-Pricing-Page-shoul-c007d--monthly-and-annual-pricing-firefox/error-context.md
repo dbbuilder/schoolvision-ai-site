@@ -1,0 +1,296 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - link "SchoolVision.AI":
+    - /url: /
+  - link "Home":
+    - /url: /
+  - link "Solutions":
+    - /url: /solutions
+  - button "Why SV":
+    - text: Why SV
+    - img
+  - link "ROI Calculator":
+    - /url: /roi-calculator
+  - link "Resources":
+    - /url: /library
+  - link "Blog":
+    - /url: /blog
+  - link "Pricing":
+    - /url: /pricing
+  - link "About":
+    - /url: /about
+  - link "Contact Sales":
+    - /url: /contact
+    - button "Contact Sales"
+  - link "Request Demo":
+    - /url: /demo
+    - button "Request Demo"
+- main:
+  - heading "Simple, Transparent Pricing" [level=1]
+  - paragraph: Choose the plan that fits your institution's needs. All plans include core features with no hidden fees.
+  - button "Monthly"
+  - button "Annual Save 20%"
+  - heading "Starter" [level=3]
+  - paragraph: Perfect for small schools getting started with AI
+  - text: $299 /month
+  - paragraph: per school per month
+  - list:
+    - listitem:
+      - img
+      - text: Up to 500 students
+    - listitem:
+      - img
+      - text: Smart Attendance
+    - listitem:
+      - img
+      - text: Basic Reporting
+    - listitem:
+      - img
+      - text: Email Support
+    - listitem:
+      - img
+      - text: Mobile App Access
+    - listitem:
+      - img
+      - text: 99.9% Uptime SLA
+  - button "Start Free Trial"
+  - heading "Professional" [level=3]
+  - paragraph: Complete solution for growing institutions
+  - text: Most Popular $599 /month
+  - paragraph: per school per month
+  - list:
+    - listitem:
+      - img
+      - text: Up to 2,000 students
+    - listitem:
+      - img
+      - text: All Starter features
+    - listitem:
+      - img
+      - text: AI-Powered Grading
+    - listitem:
+      - img
+      - text: Intelligent POS
+    - listitem:
+      - img
+      - text: Advanced Analytics
+    - listitem:
+      - img
+      - text: Priority Support
+    - listitem:
+      - img
+      - text: API Access
+    - listitem:
+      - img
+      - text: Custom Integrations
+  - button "Start Free Trial"
+  - heading "Enterprise" [level=3]
+  - paragraph: Tailored solutions for large districts
+  - text: $Custom /month
+  - paragraph: Custom pricing
+  - list:
+    - listitem:
+      - img
+      - text: Unlimited students
+    - listitem:
+      - img
+      - text: All Professional features
+    - listitem:
+      - img
+      - text: Predictive Analytics
+    - listitem:
+      - img
+      - text: Custom AI Models
+    - listitem:
+      - img
+      - text: Dedicated Success Manager
+    - listitem:
+      - img
+      - text: On-premise deployment option
+    - listitem:
+      - img
+      - text: Advanced Security Features
+    - listitem:
+      - img
+      - text: Custom Training
+  - button "Contact Sales"
+  - heading "Need a Custom Solution?" [level=3]
+  - paragraph: For large districts or institutions with special requirements, we offer custom enterprise plans.
+  - link "Contact Sales":
+    - /url: /contact
+    - button "Contact Sales"
+  - paragraph: Want to see your potential savings?
+  - link "Try Our ROI Calculator":
+    - /url: /roi-calculator
+    - button "Try Our ROI Calculator"
+  - heading "Compare Plans" [level=2]
+  - table:
+    - rowgroup:
+      - row "Features Starter Professional Enterprise":
+        - cell "Features"
+        - cell "Starter"
+        - cell "Professional"
+        - cell "Enterprise"
+    - rowgroup:
+      - row "Smart Attendance & Safety":
+        - cell "Smart Attendance & Safety"
+        - cell
+        - cell
+        - cell
+      - row "Basic Reporting":
+        - cell "Basic Reporting"
+        - cell
+        - cell
+        - cell
+      - row "Mobile App Access":
+        - cell "Mobile App Access"
+        - cell
+        - cell
+        - cell
+      - row "AI-Powered Grading -":
+        - cell "AI-Powered Grading"
+        - cell "-"
+        - cell
+        - cell
+      - row "Intelligent POS -":
+        - cell "Intelligent POS"
+        - cell "-"
+        - cell
+        - cell
+      - row "Predictive Analytics - -":
+        - cell "Predictive Analytics"
+        - cell "-"
+        - cell "-"
+        - cell
+      - row "Custom AI Models - -":
+        - cell "Custom AI Models"
+        - cell "-"
+        - cell "-"
+        - cell
+      - row "API Access -":
+        - cell "API Access"
+        - cell "-"
+        - cell
+        - cell
+      - row "Dedicated Success Manager - -":
+        - cell "Dedicated Success Manager"
+        - cell "-"
+        - cell "-"
+        - cell
+  - heading "Frequently Asked Questions" [level=2]
+  - heading "Can I change plans later?" [level=3]
+  - paragraph: Yes! You can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle.
+  - heading "Is there a setup fee?" [level=3]
+  - paragraph: No, there are no setup fees. We provide free onboarding and training for all plans to ensure a smooth implementation.
+  - heading "What payment methods do you accept?" [level=3]
+  - paragraph: We accept all major credit cards, ACH transfers, and purchase orders for annual plans. Enterprise customers can also pay by invoice.
+  - heading "Do you offer discounts for multiple schools?" [level=3]
+  - paragraph: Yes! We offer volume discounts for districts with multiple schools. Contact our sales team for custom pricing.
+  - heading "What kind of support is included?" [level=3]
+  - paragraph: All plans include email support. Professional plans get priority support with faster response times, and Enterprise plans include a dedicated success manager.
+  - heading "Ready to Get Started?" [level=2]
+  - paragraph: Join hundreds of schools already using SchoolVision.AI
+  - link "Start Free Trial":
+    - /url: /demo
+    - button "Start Free Trial"
+- contentinfo:
+  - text: SchoolVision.AI
+  - paragraph: Complete Campus Intelligence Platform. Where your SIS ends, we begin. Serving 523 campuses with 20+ years of experience.
+  - link:
+    - /url: https://linkedin.com/company/schoolvision-ai
+    - img
+  - link:
+    - /url: https://twitter.com/schoolvisionai
+    - img
+  - link:
+    - /url: https://youtube.com/schoolvisionai
+    - img
+  - heading "Solutions" [level=3]
+  - list:
+    - listitem:
+      - link "All Solutions":
+        - /url: /solutions
+    - listitem:
+      - link "Attendance & Safety":
+        - /url: /solutions/attendance-safety
+    - listitem:
+      - link "Point of Sale":
+        - /url: /solutions/point-of-sale
+    - listitem:
+      - link "AI Grading":
+        - /url: /solutions/ai-grading
+    - listitem:
+      - link "Compliance Tracking":
+        - /url: /solutions/compliance-tracking
+    - listitem:
+      - link "Predictive Analytics":
+        - /url: /solutions/predictive-analytics
+  - heading "Markets" [level=3]
+  - list:
+    - listitem:
+      - link "K-12 Schools":
+        - /url: /why-sv/k12
+    - listitem:
+      - link "Higher Education":
+        - /url: /why-sv/higher-ed
+    - listitem:
+      - link "Vocational/CTE":
+        - /url: /why-sv/vocational
+    - listitem:
+      - link "CDL Programs":
+        - /url: /markets/cdl-programs
+    - listitem:
+      - link "Healthcare Training":
+        - /url: /markets/healthcare-training
+    - listitem:
+      - link "Trade Schools":
+        - /url: /markets/trade-schools
+  - heading "Resources" [level=3]
+  - list:
+    - listitem:
+      - link "Resource Library":
+        - /url: /library
+    - listitem:
+      - link "Blog":
+        - /url: /blog
+    - listitem:
+      - link "ROI Calculator":
+        - /url: /roi-calculator
+    - listitem:
+      - link "FAQ":
+        - /url: /faq
+    - listitem:
+      - link "API Documentation":
+        - /url: /api-docs
+    - listitem:
+      - link "Support Center":
+        - /url: https://support.schoolvision.ai
+  - img
+  - text: Sales & Support
+  - link "801-659-7778":
+    - /url: tel:801-659-7778
+  - img
+  - text: Email Us
+  - link "info@schoolvision.ai":
+    - /url: mailto:info@schoolvision.ai
+  - img
+  - text: Headquarters Salt Lake City, Utah © 2025 SchoolVision.AI. All rights reserved. | 20+ Years Serving Education
+  - link "Privacy Policy":
+    - /url: /privacy
+  - link "Terms of Service":
+    - /url: /terms
+  - link "FERPA Compliance":
+    - /url: /ferpa
+  - link "Accessibility":
+    - /url: /accessibility
+  - link "Sitemap":
+    - /url: /sitemap
+  - text: Trusted Partners & Certifications SOC 2 Type II FERPA Compliant Ed-Fi Certified ISO 27001 COPPA Compliant
+- heading "We value your privacy" [level=3]
+- paragraph: We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences by clicking "Cookie Settings".
+- button "Accept All"
+- button "Cookie Settings"
+- button "Reject All"
+```

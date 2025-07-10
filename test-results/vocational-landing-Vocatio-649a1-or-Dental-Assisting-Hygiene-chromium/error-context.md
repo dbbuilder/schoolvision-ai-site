@@ -1,0 +1,188 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - link "SchoolVision.AI":
+    - /url: /
+  - link "Home":
+    - /url: /
+  - link "Solutions":
+    - /url: /solutions
+  - button "Why SV":
+    - text: Why SV
+    - img
+  - link "ROI Calculator":
+    - /url: /roi-calculator
+  - link "Resources":
+    - /url: /library
+  - link "Blog":
+    - /url: /blog
+  - link "Pricing":
+    - /url: /pricing
+  - link "About":
+    - /url: /about
+  - link "Contact Sales":
+    - /url: /contact
+    - button "Contact Sales"
+  - link "Request Demo":
+    - /url: /demo
+    - button "Request Demo"
+- main:
+  - heading "Transform Your Dental Assisting/Hygiene Program" [level=1]
+  - paragraph: Elevate your dental program with integrated clinical management and state-of-the-art patient care tracking
+  - button "See How SchoolVision.AI Works":
+    - text: See How SchoolVision.AI Works
+    - img
+  - button "Why SchoolVision for Dental"
+  - heading "Built Specifically for Dental Assisting/Hygiene Schools" [level=2]
+  - img
+  - heading "Patient Record Management" [level=3]
+  - paragraph: HIPAA-compliant digital charts with treatment planning capabilities
+  - img
+  - heading "Clinical Requirements" [level=3]
+  - paragraph: Track procedures by type to meet accreditation standards
+  - img
+  - heading "Radiograph Tracking" [level=3]
+  - paragraph: Digital X-ray competency tracking with quality assessments
+  - heading "We Understand Your Challenges" [level=2]
+  - paragraph: Dental Assisting/Hygiene programs face unique operational challenges. SchoolVision.AI addresses each one.
+  - img
+  - heading "Procedure Requirements" [level=3]
+  - paragraph: Students need specific numbers of each procedure type for graduation
+  - img
+  - paragraph: Automatic tracking with real-time progress dashboards for students and faculty
+  - img
+  - heading "Patient Recruitment" [level=3]
+  - paragraph: Finding enough patients for students to meet clinical requirements
+  - img
+  - paragraph: Patient portal with online screening and appointment scheduling
+  - img
+  - heading "Instrument Tracking" [level=3]
+  - paragraph: Expensive instruments get lost or improperly sterilized
+  - img
+  - paragraph: RFID tracking with sterilization cycle documentation
+  - img
+  - heading "Clinic Efficiency" [level=3]
+  - paragraph: Long patient wait times and inefficient student-patient matching
+  - img
+  - paragraph: Smart scheduling matches patient needs with student requirements
+  - heading "Features Designed for Dental Assisting/Hygiene Education" [level=2]
+  - heading "Digital Treatment Plans" [level=3]
+  - paragraph: Create and track comprehensive treatment plans with faculty approval
+  - heading "Perio Charting" [level=3]
+  - paragraph: Digital periodontal charting with voice activation capability
+  - heading "Supply Kit Management" [level=3]
+  - paragraph: Track individual student kits and automatic resupply ordering
+  - heading "Radiograph Critique" [level=3]
+  - paragraph: Digital X-ray submission with instructor feedback tools
+  - heading "Patient Screening Portal" [level=3]
+  - paragraph: Online health history and treatment need assessment
+  - heading "Procedure Competency Videos" [level=3]
+  - paragraph: Record and review student clinical procedures
+  - heading "See Your Potential ROI" [level=2]
+  - paragraph: "Dental Assisting/Hygiene programs using SchoolVision.AI typically see:"
+  - text: 40% Increase in Patient Volume $15,000 Annual Supply Savings 25% Faster Graduation Rates
+  - button "Calculate Your ROI"
+  - heading "Ready to Transform Your Dental Assisting/Hygiene Program?" [level=2]
+  - paragraph: Join hundreds of vocational schools already using SchoolVision.AI to streamline operations and improve student outcomes.
+  - button "Request a Demo"
+  - button "Contact Sales"
+- contentinfo:
+  - text: SchoolVision.AI
+  - paragraph: Complete Campus Intelligence Platform. Where your SIS ends, we begin. Serving 523 campuses with 20+ years of experience.
+  - link:
+    - /url: https://linkedin.com/company/schoolvision-ai
+    - img
+  - link:
+    - /url: https://twitter.com/schoolvisionai
+    - img
+  - link:
+    - /url: https://youtube.com/schoolvisionai
+    - img
+  - heading "Solutions" [level=3]
+  - list:
+    - listitem:
+      - link "All Solutions":
+        - /url: /solutions
+    - listitem:
+      - link "Attendance & Safety":
+        - /url: /solutions/attendance-safety
+    - listitem:
+      - link "Point of Sale":
+        - /url: /solutions/point-of-sale
+    - listitem:
+      - link "AI Grading":
+        - /url: /solutions/ai-grading
+    - listitem:
+      - link "Compliance Tracking":
+        - /url: /solutions/compliance-tracking
+    - listitem:
+      - link "Predictive Analytics":
+        - /url: /solutions/predictive-analytics
+  - heading "Markets" [level=3]
+  - list:
+    - listitem:
+      - link "K-12 Schools":
+        - /url: /why-sv/k12
+    - listitem:
+      - link "Higher Education":
+        - /url: /why-sv/higher-ed
+    - listitem:
+      - link "Vocational/CTE":
+        - /url: /why-sv/vocational
+    - listitem:
+      - link "CDL Programs":
+        - /url: /markets/cdl-programs
+    - listitem:
+      - link "Healthcare Training":
+        - /url: /markets/healthcare-training
+    - listitem:
+      - link "Trade Schools":
+        - /url: /markets/trade-schools
+  - heading "Resources" [level=3]
+  - list:
+    - listitem:
+      - link "Resource Library":
+        - /url: /library
+    - listitem:
+      - link "Blog":
+        - /url: /blog
+    - listitem:
+      - link "ROI Calculator":
+        - /url: /roi-calculator
+    - listitem:
+      - link "FAQ":
+        - /url: /faq
+    - listitem:
+      - link "API Documentation":
+        - /url: /api-docs
+    - listitem:
+      - link "Support Center":
+        - /url: https://support.schoolvision.ai
+  - img
+  - text: Sales & Support
+  - link "801-659-7778":
+    - /url: tel:801-659-7778
+  - img
+  - text: Email Us
+  - link "info@schoolvision.ai":
+    - /url: mailto:info@schoolvision.ai
+  - img
+  - text: Headquarters Salt Lake City, Utah © 2025 SchoolVision.AI. All rights reserved. | 20+ Years Serving Education
+  - link "Privacy Policy":
+    - /url: /privacy
+  - link "Terms of Service":
+    - /url: /terms
+  - link "FERPA Compliance":
+    - /url: /ferpa
+  - link "Accessibility":
+    - /url: /accessibility
+  - link "Sitemap":
+    - /url: /sitemap
+  - text: Trusted Partners & Certifications SOC 2 Type II FERPA Compliant Ed-Fi Certified ISO 27001 COPPA Compliant
+- heading "We value your privacy" [level=3]
+- paragraph: We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences by clicking "Cookie Settings".
+- button "Accept All"
+- button "Cookie Settings"
+- button "Reject All"
+```

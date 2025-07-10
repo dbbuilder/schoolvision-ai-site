@@ -1,0 +1,194 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - link "SchoolVision.AI":
+    - /url: /
+  - link "Home":
+    - /url: /
+  - link "Solutions":
+    - /url: /solutions
+  - button "Why SV":
+    - text: Why SV
+    - img
+  - link "ROI Calculator":
+    - /url: /roi-calculator
+  - link "Resources":
+    - /url: /library
+  - link "Blog":
+    - /url: /blog
+  - link "Pricing":
+    - /url: /pricing
+  - link "About":
+    - /url: /about
+  - link "Contact Sales":
+    - /url: /contact
+    - button "Contact Sales"
+  - link "Request Demo":
+    - /url: /demo
+    - button "Request Demo"
+- main:
+  - navigation:
+    - link "← Back to Vocational Schools":
+      - /url: /markets/vocational
+  - heading "Why SchoolVision.AI for Cosmetology Schools" [level=1]
+  - paragraph: Designed specifically for beauty schools with deep understanding of state board requirements, client management, and the unique needs of cosmetology education.
+  - heading "Created by Beauty Industry Experts" [level=2]
+  - paragraph: Our team includes licensed cosmetologists, beauty school owners, and state board compliance experts who understand the intricacies of running a successful cosmetology program. We've built SchoolVision.AI to solve the real challenges you face.
+  - heading "State Board Compliance Automated" [level=3]
+  - paragraph: Track student hours by service category exactly as your state board requires. Generate compliant reports instantly and ensure every student meets graduation requirements.
+  - list:
+    - listitem:
+      - img
+      - text: Automatic hour categorization by service type
+    - listitem:
+      - img
+      - text: Real-time progress tracking for students
+    - listitem:
+      - img
+      - text: One-click state board report generation
+  - heading "Client Experience That Builds Your Reputation" [level=3]
+  - paragraph: Provide a professional experience from booking to service completion. Online scheduling, automated reminders, and digital consent forms show clients you run a modern, professional operation.
+  - paragraph: 60% reduction in no-shows with automated reminders
+  - heading "Inventory Control That Saves Money" [level=3]
+  - paragraph: Track product usage by student and service, set automatic reorder points, and get expiration alerts. Know exactly what you have, what you need, and what's costing you money.
+  - heading "Features Designed for Beauty Education" [level=2]
+  - heading "Digital Service Tickets with Photo Documentation" [level=3]
+  - paragraph: Students document their work with before/after photos, track products used, and receive instant feedback from instructors. Build portfolios automatically.
+  - text: Image Placeholder
+  - heading "Smart Client Booking Portal" [level=3]
+  - paragraph: Clients book appointments online, selecting services and preferred times. System automatically matches them with students who need those service hours.
+  - text: Image Placeholder
+  - heading "Chemical Tracking & Safety Compliance" [level=3]
+  - paragraph: Track chemical inventory, mixing ratios, and patch test results. Ensure OSHA compliance with automated safety data sheet management.
+  - text: Image Placeholder
+  - heading "Retail POS Integration" [level=3]
+  - paragraph: Sell professional products to clients with integrated inventory tracking. Students learn retail skills while you track sales performance.
+  - text: Image Placeholder
+  - heading "Trusted by Top Beauty Schools" [level=2]
+  - text: Image Placeholder
+  - blockquote: "\"SchoolVision.AI transformed our operations. State board reporting that took hours now takes minutes, and our client satisfaction scores have never been higher.\""
+  - text: Maria Rodriguez
+  - paragraph: Director, Elite Beauty Academy
+  - text: Image Placeholder
+  - blockquote: "\"The online booking system filled our appointment books and the inventory tracking has saved us thousands in product waste. It's been a game-changer.\""
+  - text: Ashley Chen
+  - paragraph: Owner, Glamour Institute
+  - heading "Implementation Tailored for Beauty Schools" [level=2]
+  - paragraph: We know you can't close your doors for a system implementation. Our beauty school-specific process gets you running without disrupting client services or student education.
+  - text: "1"
+  - heading "Service Menu & Pricing Setup (Week 1)" [level=3]
+  - paragraph: Configure your service menu, student pricing, and state board hour categories. Import existing client data and appointment history.
+  - text: "2"
+  - heading "Inventory & Product Setup (Week 2)" [level=3]
+  - paragraph: Catalog your professional and retail products, set par levels, and configure the dispensary system. Train staff on inventory procedures.
+  - text: "3"
+  - heading "Launch & Support (Week 3)" [level=3]
+  - paragraph: Go live with full support. We'll help manage your first day of digital tickets, ensure smooth client check-ins, and be available for any questions.
+  - heading "Calculate Your Beauty School's Potential Savings" [level=2]
+  - paragraph: See how much time and money SchoolVision.AI can save your cosmetology school with our specialized ROI calculator.
+  - button "Calculate Your ROI"
+  - button "Schedule a Demo"
+  - heading "Ready to Modernize Your Beauty School?" [level=2]
+  - paragraph: Join leading cosmetology schools using SchoolVision.AI to streamline operations, ensure compliance, and provide an exceptional education experience.
+  - text: 30-Day Free Trial 100% Client Data Import 24/7 Support
+  - button "Get Started Today"
+- contentinfo:
+  - text: SchoolVision.AI
+  - paragraph: Complete Campus Intelligence Platform. Where your SIS ends, we begin. Serving 523 campuses with 20+ years of experience.
+  - link:
+    - /url: https://linkedin.com/company/schoolvision-ai
+    - img
+  - link:
+    - /url: https://twitter.com/schoolvisionai
+    - img
+  - link:
+    - /url: https://youtube.com/schoolvisionai
+    - img
+  - heading "Solutions" [level=3]
+  - list:
+    - listitem:
+      - link "All Solutions":
+        - /url: /solutions
+    - listitem:
+      - link "Attendance & Safety":
+        - /url: /solutions/attendance-safety
+    - listitem:
+      - link "Point of Sale":
+        - /url: /solutions/point-of-sale
+    - listitem:
+      - link "AI Grading":
+        - /url: /solutions/ai-grading
+    - listitem:
+      - link "Compliance Tracking":
+        - /url: /solutions/compliance-tracking
+    - listitem:
+      - link "Predictive Analytics":
+        - /url: /solutions/predictive-analytics
+  - heading "Markets" [level=3]
+  - list:
+    - listitem:
+      - link "K-12 Schools":
+        - /url: /why-sv/k12
+    - listitem:
+      - link "Higher Education":
+        - /url: /why-sv/higher-ed
+    - listitem:
+      - link "Vocational/CTE":
+        - /url: /why-sv/vocational
+    - listitem:
+      - link "CDL Programs":
+        - /url: /markets/cdl-programs
+    - listitem:
+      - link "Healthcare Training":
+        - /url: /markets/healthcare-training
+    - listitem:
+      - link "Trade Schools":
+        - /url: /markets/trade-schools
+  - heading "Resources" [level=3]
+  - list:
+    - listitem:
+      - link "Resource Library":
+        - /url: /library
+    - listitem:
+      - link "Blog":
+        - /url: /blog
+    - listitem:
+      - link "ROI Calculator":
+        - /url: /roi-calculator
+    - listitem:
+      - link "FAQ":
+        - /url: /faq
+    - listitem:
+      - link "API Documentation":
+        - /url: /api-docs
+    - listitem:
+      - link "Support Center":
+        - /url: https://support.schoolvision.ai
+  - img
+  - text: Sales & Support
+  - link "801-659-7778":
+    - /url: tel:801-659-7778
+  - img
+  - text: Email Us
+  - link "info@schoolvision.ai":
+    - /url: mailto:info@schoolvision.ai
+  - img
+  - text: Headquarters Salt Lake City, Utah © 2025 SchoolVision.AI. All rights reserved. | 20+ Years Serving Education
+  - link "Privacy Policy":
+    - /url: /privacy
+  - link "Terms of Service":
+    - /url: /terms
+  - link "FERPA Compliance":
+    - /url: /ferpa
+  - link "Accessibility":
+    - /url: /accessibility
+  - link "Sitemap":
+    - /url: /sitemap
+  - text: Trusted Partners & Certifications SOC 2 Type II FERPA Compliant Ed-Fi Certified ISO 27001 COPPA Compliant
+- heading "We value your privacy" [level=3]
+- paragraph: We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences by clicking "Cookie Settings".
+- button "Accept All"
+- button "Cookie Settings"
+- button "Reject All"
+```
