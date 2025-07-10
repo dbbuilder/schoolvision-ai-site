@@ -1,0 +1,46 @@
+# SchoolVision.AI Robots.txt
+# https://schoolvision.ai
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow administrative and API paths
+Disallow: /admin/
+Disallow: /api/
+Disallow: /.well-known/
+Disallow: /private/
+
+# Allow specific bots full access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemap locations
+Sitemap: https://schoolvision.ai/sitemap.xml
+
+# Crawl delay for polite crawling
+Crawl-delay: 1
