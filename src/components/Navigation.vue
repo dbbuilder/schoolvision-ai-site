@@ -162,7 +162,8 @@ const navigation = [
   { name: 'Solutions', to: '/solutions' },
   { name: 'Why SV', dropdown: true },
   { name: 'ROI Calculator', to: '/roi-calculator' },
-  { name: 'Library', to: '/library' },
+  { name: 'Resources', to: '/library' },
+  { name: 'Blog', to: '/blog' },
   { name: 'Pricing', to: '/pricing' },
   { name: 'About', to: '/about' }
 ]

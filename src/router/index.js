@@ -102,6 +102,24 @@ const routes = [
     }
   },
   {
+    path: '/blog',
+    name: 'Blog',
+    component: () => import('../views/Blog.vue'),
+    meta: {
+      title: 'Blog - SchoolVision.AI',
+      description: 'Insights, trends, and best practices for educational technology leaders.'
+    }
+  },
+  {
+    path: '/blog/:slug',
+    name: 'BlogPost',
+    component: () => import('../views/BlogPost.vue'),
+    meta: {
+      title: 'Blog - SchoolVision.AI',
+      description: 'Read the latest insights on educational technology and campus management.'
+    }
+  },
+  {
     path: '/why-sv/k12',
     name: 'WhySV-K12',
     component: () => import('../views/WhySV-K12.vue'),
