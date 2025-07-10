@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- Hero Section -->
+    <!-- Hero Section v1.0.0 -->
     <section class="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white overflow-hidden">
       <div class="absolute inset-0 bg-black opacity-10"></div>
       <Container class="relative py-24 lg:py-32">
