@@ -70,19 +70,29 @@
                   </router-link>
                 </li>
                 <li class="ml-4">
-                  <span class="text-gray-500">Attendance & Safety</span>
+                  <router-link to="/solutions/attendance-safety" class="text-gray-700 hover:text-primary-600 transition-colors">
+                    Attendance & Safety
+                  </router-link>
                 </li>
                 <li class="ml-4">
-                  <span class="text-gray-500">Point of Sale</span>
+                  <router-link to="/solutions/point-of-sale" class="text-gray-700 hover:text-primary-600 transition-colors">
+                    Point of Sale
+                  </router-link>
                 </li>
                 <li class="ml-4">
-                  <span class="text-gray-500">AI Grading</span>
+                  <router-link to="/solutions/ai-grading" class="text-gray-700 hover:text-primary-600 transition-colors">
+                    AI Grading
+                  </router-link>
                 </li>
                 <li class="ml-4">
-                  <span class="text-gray-500">Compliance Tracking</span>
+                  <router-link to="/solutions/compliance-tracking" class="text-gray-700 hover:text-primary-600 transition-colors">
+                    Compliance Tracking
+                  </router-link>
                 </li>
                 <li class="ml-4">
-                  <span class="text-gray-500">Predictive Analytics</span>
+                  <router-link to="/solutions/predictive-analytics" class="text-gray-700 hover:text-primary-600 transition-colors">
+                    Predictive Analytics
+                  </router-link>
                 </li>
               </ul>
             </div>
@@ -108,6 +118,27 @@
                     Vocational Schools
                   </router-link>
                 </li>
+                <li class="mt-4 font-semibold">Vocational Landing Pages</li>
+                <li class="ml-4">
+                  <router-link to="/cdl" class="text-gray-700 hover:text-primary-600 transition-colors">
+                    CDL/Trucking Programs
+                  </router-link>
+                </li>
+                <li class="ml-4">
+                  <router-link to="/cosmetology" class="text-gray-700 hover:text-primary-600 transition-colors">
+                    Cosmetology Schools
+                  </router-link>
+                </li>
+                <li class="ml-4">
+                  <router-link to="/nursing" class="text-gray-700 hover:text-primary-600 transition-colors">
+                    Nursing Programs
+                  </router-link>
+                </li>
+                <li class="ml-4">
+                  <router-link to="/dental" class="text-gray-700 hover:text-primary-600 transition-colors">
+                    Dental Programs
+                  </router-link>
+                </li>
                 <li class="mt-4 font-semibold">Why SchoolVision</li>
                 <li class="ml-4">
                   <router-link to="/why-sv/k12" class="text-gray-700 hover:text-primary-600 transition-colors">
@@ -122,6 +153,26 @@
                 <li class="ml-4">
                   <router-link to="/why-sv/vocational" class="text-gray-700 hover:text-primary-600 transition-colors">
                     For Vocational
+                  </router-link>
+                </li>
+                <li class="ml-4">
+                  <router-link to="/why-schoolvision/cdl" class="text-gray-700 hover:text-primary-600 transition-colors">
+                    For CDL Programs
+                  </router-link>
+                </li>
+                <li class="ml-4">
+                  <router-link to="/why-schoolvision/cosmetology" class="text-gray-700 hover:text-primary-600 transition-colors">
+                    For Cosmetology
+                  </router-link>
+                </li>
+                <li class="ml-4">
+                  <router-link to="/why-schoolvision/nursing" class="text-gray-700 hover:text-primary-600 transition-colors">
+                    For Nursing
+                  </router-link>
+                </li>
+                <li class="ml-4">
+                  <router-link to="/why-schoolvision/dental" class="text-gray-700 hover:text-primary-600 transition-colors">
+                    For Dental
                   </router-link>
                 </li>
               </ul>

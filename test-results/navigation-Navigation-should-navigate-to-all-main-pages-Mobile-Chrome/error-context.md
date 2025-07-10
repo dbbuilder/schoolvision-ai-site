@@ -4,27 +4,9 @@
 - navigation:
   - link "SchoolVision AI":
     - /url: /
-  - link "Home":
-    - /url: /
-  - link "Solutions":
-    - /url: /solutions
-  - button "Why SV":
-    - text: Why SV
+  - button "Open main menu":
+    - text: Open main menu
     - img
-  - link "ROI Calculator":
-    - /url: /roi-calculator
-  - link "Library":
-    - /url: /library
-  - link "Pricing":
-    - /url: /pricing
-  - link "About":
-    - /url: /about
-  - link "Contact Sales":
-    - /url: /contact
-    - button "Contact Sales"
-  - link "Request Demo":
-    - /url: /demo
-    - button "Request Demo"
 - main:
   - heading "Intelligent Campus Management" [level=1]
   - paragraph: Transform your educational institution with AI-powered solutions. 20+ years of experience, now enhanced with cutting-edge artificial intelligence.

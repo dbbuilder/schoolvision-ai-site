@@ -282,6 +282,80 @@ const routes = [
       description: 'Build powerful integrations with the SchoolVision.AI platform using our comprehensive REST API.'
     }
   },
+  // Vocational Landing Pages
+  {
+    path: '/cdl',
+    name: 'CDLLanding',
+    component: () => import('../views/vocational/CDLLanding.vue'),
+    meta: {
+      title: 'CDL Training School Management - SchoolVision.AI',
+      description: 'Streamline CDL training operations with DOT compliance tracking, fleet management, and skills assessment tools.'
+    }
+  },
+  {
+    path: '/cosmetology',
+    name: 'CosmetologyLanding',
+    component: () => import('../views/vocational/CosmetologyLanding.vue'),
+    meta: {
+      title: 'Cosmetology School Management - SchoolVision.AI',
+      description: 'Manage beauty school operations with state board compliance, client scheduling, and inventory tracking.'
+    }
+  },
+  {
+    path: '/nursing',
+    name: 'NursingLanding',
+    component: () => import('../views/vocational/NursingLanding.vue'),
+    meta: {
+      title: 'Nursing Program Management - SchoolVision.AI',
+      description: 'Comprehensive nursing education platform with clinical rotations, simulation lab scheduling, and NCLEX tracking.'
+    }
+  },
+  {
+    path: '/dental',
+    name: 'DentalLanding',
+    component: () => import('../views/vocational/DentalLanding.vue'),
+    meta: {
+      title: 'Dental Program Management - SchoolVision.AI',
+      description: 'Elevate dental education with patient management, clinical tracking, and accreditation-ready reporting.'
+    }
+  },
+  // Why SchoolVision Pages for Vocational Programs
+  {
+    path: '/why-schoolvision/cdl',
+    name: 'WhySVCDL',
+    component: () => import('../views/WhySV-CDL.vue'),
+    meta: {
+      title: 'Why SchoolVision for CDL/Trucking Programs',
+      description: 'Discover how SchoolVision.AI transforms CDL training with DOT compliance, fleet management, and student success tools.'
+    }
+  },
+  {
+    path: '/why-schoolvision/cosmetology',
+    name: 'WhySVCosmetology',
+    component: () => import('../views/WhySV-Cosmetology.vue'),
+    meta: {
+      title: 'Why SchoolVision for Cosmetology Schools',
+      description: 'Learn how SchoolVision.AI helps beauty schools streamline operations, ensure compliance, and grow their business.'
+    }
+  },
+  {
+    path: '/why-schoolvision/nursing',
+    name: 'WhySVNursing',
+    component: () => import('../views/WhySV-Nursing.vue'),
+    meta: {
+      title: 'Why SchoolVision for Nursing Programs',
+      description: 'See how SchoolVision.AI elevates nursing education with clinical management and simulation optimization.'
+    }
+  },
+  {
+    path: '/why-schoolvision/dental',
+    name: 'WhySVDental',
+    component: () => import('../views/WhySV-Dental.vue'),
+    meta: {
+      title: 'Why SchoolVision for Dental Programs',
+      description: 'Explore how SchoolVision.AI modernizes dental education with patient care tracking and accreditation support.'
+    }
+  },
   {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
