@@ -27,7 +27,7 @@ const props = defineProps({
   size: {
     type: String,
     default: 'md',
-    validator: (value) => ['sm', 'md', 'lg'].includes(value)
+    validator: (value) => ['sm', 'md', 'lg', 'xl'].includes(value)
   },
   type: {
     type: String,
@@ -42,8 +42,9 @@ const props = defineProps({
 const sizeClasses = computed(() => {
   const sizes = {
     sm: 'px-3 py-1.5 text-sm',
-    md: 'px-4 py-2 text-base',
-    lg: 'px-6 py-3 text-lg'
+    md: 'px-5 py-2.5 text-base',
+    lg: 'px-7 py-3.5 text-lg',
+    xl: 'px-10 py-4 text-xl'
   }
   return sizes[props.size]
 })
