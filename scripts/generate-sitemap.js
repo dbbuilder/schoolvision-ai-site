@@ -13,6 +13,7 @@ const routes = [
   { path: '/library', priority: 0.7, changefreq: 'weekly' },
   { path: '/resources', priority: 0.7, changefreq: 'weekly' },
   { path: '/blog', priority: 0.8, changefreq: 'daily' },
+  { path: '/faq', priority: 0.8, changefreq: 'monthly' },
   
   // Market pages
   { path: '/markets/k12', priority: 0.8, changefreq: 'weekly' },

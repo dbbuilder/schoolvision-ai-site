@@ -61,9 +61,9 @@
             <h3 class="text-white font-semibold mb-4">Resources</h3>
             <ul class="space-y-2">
               <li><router-link to="/library" class="hover:text-white transition-colors">Resource Library</router-link></li>
+              <li><router-link to="/blog" class="hover:text-white transition-colors">Blog</router-link></li>
               <li><router-link to="/roi-calculator" class="hover:text-white transition-colors">ROI Calculator</router-link></li>
-              <li><a href="#" class="hover:text-white transition-colors">Case Studies</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Webinars</a></li>
+              <li><router-link to="/faq" class="hover:text-white transition-colors">FAQ</router-link></li>
               <li><a href="#" class="hover:text-white transition-colors">API Documentation</a></li>
               <li><a href="https://support.schoolvision.ai" class="hover:text-white transition-colors">Support Center</a></li>
             </ul>

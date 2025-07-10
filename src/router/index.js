@@ -120,6 +120,15 @@ const routes = [
     }
   },
   {
+    path: '/faq',
+    name: 'FAQ',
+    component: () => import('../views/FAQ.vue'),
+    meta: {
+      title: 'FAQ - SchoolVision.AI',
+      description: 'Find answers to frequently asked questions about SchoolVision.AI campus intelligence platform.'
+    }
+  },
+  {
     path: '/why-sv/k12',
     name: 'WhySV-K12',
     component: () => import('../views/WhySV-K12.vue'),
