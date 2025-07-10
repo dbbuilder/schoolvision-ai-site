@@ -32,73 +32,35 @@
 <script setup>
 import { Container } from './ui'
 import TestimonialCard from './TestimonialCard.vue'
+import testimonialData from '../data/testimonials.json'
+import companyInfo from '../data/company-info.json'
 
-const testimonials = [
-  {
-    id: 1,
-    quote: "After 20 years of manual attendance tracking, SchoolVision.AI reduced our daily attendance time from 45 minutes to under 5 minutes. The automated parent notifications alone have improved our chronic absenteeism rate by 27%. We're saving $127,000 annually.",
-    author: "Dr. Jennifer Martinez",
-    role: "Superintendent",
-    organization: "Westside K-12 District (1,200 students)",
-    rating: 5
-  },
-  {
-    id: 2,
-    quote: "The integration with our SIS revealed patterns we never saw before. When we noticed declining cafeteria visits correlating with dropping grades, we identified 47 food-insecure students. The predictive analytics helped us increase our retention rate from 72% to 85%.",
-    author: "Dr. Michael Thompson",
-    role: "VP of Student Success",
-    organization: "State University (18,000 students)",
-    rating: 5
-  },
-  {
-    id: 3,
-    quote: "Managing 90/10 compliance was a nightmare with 6 campuses. SchoolVision.AI automated our clock hour tracking across all locations. We went from 3 full-time compliance officers to 1, and our audit prep time dropped from 3 weeks to 3 days.",
-    author: "Linda Chen",
-    role: "CFO",
-    organization: "Allied Career Centers (3,500 CTE students)",
-    rating: 5
-  },
-  {
-    id: 4,
-    quote: "In our dental hygiene program, the per-tooth grading system transformed our assessments. Clinical supervisors save 20 hours weekly, and students get detailed feedback instantly. Pass rates on state boards improved from 78% to 94%.",
-    author: "Dr. Patricia Williams",
-    role: "Program Director",
-    organization: "Regional Health Sciences Institute",
-    rating: 5
-  },
-  {
-    id: 5,
-    quote: "The AI detected unusual POS patterns and prevented $45,000 in cafeteria fraud in our first year. But the real win was reducing food waste by 32% through predictive ordering. That's $180,000 saved annually across our 8 schools.",
-    author: "Robert Martinez",
-    role: "Business Manager",
-    organization: "Metro Unified School District",
-    rating: 5
-  },
-  {
-    id: 6,
-    quote: "Our CDL program struggled with in-truck attendance verification across 15 training routes. SchoolVision's GPS tracking with rotating QR codes solved it completely. DOT compliance is automatic, and we can finally prove our 1,200 behind-the-wheel hours.",
-    author: "James Wilson",
-    role: "Director of Transportation Training",
-    organization: "Interstate Trucking Academy",
-    rating: 5
-  }
-]
+// Use real testimonial data
+const testimonials = testimonialData.testimonials.filter(t => t.featured).map(t => ({
+  id: t.id,
+  quote: t.content,
+  author: t.name,
+  role: t.role,
+  organization: t.school,
+  rating: t.rating
+}))
 
+// Use real company stats
 const stats = [
   {
-    value: '500+',
+    value: companyInfo.stats.campusesServed,
     label: 'Campuses Served'
   },
   {
-    value: '2.8M+',
+    value: companyInfo.stats.studentsImpacted,
     label: 'Students Tracked Daily'
   },
   {
-    value: '$47M',
-    label: 'Total Client Savings'
+    value: companyInfo.stats.customerSatisfaction,
+    label: 'Customer Satisfaction'
   },
   {
-    value: '20+',
+    value: companyInfo.stats.yearsExperience,
     label: 'Years of Experience'
   }
 ]

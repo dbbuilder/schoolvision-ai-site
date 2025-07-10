@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import { updateMetaTags, pageMeta } from '../utils/meta'
 
 const routes = [
   {
@@ -201,6 +202,87 @@ const routes = [
     }
   },
   {
+    path: '/solutions/attendance-safety',
+    name: 'AttendanceSafety',
+    component: () => import('../views/solutions/AttendanceSafety.vue'),
+    meta: {
+      title: 'Attendance & Safety Solutions - SchoolVision.AI',
+      description: 'Real-time attendance tracking and comprehensive safety monitoring for educational institutions.'
+    }
+  },
+  {
+    path: '/solutions/point-of-sale',
+    name: 'PointOfSale',
+    component: () => import('../views/solutions/PointOfSale.vue'),
+    meta: {
+      title: 'Smart Point of Sale Solutions - SchoolVision.AI',
+      description: 'Transform campus dining with intelligent POS systems that reduce waste and speed service.'
+    }
+  },
+  {
+    path: '/solutions/ai-grading',
+    name: 'AIGrading',
+    component: () => import('../views/solutions/AIGrading.vue'),
+    meta: {
+      title: 'AI-Powered Grading & Assessment - SchoolVision.AI',
+      description: 'Give teachers their evenings back with AI grading that provides deeper learning insights.'
+    }
+  },
+  {
+    path: '/solutions/compliance-tracking',
+    name: 'ComplianceTracking',
+    component: () => import('../views/solutions/ComplianceTracking.vue'),
+    meta: {
+      title: 'Compliance Tracking & Reporting - SchoolVision.AI',
+      description: 'Stay audit-ready year-round with automated compliance monitoring for educational regulations.'
+    }
+  },
+  {
+    path: '/solutions/predictive-analytics',
+    name: 'PredictiveAnalytics',
+    component: () => import('../views/solutions/PredictiveAnalytics.vue'),
+    meta: {
+      title: 'Predictive Analytics & Insights - SchoolVision.AI',
+      description: 'Transform data into action with AI-powered analytics that predict outcomes and optimize resources.'
+    }
+  },
+  {
+    path: '/markets/cdl-programs',
+    name: 'CDLPrograms',
+    component: () => import('../views/markets/CDLPrograms.vue'),
+    meta: {
+      title: 'CDL Training Solutions - SchoolVision.AI',
+      description: 'Complete CDL school management platform with scheduling, compliance tracking, and job placement tools.'
+    }
+  },
+  {
+    path: '/markets/healthcare-training',
+    name: 'HealthcareTraining',
+    component: () => import('../views/markets/HealthcareTraining.vue'),
+    meta: {
+      title: 'Healthcare Training Solutions - SchoolVision.AI',
+      description: 'Manage nursing schools and allied health programs with clinical rotations and competency tracking.'
+    }
+  },
+  {
+    path: '/markets/trade-schools',
+    name: 'TradeSchools',
+    component: () => import('../views/markets/TradeSchools.vue'),
+    meta: {
+      title: 'Trade School Solutions - SchoolVision.AI',
+      description: 'Equipment scheduling and certification tracking for HVAC, electrical, plumbing, and welding programs.'
+    }
+  },
+  {
+    path: '/api-docs',
+    name: 'APIDocs',
+    component: () => import('../views/APIDocs.vue'),
+    meta: {
+      title: 'API Documentation - SchoolVision.AI',
+      description: 'Build powerful integrations with the SchoolVision.AI platform using our comprehensive REST API.'
+    }
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('../views/NotFound.vue'),
@@ -225,13 +307,19 @@ const router = createRouter({
 
 // Update document title and meta tags
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title || 'SchoolVision.AI'
+  // Get page-specific meta configuration
+  const routeName = to.name?.toLowerCase().replace(/([A-Z])/g, '-$1').toLowerCase()
+  const metaConfig = pageMeta[routeName] || {}
   
-  // Update meta description
-  const metaDescription = document.querySelector('meta[name="description"]')
-  if (metaDescription) {
-    metaDescription.setAttribute('content', to.meta.description || '')
-  }
+  // Build full URL for canonical and og:url
+  const fullUrl = `https://schoolvision.ai${to.path}`
+  
+  // Update all meta tags
+  updateMetaTags({
+    ...metaConfig,
+    url: fullUrl,
+    canonical: fullUrl
+  })
   
   next()
 })

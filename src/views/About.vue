@@ -8,21 +8,21 @@
             Two Decades of Educational Innovation
           </h1>
           <p class="text-xl text-primary-100 mb-8">
-            SchoolVision.AI combines 20+ years of campus management expertise with cutting-edge 
+            {{ companyInfo.company.name }} combines {{ stats.yearsExperience }} years of campus management expertise with cutting-edge 
             artificial intelligence to create the most comprehensive educational platform available.
           </p>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="text-center">
-              <p class="text-4xl font-bold mb-2">500+</p>
+              <p class="text-4xl font-bold mb-2">{{ stats.campusesServed }}</p>
               <p class="text-primary-200">Campuses Served</p>
             </div>
             <div class="text-center">
-              <p class="text-4xl font-bold mb-2">20+</p>
+              <p class="text-4xl font-bold mb-2">{{ stats.yearsExperience }}</p>
               <p class="text-primary-200">Years Experience</p>
             </div>
             <div class="text-center">
-              <p class="text-4xl font-bold mb-2">$47M+</p>
-              <p class="text-primary-200">Saved for Schools</p>
+              <p class="text-4xl font-bold mb-2">{{ stats.studentsImpacted }}</p>
+              <p class="text-primary-200">Students Tracked Daily</p>
             </div>
           </div>
         </div>
@@ -36,7 +36,7 @@
           <h2 class="text-3xl font-bold text-gray-900 mb-8">Our Story</h2>
           <div class="prose prose-lg max-w-none">
             <p class="text-gray-700 mb-6">
-              SchoolVision.AI began in 2003 when our founder, a former school administrator, 
+              {{ companyInfo.company.name }} began in {{ companyInfo.company.founded }} when our founder, a former school administrator, 
               witnessed firsthand the challenges educators face with disconnected systems and 
               data silos. What started as a simple attendance tracking solution has evolved into 
               a comprehensive campus intelligence platform.
@@ -94,47 +94,16 @@
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <!-- CEO -->
-          <Card>
+          <!-- Leadership Team Members -->
+          <Card v-for="leader in leadership" :key="leader.name">
             <div class="p-6 text-center">
               <div class="w-32 h-32 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <span class="text-white text-3xl font-bold">JD</span>
+                <span class="text-white text-3xl font-bold">{{ getInitials(leader.name) }}</span>
               </div>
-              <h4 class="text-xl font-semibold text-gray-900 mb-2">John Davidson</h4>
-              <p class="text-primary-600 font-medium mb-3">CEO & Founder</p>
+              <h4 class="text-xl font-semibold text-gray-900 mb-2">{{ leader.name }}</h4>
+              <p class="text-primary-600 font-medium mb-3">{{ leader.title }}</p>
               <p class="text-gray-600 text-sm">
-                Former school administrator with 30+ years in education. Founded SchoolVision.AI 
-                to solve the problems he experienced firsthand.
-              </p>
-            </div>
-          </Card>
-
-          <!-- CTO -->
-          <Card>
-            <div class="p-6 text-center">
-              <div class="w-32 h-32 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <span class="text-white text-3xl font-bold">SC</span>
-              </div>
-              <h4 class="text-xl font-semibold text-gray-900 mb-2">Sarah Chen</h4>
-              <p class="text-primary-600 font-medium mb-3">Chief Technology Officer</p>
-              <p class="text-gray-600 text-sm">
-                AI researcher and engineer with expertise in educational technology. 
-                Leads our AI innovation and product development.
-              </p>
-            </div>
-          </Card>
-
-          <!-- VP Customer Success -->
-          <Card>
-            <div class="p-6 text-center">
-              <div class="w-32 h-32 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <span class="text-white text-3xl font-bold">MR</span>
-              </div>
-              <h4 class="text-xl font-semibold text-gray-900 mb-2">Michael Rodriguez</h4>
-              <p class="text-primary-600 font-medium mb-3">VP Customer Success</p>
-              <p class="text-gray-600 text-sm">
-                20 years in educational operations. Ensures every SchoolVision.AI 
-                implementation delivers maximum value to schools.
+                {{ leader.bio }}
               </p>
             </div>
           </Card>
@@ -217,32 +186,11 @@
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-          <div class="text-center">
+          <div v-for="award in awards" :key="award.title" class="text-center">
             <div class="bg-gray-100 rounded-lg p-6 h-24 flex items-center justify-center mb-3">
-              <p class="font-semibold text-gray-700">EdTech Digest</p>
+              <p class="font-semibold text-gray-700">{{ award.title }}</p>
             </div>
-            <p class="text-sm text-gray-600">Cool Tool Award 2023</p>
-          </div>
-
-          <div class="text-center">
-            <div class="bg-gray-100 rounded-lg p-6 h-24 flex items-center justify-center mb-3">
-              <p class="font-semibold text-gray-700">THE Journal</p>
-            </div>
-            <p class="text-sm text-gray-600">Innovator Award 2023</p>
-          </div>
-
-          <div class="text-center">
-            <div class="bg-gray-100 rounded-lg p-6 h-24 flex items-center justify-center mb-3">
-              <p class="font-semibold text-gray-700">District Admin</p>
-            </div>
-            <p class="text-sm text-gray-600">Top 100 Products</p>
-          </div>
-
-          <div class="text-center">
-            <div class="bg-gray-100 rounded-lg p-6 h-24 flex items-center justify-center mb-3">
-              <p class="font-semibold text-gray-700">Tech & Learning</p>
-            </div>
-            <p class="text-sm text-gray-600">Best of Show 2022</p>
+            <p class="text-sm text-gray-600">{{ award.description }} {{ award.year }}</p>
           </div>
         </div>
       </Container>
@@ -279,4 +227,15 @@
 
 <script setup>
 import { Container, Card, Button } from '../components/ui'
+import companyInfo from '../data/company-info.json'
+
+// Extract data
+const stats = companyInfo.stats
+const leadership = companyInfo.team.leadership
+const awards = companyInfo.achievements
+
+// Helper function to get initials
+const getInitials = (name) => {
+  return name.split(' ').map(n => n[0]).join('').toUpperCase()
+}
 </script>

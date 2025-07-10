@@ -52,29 +52,27 @@
               <div class="md:w-3/5 p-8">
                 <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
                   <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-xs font-medium">
-                    AI Innovation
+                    {{ featuredPost.category }}
                   </span>
-                  <span>March 15, 2024</span>
-                  <span>10 min read</span>
+                  <span>{{ formatDate(featuredPost.date) }}</span>
+                  <span>{{ featuredPost.readTime }} min read</span>
                 </div>
                 <h3 class="text-2xl font-bold text-gray-900 mb-3">
-                  How AI is Revolutionizing Student Retention: A Data-Driven Approach
+                  {{ featuredPost.title }}
                 </h3>
                 <p class="text-gray-600 mb-6">
-                  Discover how universities are using predictive analytics to identify at-risk students 
-                  before they drop out. We analyzed data from 250 institutions and found surprising 
-                  patterns that traditional methods miss.
+                  {{ featuredPost.excerpt }}
                 </p>
                 <div class="flex items-center justify-between">
                   <div class="flex items-center gap-3">
                     <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
                     <div>
-                      <p class="font-semibold text-gray-900">Dr. Sarah Chen</p>
-                      <p class="text-sm text-gray-500">Chief Technology Officer</p>
+                      <p class="font-semibold text-gray-900">{{ featuredPost.author }}</p>
+                      <p class="text-sm text-gray-500">{{ getAuthorRole(featuredPost.author) }}</p>
                     </div>
                   </div>
                   <router-link 
-                    to="/blog/ai-revolutionizing-student-retention"
+                    :to="`/blog/${featuredPost.slug}`"
                     class="text-primary-600 hover:text-primary-700 font-medium flex items-center gap-1"
                   >
                     Read More
@@ -174,7 +172,7 @@
           </h2>
           <p class="text-xl text-gray-600 mb-8">
             Get the latest insights on educational technology delivered to your inbox. 
-            Join 10,000+ education leaders who read our weekly newsletter.
+            Join 15,000+ education leaders who read our weekly newsletter.
           </p>
           <form @submit.prevent="subscribeNewsletter" class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
@@ -201,9 +199,11 @@
 import { ref, computed } from 'vue'
 import { Container, Card, Button } from '../components/ui'
 import { submitForm } from '../utils/formSubmission'
+import blogData from '../data/blog-posts.json'
 
-// Popular tags
-const popularTags = ['AI', 'Student Success', 'Campus Safety', 'ROI', 'Best Practices', 'Case Studies']
+// Popular tags - extract unique tags from blog posts
+const allTags = [...new Set(blogData.posts.flatMap(post => post.tags))]
+const popularTags = ['AI', 'Student Success', 'Campus Safety', 'ROI', 'Best Practices', 'Case Studies'].filter(tag => allTags.includes(tag))
 const selectedTag = ref('')
 
 // Newsletter
@@ -211,116 +211,39 @@ const email = ref('')
 const subscribeMessage = ref('')
 const subscribeSuccess = ref(false)
 
-// Blog posts data
-const posts = ref([
-  {
-    id: 1,
-    slug: 'ai-revolutionizing-student-retention',
-    title: 'How AI is Revolutionizing Student Retention: A Data-Driven Approach',
-    excerpt: 'Discover how universities are using predictive analytics to identify at-risk students before they drop out. We analyzed data from 250 institutions.',
-    category: 'AI Innovation',
-    author: 'Dr. Sarah Chen',
-    date: new Date('2024-03-15'),
-    readTime: 10,
-    tags: ['AI', 'Student Success', 'Higher Ed']
-  },
-  {
-    id: 2,
-    slug: 'complete-guide-ferpa-compliance',
-    title: 'The Complete Guide to FERPA Compliance in the Age of AI',
-    excerpt: 'Navigate the complexities of student data privacy while leveraging AI tools. Learn from real-world examples and avoid common pitfalls.',
-    category: 'Compliance',
-    author: 'Michael Rodriguez',
-    date: new Date('2024-03-12'),
-    readTime: 15,
-    tags: ['Compliance', 'Best Practices', 'AI']
-  },
-  {
-    id: 3,
-    slug: 'reducing-cafeteria-waste-30-percent',
-    title: 'How We Helped Schools Reduce Cafeteria Waste by 30%',
-    excerpt: 'Learn how predictive analytics transformed meal planning at Metro Unified, saving $180,000 annually while reducing environmental impact.',
-    category: 'Operations',
-    author: 'John Davidson',
-    date: new Date('2024-03-10'),
-    readTime: 8,
-    tags: ['ROI', 'Case Studies', 'Operations']
-  },
-  {
-    id: 4,
-    slug: 'parent-engagement-mobile-first',
-    title: 'Parent Engagement 3.0: Building Mobile-First Portals That Work',
-    excerpt: 'Westside K-12 saw a 300% increase in parent engagement. Here\'s how they did it with consolidated views and smart notifications.',
-    category: 'K-12',
-    author: 'Lisa Park',
-    date: new Date('2024-03-08'),
-    readTime: 7,
-    tags: ['K-12', 'Best Practices', 'Parent Engagement']
-  },
-  {
-    id: 5,
-    slug: 'clock-hour-tracking-vocational',
-    title: 'Clock Hour Tracking: A Game-Changer for Vocational Schools',
-    excerpt: 'Allied Career Centers reduced compliance officers from 3 to 1 and cut audit prep time by 90%. Learn their strategies.',
-    category: 'Vocational',
-    author: 'Tom Miller',
-    date: new Date('2024-03-05'),
-    readTime: 12,
-    tags: ['Vocational', 'Compliance', 'Case Studies']
-  },
-  {
-    id: 6,
-    slug: 'ai-powered-early-warning-systems',
-    title: 'Building AI-Powered Early Warning Systems That Actually Work',
-    excerpt: 'Beyond grades: How combining cafeteria, attendance, and engagement data creates a 360-degree view of student success.',
-    category: 'AI Innovation',
-    author: 'Dr. Sarah Chen',
-    date: new Date('2024-03-01'),
-    readTime: 11,
-    tags: ['AI', 'Student Success', 'Best Practices']
-  },
-  {
-    id: 7,
-    slug: 'roi-calculator-build-business-case',
-    title: 'Using Our ROI Calculator to Build Your Business Case',
-    excerpt: 'Step-by-step guide to calculating and presenting the financial impact of campus intelligence to your board.',
-    category: 'Planning',
-    author: 'Michael Rodriguez',
-    date: new Date('2024-02-28'),
-    readTime: 9,
-    tags: ['ROI', 'Planning', 'Best Practices']
-  },
-  {
-    id: 8,
-    slug: 'campus-safety-ai-real-time',
-    title: 'Campus Safety in Real-Time: AI Tools That Make a Difference',
-    excerpt: 'From predictive threat assessment to automated emergency responses, see how AI enhances campus security without being intrusive.',
-    category: 'Safety',
-    author: 'Chief James Wilson',
-    date: new Date('2024-02-25'),
-    readTime: 8,
-    tags: ['Campus Safety', 'AI', 'Best Practices']
-  },
-  {
-    id: 9,
-    slug: 'dental-school-competency-tracking',
-    title: 'Dental School Success: Per-Tooth Competency Tracking',
-    excerpt: 'Regional Health Sciences improved state board pass rates from 78% to 94%. Learn how granular tracking made the difference.',
-    category: 'Case Study',
-    author: 'Dr. Emily Chang',
-    date: new Date('2024-02-20'),
-    readTime: 10,
-    tags: ['Higher Ed', 'Case Studies', 'Healthcare']
-  }
-])
+// Blog posts data - transform from JSON format
+const posts = ref(blogData.posts.map(post => ({
+  id: post.id,
+  slug: post.slug,
+  title: post.title,
+  excerpt: post.excerpt,
+  category: post.category,
+  author: post.author.name,
+  date: new Date(post.publishedDate),
+  readTime: post.readTime,
+  tags: post.tags,
+  featuredImage: post.featuredImage
+})))
+
+// Get the first post as featured (most recent AI-related post)
+const featuredPost = computed(() => {
+  const aiPost = posts.value.find(post => post.tags.includes('AI')) || posts.value[0]
+  return aiPost
+})
+
+// Get author role from blog data
+const getAuthorRole = (authorName) => {
+  const post = blogData.posts.find(p => p.author.name === authorName)
+  return post?.author.role || 'Author'
+}
 
 // Pagination
 const pageSize = 9
 const currentPage = ref(1)
 
-// Filter posts
+// Filter posts (exclude featured from the grid)
 const filteredPosts = computed(() => {
-  let filtered = posts.value
+  let filtered = posts.value.filter(post => post.id !== featuredPost.value.id)
   
   if (selectedTag.value) {
     filtered = filtered.filter(post => 
@@ -333,8 +256,8 @@ const filteredPosts = computed(() => {
 
 const hasMore = computed(() => {
   const totalFiltered = selectedTag.value 
-    ? posts.value.filter(p => p.tags.includes(selectedTag.value)).length
-    : posts.value.length
+    ? posts.value.filter(p => p.tags.includes(selectedTag.value) && p.id !== featuredPost.value.id).length
+    : posts.value.filter(p => p.id !== featuredPost.value.id).length
   return filteredPosts.value.length < totalFiltered
 })
 

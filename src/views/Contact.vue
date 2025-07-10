@@ -28,17 +28,17 @@
               <div>
                 <h3 class="font-semibold text-gray-900 mb-2">Sales Inquiries</h3>
                 <p class="text-gray-600">
-                  <a href="mailto:sales@schoolvision.ai" class="hover:text-primary-600">sales@schoolvision.ai</a>
+                  <a :href="`mailto:${contact.salesEmail}`" class="hover:text-primary-600">{{ contact.salesEmail }}</a>
                 </p>
                 <p class="text-gray-600">
-                  <a href="tel:801-659-7778" class="hover:text-primary-600">801-659-7778</a>
+                  <a :href="`tel:${contact.phone}`" class="hover:text-primary-600">{{ contact.phone }}</a>
                 </p>
               </div>
               
               <div>
                 <h3 class="font-semibold text-gray-900 mb-2">Support</h3>
                 <p class="text-gray-600">
-                  <a href="mailto:support@schoolvision.ai" class="hover:text-primary-600">support@schoolvision.ai</a>
+                  <a :href="`mailto:${contact.supportEmail}`" class="hover:text-primary-600">{{ contact.supportEmail }}</a>
                 </p>
                 <p class="text-gray-600">Available 24/7 for existing customers</p>
               </div>
@@ -52,9 +52,10 @@
               <div>
                 <h3 class="font-semibold text-gray-900 mb-2">Headquarters</h3>
                 <p class="text-gray-600">
-                  SchoolVision.AI<br>
-                  Salt Lake City, Utah<br>
-                  United States
+                  {{ companyInfo.company.name }}<br>
+                  {{ headquarters.address }}<br>
+                  {{ headquarters.city }}, {{ headquarters.state }} {{ headquarters.zipCode }}<br>
+                  {{ headquarters.country }}
                 </p>
               </div>
             </div>
@@ -92,4 +93,9 @@
 <script setup>
 import { Container, Card, Button } from '../components/ui'
 import ContactForm from '../components/ContactForm.vue'
+import companyInfo from '../data/company-info.json'
+
+// Extract company data
+const contact = companyInfo.company.contact
+const headquarters = companyInfo.company.headquarters
 </script>

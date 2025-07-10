@@ -17,7 +17,12 @@
                 Request Demo
               </Button>
             </router-link>
-            <Button size="lg" variant="outline" class="w-full sm:w-auto border-white text-white hover:bg-white hover:text-primary-700">
+            <Button 
+              @click="showVideoModal = true"
+              size="lg" 
+              variant="outline" 
+              class="w-full sm:w-auto border-white text-white hover:bg-white hover:text-primary-700"
+            >
               Watch Video
             </Button>
           </div>
@@ -109,7 +114,7 @@
             Ready to Transform Your Campus?
           </h2>
           <p class="text-xl mb-8 text-primary-100">
-            Join hundreds of educational institutions already using SchoolVision.AI
+            Join 523 educational institutions already using SchoolVision.AI
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <router-link to="/demo">
@@ -126,12 +131,24 @@
         </div>
       </Container>
     </section>
+
+    <!-- Video Modal -->
+    <VideoModal 
+      :is-open="showVideoModal" 
+      @close="showVideoModal = false"
+      title="See SchoolVision.AI in Action"
+      description="Discover how our AI-powered platform transforms campus management with real-time insights and seamless integrations."
+    />
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import { Container, Button, Card } from '../components/ui'
 import TestimonialsSection from '../components/TestimonialsSection.vue'
+import VideoModal from '../components/VideoModal.vue'
+
+const showVideoModal = ref(false)
 
 const features = [
   {

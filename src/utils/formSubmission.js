@@ -1,95 +1,161 @@
-import emailjs from '@emailjs/browser'
-import { put } from '@vercel/blob'
+// Form submission utility using Vercel serverless function
+// This replaces the placeholder EmailJS implementation with a real backend
 
-// Initialize EmailJS with public key
-const initEmailJS = () => {
-  if (import.meta.env.VITE_EMAILJS_PUBLIC_KEY) {
-    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
-  }
-}
+import { trackFormSubmission, trackDemoRequest, trackContactForm } from './analytics'
+import { validateFormSecurity, getBrowserFingerprint } from './recaptcha'
 
-// Store form data in Vercel Blob storage
-const storeInBlob = async (formData) => {
+// API endpoint - will use relative URL in production
+const API_ENDPOINT = process.env.NODE_ENV === 'production' 
+  ? '/api/submit-form' 
+  : 'http://localhost:3000/api/submit-form'
+
+// Submit form data to our serverless function
+const submitToAPI = async (formType, data, securityToken) => {
   try {
-    const timestamp = new Date().toISOString()
-    const fileName = `forms/${formData.type}/${timestamp}-${formData.email.replace('@', '-at-')}.json`
+    const browserInfo = getBrowserFingerprint()
     
-    const blob = await put(fileName, JSON.stringify({
-      ...formData,
-      submittedAt: timestamp,
-      userAgent: navigator.userAgent,
-      referrer: document.referrer
-    }), {
-      access: 'public',
-      token: import.meta.env.VITE_BLOB_READ_WRITE_TOKEN
+    const response = await fetch(API_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        formType,
+        data: {
+          ...data,
+          timestamp: new Date().toISOString(),
+          userAgent: navigator.userAgent,
+          referrer: document.referrer,
+          pageUrl: window.location.href,
+          browserFingerprint: browserInfo.hash
+        },
+        security: {
+          recaptchaToken: securityToken,
+          fingerprint: browserInfo.fingerprint
+        }
+      })
     })
-    
-    console.log('Form data stored in blob:', blob.url)
-    return blob
+
+    if (!response.ok) {
+      const error = await response.json()
+      throw new Error(error.message || 'Form submission failed')
+    }
+
+    const result = await response.json()
+    return result
   } catch (error) {
-    console.error('Error storing in blob:', error)
-    // Don't throw - we want form submission to continue even if blob storage fails
-    return null
+    console.error('API submission error:', error)
+    throw error
   }
 }
 
-// Send email notification
-const sendEmail = async (formData) => {
+// Store form data in localStorage as backup
+const storeLocally = (formType, data) => {
   try {
-    initEmailJS()
+    const submissions = JSON.parse(localStorage.getItem('form_submissions') || '[]')
+    submissions.push({
+      id: Date.now().toString(),
+      formType,
+      data,
+      timestamp: new Date().toISOString(),
+      synced: false
+    })
+    // Keep only last 50 submissions to avoid storage issues
+    if (submissions.length > 50) {
+      submissions.shift()
+    }
+    localStorage.setItem('form_submissions', JSON.stringify(submissions))
+  } catch (error) {
+    console.error('Local storage error:', error)
+  }
+}
+
+// Retry failed submissions
+const retryFailedSubmissions = async () => {
+  try {
+    const submissions = JSON.parse(localStorage.getItem('form_submissions') || '[]')
+    const unsynced = submissions.filter(s => !s.synced)
     
-    const templateParams = {
-      to_email: import.meta.env.VITE_ADMIN_EMAIL || 'admin@schoolvision.ai',
-      from_name: formData.name,
-      from_email: formData.email,
-      from_company: formData.company || 'Not provided',
-      from_phone: formData.phone || 'Not provided',
-      message: formData.message || 'No message provided',
-      form_type: formData.type || 'contact',
-      submitted_at: new Date().toLocaleString(),
-      page_url: window.location.href
+    for (const submission of unsynced) {
+      try {
+        await submitToAPI(submission.formType, submission.data)
+        submission.synced = true
+      } catch (error) {
+        console.error('Retry failed for submission:', submission.id)
+      }
     }
     
-    const response = await emailjs.send(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_schoolvision',
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_contact',
-      templateParams
-    )
-    
-    console.log('Email sent successfully:', response)
-    return response
+    localStorage.setItem('form_submissions', JSON.stringify(submissions))
   } catch (error) {
-    console.error('Error sending email:', error)
-    throw error
+    console.error('Retry process error:', error)
   }
 }
 
 // Main form submission handler
 export const submitForm = async (formData) => {
+  const { type: formType, honeypot, ...data } = formData
+  
+  // Validate form security
+  const securityCheck = await validateFormSecurity(
+    { ...formData }, 
+    {
+      identifier: data.email || 'anonymous',
+      requireRecaptcha: true,
+      checkHoneypot: true,
+      enforceRateLimit: true
+    }
+  )
+  
+  if (!securityCheck.valid) {
+    console.error('Form security validation failed:', securityCheck.errors)
+    const errorMessage = securityCheck.errors[0]?.message || 'Security validation failed'
+    return {
+      success: false,
+      message: errorMessage,
+      errors: securityCheck.errors
+    }
+  }
+  
   try {
-    // Store in blob storage first (non-blocking)
-    const blobPromise = storeInBlob(formData)
+    // Store locally first as backup
+    storeLocally(formType || 'contact', data)
     
-    // Send email (this is the critical path)
-    await sendEmail(formData)
+    // Submit to API with security token
+    const result = await submitToAPI(formType || 'contact', data, securityCheck.enhancedData.recaptchaToken)
     
-    // Wait for blob storage to complete
-    await blobPromise
+    // Track successful submission in analytics
+    trackFormSubmission(formType || 'contact')
     
-    return { success: true, message: 'Form submitted successfully!' }
-  } catch (error) {
-    console.error('Form submission error:', error)
+    // Track specific form types
+    if (formType === 'demo_request') {
+      trackDemoRequest()
+    } else if (formType === 'contact') {
+      trackContactForm()
+    }
     
-    // If email fails, try to at least store in blob
-    try {
-      await storeInBlob({ ...formData, error: error.message })
-    } catch (blobError) {
-      console.error('Backup storage also failed:', blobError)
+    // Mark as synced in local storage
+    const submissions = JSON.parse(localStorage.getItem('form_submissions') || '[]')
+    const lastSubmission = submissions[submissions.length - 1]
+    if (lastSubmission) {
+      lastSubmission.synced = true
+      localStorage.setItem('form_submissions', JSON.stringify(submissions))
     }
     
     return { 
+      success: true, 
+      message: 'Thank you! Your form has been submitted successfully. We\'ll get back to you soon.',
+      submissionId: result.submissionId
+    }
+  } catch (error) {
+    console.error('Form submission error:', error)
+    
+    // Try to retry failed submissions in the background
+    setTimeout(() => retryFailedSubmissions(), 5000)
+    
+    return { 
       success: false, 
-      message: 'There was an error submitting your form. Please try again or contact us directly at admin@schoolvision.ai' 
+      message: 'We\'re having trouble submitting your form. It\'s been saved and will be sent when connection is restored. You can also email us directly at info@schoolvision.ai',
+      fallbackEmail: getMailtoLink(formData)
     }
   }
 }
@@ -100,8 +166,9 @@ export const getMailtoLink = (formData) => {
   const body = encodeURIComponent(`
 Name: ${formData.name}
 Email: ${formData.email}
-Company: ${formData.company || 'Not provided'}
+Company/School: ${formData.company || formData.schoolName || 'Not provided'}
 Phone: ${formData.phone || 'Not provided'}
+Role: ${formData.role || 'Not provided'}
 
 Message:
 ${formData.message || 'No message provided'}
@@ -111,5 +178,38 @@ Submitted from: ${window.location.href}
 Time: ${new Date().toLocaleString()}
   `)
   
-  return `mailto:${import.meta.env.VITE_ADMIN_EMAIL || 'admin@schoolvision.ai'}?subject=${subject}&body=${body}`
+  return `mailto:info@schoolvision.ai?subject=${subject}&body=${body}`
+}
+
+// Initialize retry mechanism on page load
+if (typeof window !== 'undefined') {
+  window.addEventListener('load', () => {
+    // Try to submit any failed forms after 2 seconds
+    setTimeout(() => retryFailedSubmissions(), 2000)
+  })
+  
+  // Also retry when coming back online
+  window.addEventListener('online', () => {
+    retryFailedSubmissions()
+  })
+}
+
+// Function to get all unsynced submissions (useful for debugging)
+export const getUnsyncedSubmissions = () => {
+  try {
+    const submissions = JSON.parse(localStorage.getItem('form_submissions') || '[]')
+    return submissions.filter(s => !s.synced)
+  } catch (error) {
+    console.error('Error getting unsynced submissions:', error)
+    return []
+  }
+}
+
+// Function to clear submission history
+export const clearSubmissionHistory = () => {
+  try {
+    localStorage.removeItem('form_submissions')
+  } catch (error) {
+    console.error('Error clearing submission history:', error)
+  }
 }

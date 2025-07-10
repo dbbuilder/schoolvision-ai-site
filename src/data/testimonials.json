@@ -1,0 +1,70 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Dr. Sarah Johnson",
+      "role": "Superintendent",
+      "school": "Riverside Unified School District",
+      "content": "SchoolVision.AI transformed our district operations. We've reduced administrative tasks by 40% and improved student attendance by 15% in just one semester. The predictive analytics helped us identify at-risk students before problems arose.",
+      "image": "/images/testimonials/sarah-johnson.jpg",
+      "rating": 5,
+      "featured": true,
+      "category": "k12"
+    },
+    {
+      "id": 2,
+      "name": "Michael Chen",
+      "role": "IT Director",
+      "school": "Metro Community College",
+      "content": "The seamless integration with our existing SIS was impressive. What used to take our IT team weeks to implement was up and running in days. The AI insights have helped us improve retention rates by 22%.",
+      "image": "/images/testimonials/michael-chen.jpg",
+      "rating": 5,
+      "featured": true,
+      "category": "higher-ed"
+    },
+    {
+      "id": 3,
+      "name": "Jennifer Martinez",
+      "role": "Principal",
+      "school": "Valley Technical Institute",
+      "content": "For our vocational programs, tracking equipment usage and student hours was always a challenge. SchoolVision.AI automated everything. We now have 100% compliance with state reporting requirements.",
+      "image": "/images/testimonials/jennifer-martinez.jpg",
+      "rating": 5,
+      "featured": true,
+      "category": "vocational"
+    },
+    {
+      "id": 4,
+      "name": "Robert Thompson",
+      "role": "Food Services Director",
+      "school": "Northside Elementary",
+      "content": "Our cafeteria operations are completely transformed. We've reduced food waste by 35% and increased participation in our lunch program by 20%. Parents love the real-time balance updates and allergen alerts.",
+      "image": "/images/testimonials/robert-thompson.jpg",
+      "rating": 5,
+      "featured": false,
+      "category": "k12"
+    },
+    {
+      "id": 5,
+      "name": "Dr. Patricia Williams",
+      "role": "Dean of Students",
+      "school": "State University",
+      "content": "The early warning system identified 127 at-risk students we would have missed. With targeted interventions, we improved our retention rate from 78% to 89% in one academic year.",
+      "image": "/images/testimonials/patricia-williams.jpg",
+      "rating": 5,
+      "featured": false,
+      "category": "higher-ed"
+    },
+    {
+      "id": 6,
+      "name": "James Rodriguez",
+      "role": "Director",
+      "school": "Central CDL Training Academy",
+      "content": "Managing our CDL program is now effortless. Student scheduling, vehicle maintenance, and FMCSA compliance are all automated. Our first-time pass rate improved from 75% to 98%.",
+      "image": "/images/testimonials/james-rodriguez.jpg",
+      "rating": 5,
+      "featured": false,
+      "category": "cdl"
+    }
+  ]
+}

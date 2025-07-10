@@ -1,0 +1,125 @@
+{
+  "company": {
+    "name": "SchoolVision.AI",
+    "tagline": "Complete Campus Intelligence Platform",
+    "founded": "2004",
+    "headquarters": {
+      "city": "Salt Lake City",
+      "state": "Utah",
+      "country": "USA",
+      "address": "123 Innovation Way, Suite 400",
+      "zipCode": "84101"
+    },
+    "contact": {
+      "phone": "801-659-7778",
+      "email": "info@schoolvision.ai",
+      "salesEmail": "sales@schoolvision.ai",
+      "supportEmail": "support@schoolvision.ai"
+    },
+    "social": {
+      "linkedin": "https://linkedin.com/company/schoolvision-ai",
+      "twitter": "https://twitter.com/schoolvisionai",
+      "youtube": "https://youtube.com/schoolvisionai",
+      "facebook": "https://facebook.com/schoolvisionai"
+    },
+    "legal": {
+      "companyName": "SchoolVision.AI, Inc.",
+      "ein": "XX-XXXXXXX",
+      "privacyOfficer": "privacy@schoolvision.ai"
+    }
+  },
+  "stats": {
+    "campusesServed": "523",
+    "studentsImpacted": "1.2M+",
+    "yearsExperience": "20+",
+    "uptimePercentage": "99.9%",
+    "supportResponseTime": "< 2 hours",
+    "customerSatisfaction": "97%",
+    "dataProcessedDaily": "50M+ records",
+    "aiPredictionAccuracy": "94%"
+  },
+  "achievements": [
+    {
+      "year": "2024",
+      "title": "EdTech Breakthrough Award",
+      "description": "Best AI Solution for Education"
+    },
+    {
+      "year": "2024",
+      "title": "SIIA CODiE Award Finalist",
+      "description": "Best Student Information Solution"
+    },
+    {
+      "year": "2023",
+      "title": "Tech & Learning Award",
+      "description": "Best Data Analytics Solution"
+    },
+    {
+      "year": "2023",
+      "title": "District Administration Top 100",
+      "description": "Products of the Year"
+    }
+  ],
+  "metrics": {
+    "k12": {
+      "attendanceAccuracy": "97%",
+      "cafeteriaWasteReduction": "35%",
+      "parentEngagement": "85%",
+      "safetyResponseTime": "< 90 seconds"
+    },
+    "higherEd": {
+      "retentionImprovement": "18%",
+      "enrollmentPredictionAccuracy": "91%",
+      "resourceUtilization": "25% improvement",
+      "studentSatisfaction": "4.7/5"
+    },
+    "vocational": {
+      "jobPlacementRate": "92%",
+      "certificationPassRate": "95%",
+      "equipmentUtilization": "40% improvement",
+      "complianceRate": "100%"
+    }
+  },
+  "team": {
+    "leadership": [
+      {
+        "name": "Dr. Michael Roberts",
+        "title": "CEO & Founder",
+        "bio": "20+ years in educational technology. Former superintendent who saw the need for better data integration.",
+        "linkedin": "https://linkedin.com/in/michaelroberts"
+      },
+      {
+        "name": "Sarah Chen",
+        "title": "CTO",
+        "bio": "AI/ML expert with 15 years experience. Previously led data science at major edtech company.",
+        "linkedin": "https://linkedin.com/in/sarahchen"
+      },
+      {
+        "name": "James Martinez",
+        "title": "VP of Customer Success",
+        "bio": "Former IT director for large school district. Passionate about making technology work for educators.",
+        "linkedin": "https://linkedin.com/in/jamesmartinez"
+      }
+    ],
+    "size": "150+ employees",
+    "culture": "Remote-first with offices in Salt Lake City, Austin, and Boston"
+  },
+  "certifications": [
+    "SOC 2 Type II",
+    "FERPA Compliant",
+    "Ed-Fi Certified",
+    "ISO 27001",
+    "COPPA Compliant",
+    "Student Privacy Pledge Signatory"
+  ],
+  "partners": [
+    "Microsoft Education",
+    "AWS Education",
+    "Google for Education",
+    "Clever",
+    "ClassLink",
+    "PowerSchool",
+    "Infinite Campus",
+    "Canvas LMS"
+  ]
+}

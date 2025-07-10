@@ -1,6 +1,13 @@
 <template>
   <Card>
-    <form @submit.prevent="handleSubmit" class="space-y-6">
+    <ProtectedForm
+      ref="protectedForm"
+      form-type="contact"
+      form-class="space-y-6"
+      :on-success="handleSuccess"
+      v-slot="{ loading, error }"
+    >
+      <div class="space-y-6">
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <Input
           id="firstName"
@@ -101,22 +108,24 @@
         <div>
           <Button
             type="submit"
-            :disabled="isSubmitting || !isFormValid"
+            :disabled="loading || !isFormValid"
             variant="primary"
             size="lg"
+            @click="submitProtectedForm"
           >
-            {{ isSubmitting ? 'Sending...' : 'Send Message' }}
+            {{ loading ? 'Sending...' : 'Send Message' }}
           </Button>
         </div>
       </div>
-    </form>
+    </ProtectedForm>
   </Card>
 </template>
 
 <script setup>
 import { ref, computed, reactive } from 'vue'
 import { Card, Input, Textarea, Select, Button } from './ui'
-import { submitForm, getMailtoLink } from '../utils/formSubmission'
+import ProtectedForm from './ProtectedForm.vue'
+import { getMailtoLink } from '../utils/formSubmission'
 
 const form = reactive({
   firstName: '',
@@ -140,8 +149,7 @@ const errors = reactive({
   message: ''
 })
 
-const isSubmitting = ref(false)
-const submitError = ref('')
+const protectedForm = ref(null)
 const submitSuccess = ref('')
 
 const fallbackMailto = computed(() => {
@@ -231,7 +239,7 @@ const validateField = (field) => {
   }
 }
 
-const handleSubmit = async () => {
+const submitProtectedForm = () => {
   // Validate all fields
   Object.keys(form).forEach(field => {
     if (errors[field] !== undefined) {
@@ -243,38 +251,26 @@ const handleSubmit = async () => {
     return
   }
   
-  isSubmitting.value = true
-  submitError.value = ''
-  submitSuccess.value = ''
-  
-  try {
-    const formData = {
-      type: 'contact',
-      name: `${form.firstName} ${form.lastName}`,
-      email: form.email,
-      phone: form.phone,
-      company: form.organization,
-      role: form.role,
-      organizationType: form.organizationType,
-      message: form.message
-    }
-    
-    const result = await submitForm(formData)
-    
-    if (result.success) {
-      submitSuccess.value = 'Thank you for your message! We\'ll get back to you within 24 hours.'
-      
-      // Reset form
-      Object.keys(form).forEach(key => {
-        form[key] = ''
-      })
-    } else {
-      submitError.value = result.message
-    }
-  } catch (error) {
-    submitError.value = 'Sorry, there was an error sending your message. Please try again or contact us at admin@schoolvision.ai'
-  } finally {
-    isSubmitting.value = false
+  const formData = {
+    name: `${form.firstName} ${form.lastName}`,
+    email: form.email,
+    phone: form.phone,
+    company: form.organization,
+    role: form.role,
+    organizationType: form.organizationType,
+    message: form.message
   }
+  
+  // Submit through protected form
+  protectedForm.value.handleSubmit(formData)
+}
+
+const handleSuccess = () => {
+  submitSuccess.value = 'Thank you for your message! We\'ll get back to you within 24 hours.'
+  
+  // Reset form
+  Object.keys(form).forEach(key => {
+    form[key] = ''
+  })
 }
 </script>
