@@ -7,7 +7,6 @@
       :on-success="handleSuccess"
       v-slot="{ loading, error }"
     >
-      <div class="space-y-6">
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <Input
           id="firstName"

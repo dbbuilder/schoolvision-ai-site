@@ -1,0 +1,167 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - link "SchoolVision AI":
+    - /url: /
+  - link "Home":
+    - /url: /
+  - link "Solutions":
+    - /url: /solutions
+  - button "Why SV":
+    - text: Why SV
+    - img
+  - link "ROI Calculator":
+    - /url: /roi-calculator
+  - link "Library":
+    - /url: /library
+  - link "Pricing":
+    - /url: /pricing
+  - link "About":
+    - /url: /about
+  - link "Contact Sales":
+    - /url: /contact
+    - button "Contact Sales"
+  - link "Request Demo":
+    - /url: /demo
+    - button "Request Demo"
+- main:
+  - heading "See SchoolVision AI in Action" [level=1]
+  - paragraph: Get a personalized demo tailored to your institution's unique needs and challenges.
+  - heading "What to Expect in Your Demo" [level=2]
+  - img
+  - heading "Personalized Walkthrough" [level=3]
+  - paragraph: See features most relevant to your institution type and size
+  - img
+  - heading "ROI Analysis" [level=3]
+  - paragraph: Understand the potential impact on your operations and budget
+  - img
+  - heading "Q&A Session" [level=3]
+  - paragraph: Get all your questions answered by our education technology experts
+  - img
+  - heading "Implementation Roadmap" [level=3]
+  - paragraph: Learn about our proven deployment process and timeline
+  - heading "Request Your Personalized Demo" [level=2]
+  - paragraph: See how SchoolVision AI can transform your campus
+  - heading "Your Information" [level=3]
+  - text: First Name *
+  - textbox "First Name *"
+  - text: Last Name *
+  - textbox "Last Name *"
+  - text: Work Email *
+  - textbox "Work Email *"
+  - text: Phone Number *
+  - textbox "Phone Number *"
+  - heading "Organization Details" [level=3]
+  - text: School/Organization Name *
+  - textbox "School/Organization Name *"
+  - text: Organization Type *
+  - combobox "Organization Type *":
+    - option "Select type" [disabled] [selected]
+    - option "K-12 Public School"
+    - option "K-12 Private School"
+    - option "K-12 Charter School"
+    - option "School District"
+    - option "Public University/College"
+    - option "Private University/College"
+    - option "Community College"
+    - option "Vocational/Technical School"
+  - text: Your Role *
+  - combobox "Your Role *":
+    - option "Select your role" [disabled] [selected]
+    - option "Superintendent"
+    - option "Principal"
+    - option "Assistant Principal"
+    - option "IT Director"
+    - option "CTO/Technology Director"
+    - option "Business Manager"
+    - option "Dean"
+    - option "Other Administrator"
+  - text: Number of Students *
+  - combobox "Number of Students *":
+    - option "Select range" [disabled] [selected]
+    - option "Under 500 students"
+    - option "500 - 1,000 students"
+    - option "1,000 - 2,500 students"
+    - option "2,500 - 5,000 students"
+    - option "5,000 - 10,000 students"
+    - option "Over 10,000 students"
+  - heading "Demo Preferences" [level=3]
+  - text: Which solutions are you interested in? *
+  - checkbox "Smart Attendance & Safety"
+  - text: Smart Attendance & Safety
+  - checkbox "Intelligent Point of Sale"
+  - text: Intelligent Point of Sale
+  - checkbox "AI-Powered Grading & Assessment"
+  - text: AI-Powered Grading & Assessment
+  - checkbox "Predictive Analytics & Reporting"
+  - text: Predictive Analytics & Reporting
+  - checkbox "Parent & Student Communication"
+  - text: Parent & Student Communication
+  - checkbox "Smart Scheduling"
+  - text: Smart Scheduling
+  - checkbox "Full SchoolVision AI Suite"
+  - text: Full SchoolVision AI Suite Implementation Timeline *
+  - combobox "Implementation Timeline *":
+    - option "Select timeline" [disabled] [selected]
+    - option "Immediate (Within 30 days)"
+    - option "1-3 months"
+    - option "3-6 months"
+    - option "6-12 months"
+    - option "Budgeting/Planning phase"
+  - text: Preferred Demo Time
+  - combobox "Preferred Demo Time":
+    - option "Select time preference" [disabled] [selected]
+    - option "Morning (9 AM - 12 PM)"
+    - option "Afternoon (12 PM - 5 PM)"
+    - option "Flexible"
+  - paragraph: We'll work with your schedule
+  - text: Additional Information
+  - textbox "Additional Information"
+  - paragraph: Optional - Help us customize your demo
+  - paragraph:
+    - text: By submitting, you agree to our
+    - link "Privacy Policy":
+      - /url: "#"
+  - button "Request Demo" [disabled]
+  - blockquote: "\"The SchoolVision AI demo opened our eyes to what's possible. Within 30 minutes, we saw exactly how it could solve our biggest challenges. Implementation was even smoother than promised.\""
+  - paragraph: Dr. Sarah Johnson
+  - paragraph: Superintendent, Riverside School District
+- contentinfo:
+  - heading "SchoolVision AI" [level=3]
+  - paragraph: Intelligent campus management solutions for modern educational institutions.
+  - heading "Solutions" [level=4]
+  - list:
+    - listitem:
+      - link "All Solutions":
+        - /url: /solutions
+    - listitem:
+      - link "K-12 Schools":
+        - /url: /markets/k12
+    - listitem:
+      - link "Higher Education":
+        - /url: /markets/higher-ed
+    - listitem:
+      - link "Vocational Schools":
+        - /url: /markets/vocational
+  - heading "Company" [level=4]
+  - list:
+    - listitem:
+      - link "About Us":
+        - /url: /about
+    - listitem:
+      - link "Contact":
+        - /url: /contact
+    - listitem:
+      - link "Careers":
+        - /url: "#"
+    - listitem:
+      - link "Blog":
+        - /url: "#"
+  - heading "Get Started" [level=4]
+  - paragraph: Ready to transform your campus?
+  - link "Request Demo":
+    - /url: /demo
+    - button "Request Demo"
+  - paragraph: © 2025 SchoolVision AI. All rights reserved.
+```
