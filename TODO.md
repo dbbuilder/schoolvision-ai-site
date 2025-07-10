@@ -1,5 +1,18 @@
 # SchoolVision.AI Marketing Site - Development TODO
 
+## 🔥 MOST CRITICAL ISSUES (Fix Before Production)
+
+1. **Missing Critical Pages**: `/accessibility`, `/ferpa`, `/sitemap` pages are linked but don't exist
+2. **Broken Links**: Footer has 10+ links pointing to "#" placeholder
+3. **No Real Backend**: Forms use placeholder EmailJS, no actual submission
+4. **All Content is Fake**: Testimonials, blog posts, resources are all hardcoded placeholders
+5. **No Error Pages**: Missing 404 and error handling pages
+6. **Security Headers**: No CSP, no cookie consent for GDPR
+7. **Images**: All images are external Unsplash links (will break if Unsplash changes)
+8. **No Analytics**: No tracking or conversion measurement
+9. **Hardcoded Data**: Company stats, contact info hardcoded throughout
+10. **No Search**: FAQ and site-wide search don't actually work
+
 ## ✅ Completed Tasks
 
 ### Foundation & Branding
@@ -23,6 +36,10 @@
 - [x] ROI Calculator tool
 - [x] Market-specific landing pages (K-12, Higher Ed, Vocational)
 - [x] Why SchoolVision pages for each market
+- [x] Build out About Us page with team and company story
+- [x] Create Resources/Library page (structure only, needs real content)
+- [x] Implement blog system (structure only, needs real posts)
+- [x] Add FAQ section with 26 questions
 
 ### Form Infrastructure
 - [x] Implement contact form with email submission
@@ -31,30 +48,67 @@
 - [x] Create reusable form submission utilities
 - [x] Add fallback mailto links
 
+### Infrastructure & SEO
+- [x] Create sitemap.xml generator
+- [x] Add robots.txt file
+- [x] Set up Vercel deployment configuration
+- [x] Add security headers in vercel.json
+
 ## 🚧 In Progress Tasks
 
-### Content & Resources
-- [ ] Build out About Us page with team and company story
-- [ ] Create Resources/Library page with whitepapers and case studies
-- [ ] Implement blog system with sample posts
-- [ ] Add FAQ section with common questions
+None currently.
+
+## 🚨 CRITICAL FIXES - Missing Pages & Broken Links
+
+### Missing Pages (Referenced but Don't Exist)
+- [ ] Create `/accessibility` page (WCAG compliance statement)
+- [ ] Create `/ferpa` page (FERPA compliance details)
+- [ ] Create `/sitemap` page (HTML sitemap for users)
+- [ ] Create 404 error page
+- [ ] Create 500 error page
+
+### Broken Links to Fix (Currently href="#")
+- [ ] Link "Attendance & Safety" solution properly
+- [ ] Link "Point of Sale" solution properly
+- [ ] Link "AI Grading" solution properly
+- [ ] Link "Compliance Tracking" solution properly
+- [ ] Link "Predictive Analytics" solution properly
+- [ ] Link "CDL Programs" market page
+- [ ] Link "Healthcare Training" market page
+- [ ] Link "Trade Schools" market page
+- [ ] Fix "Watch Video" button on homepage
+- [ ] Add actual case studies links in Footer
 
 ## 📋 Upcoming Tasks
 
-### High Priority (Next Sprint)
+### High Priority (Production Readiness)
+- [ ] Implement real form submission backend (replace EmailJS placeholder)
+- [ ] Add actual testimonials (replace placeholder data)
+- [ ] Create real blog content (replace hardcoded posts)
+- [ ] Add downloadable resources to Library
+- [ ] Replace all placeholder images with real images
+- [ ] Implement cookie consent banner (GDPR)
+- [ ] Add Content Security Policy headers
 - [ ] Create Partners/Integrations page
-- [ ] Add customer success stories/case studies
-- [ ] Implement testimonials carousel on homepage
-- [ ] Create 404 error page
+- [ ] Set up actual social media accounts and verify links
+- [ ] Implement search functionality in FAQ
 - [ ] Add loading states and error boundaries
 - [ ] Implement analytics (Google Analytics/Plausible)
 - [ ] Add structured data for rich snippets
-- [ ] Create sitemap.xml
-- [ ] Add robots.txt
+- [x] Create sitemap.xml (generator exists)
+- [x] Add robots.txt
 
-### Medium Priority
-- [ ] Implement cookie consent banner
-- [ ] Add accessibility improvements (WCAG compliance)
+### Medium Priority - SEO & Content
+- [ ] Add Open Graph images for all pages
+- [ ] Implement canonical URLs
+- [ ] Add breadcrumb navigation
+- [ ] Create actual video content or remove video references
+- [ ] Implement newsletter signup backend
+- [ ] Add "Back to top" button on long pages
+- [ ] Create admin interface for content management
+- [ ] Add site-wide search functionality
+- [ ] Implement proper image optimization
+- [ ] Add lazy loading for images
 - [ ] Create animated feature demonstrations
 - [ ] Add video content sections
 - [ ] Implement A/B testing framework
@@ -63,6 +117,16 @@
 - [ ] Add social proof notifications
 - [ ] Implement dark mode toggle
 - [ ] Add breadcrumb navigation
+
+### Data & Configuration Issues
+- [ ] Move hardcoded testimonials to configuration file
+- [ ] Create dynamic data source for blog posts
+- [ ] Replace hardcoded company stats (500+ campuses, etc.)
+- [ ] Create configuration for social media links
+- [ ] Move phone/email to environment variables
+- [ ] Create CMS or data files for resource library
+- [ ] Add dynamic pricing configuration
+- [ ] Create partner/integration data source
 
 ### Low Priority
 - [ ] Create style guide/component documentation
