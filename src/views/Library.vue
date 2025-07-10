@@ -1,137 +1,212 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-16">
+    <section class="bg-gradient-to-br from-primary-700 to-primary-900 text-white py-20">
       <Container>
-        <div class="max-w-3xl">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">Resource Library</h1>
-          <p class="text-xl text-primary-100">
-            Explore articles, guides, and insights about educational technology and campus management
+        <div class="max-w-4xl">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Resources & Library
+          </h1>
+          <p class="text-xl text-primary-100 mb-8">
+            Dive deep into educational technology best practices, research studies, 
+            and real-world success stories from schools using SchoolVision.AI.
           </p>
-        </div>
-      </Container>
-    </section>
-
-    <!-- Search and Filter Section -->
-    <section class="py-8 bg-gray-50 border-b">
-      <Container>
-        <div class="flex flex-col md:flex-row gap-4">
-          <div class="flex-1">
-            <div class="relative">
-              <input
-                v-model="searchQuery"
-                type="text"
-                placeholder="Search articles..."
-                class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-              >
-              <svg class="absolute left-3 top-2.5 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </div>
-          </div>
-          <div class="flex gap-2">
-            <select v-model="selectedCategory" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent">
-              <option value="">All Categories</option>
-              <option v-for="category in categories" :key="category" :value="category">
-                {{ category }}
-              </option>
-            </select>
-            <select v-model="sortBy" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent">
-              <option value="newest">Newest First</option>
-              <option value="popular">Most Popular</option>
-              <option value="title">Alphabetical</option>
-            </select>
+          <div class="flex flex-wrap gap-4">
+            <button 
+              v-for="category in categories" 
+              :key="category"
+              @click="activeCategory = category"
+              :class="[
+                'px-6 py-2 rounded-full font-medium transition-all',
+                activeCategory === category 
+                  ? 'bg-white text-primary-700' 
+                  : 'bg-primary-600 text-white hover:bg-primary-500'
+              ]"
+            >
+              {{ category }}
+            </button>
           </div>
         </div>
       </Container>
     </section>
 
-    <!-- Articles Grid -->
-    <section class="py-12">
+    <!-- Featured Resource -->
+    <section class="py-16 bg-gray-50">
       <Container>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <article
-            v-for="article in filteredArticles"
-            :key="article.id"
-            class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
-          >
-            <div class="aspect-w-16 aspect-h-9 bg-gray-200">
-              <img
-                :src="article.image"
-                :alt="article.title"
-                class="object-cover w-full h-48"
-              >
-            </div>
-            <div class="p-6">
-              <div class="flex items-center gap-4 text-sm text-gray-600 mb-3">
-                <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs font-medium">
-                  {{ article.category }}
-                </span>
-                <span>{{ article.readTime }} min read</span>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">
-                {{ article.title }}
-              </h3>
-              <p class="text-gray-600 mb-4 line-clamp-3">
-                {{ article.excerpt }}
-              </p>
-              <div class="flex items-center justify-between">
-                <span class="text-sm text-gray-500">{{ formatDate(article.date) }}</span>
-                <a
-                  :href="article.link"
-                  class="text-primary-600 hover:text-primary-700 font-medium flex items-center gap-1"
-                >
-                  Read More
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-2xl font-bold text-gray-900 mb-8">Featured Resource</h2>
+          <Card class="p-0 overflow-hidden">
+            <div class="md:flex">
+              <div class="md:w-1/3 bg-gradient-to-br from-primary-400 to-primary-600 p-8 flex items-center justify-center">
+                <div class="text-white text-center">
+                  <svg class="w-24 h-24 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
-                </a>
+                  <p class="font-semibold">Research Study</p>
+                </div>
+              </div>
+              <div class="md:w-2/3 p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                  The AI Advantage: How Machine Learning Transforms Campus Operations
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  A comprehensive study examining how 250 educational institutions leveraged AI to reduce 
+                  operational costs by 35% while improving student outcomes. Learn the strategies that work.
+                </p>
+                <div class="flex items-center gap-6 text-sm text-gray-500 mb-6">
+                  <span>📄 32 pages</span>
+                  <span>📊 15 case studies</span>
+                  <span>🕐 20 min read</span>
+                </div>
+                <Button @click="downloadResource('ai-advantage-study')">
+                  Download Research Study
+                </Button>
               </div>
             </div>
-          </article>
-        </div>
-
-        <!-- Load More Button -->
-        <div v-if="hasMoreArticles" class="text-center mt-8">
-          <Button @click="loadMore" variant="outline" size="lg">
-            Load More Articles
-          </Button>
-        </div>
-
-        <!-- No Results Message -->
-        <div v-if="filteredArticles.length === 0" class="text-center py-12">
-          <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <h3 class="mt-2 text-sm font-medium text-gray-900">No articles found</h3>
-          <p class="mt-1 text-sm text-gray-500">Try adjusting your search or filters</p>
+          </Card>
         </div>
       </Container>
     </section>
 
-    <!-- Newsletter CTA -->
+    <!-- Resource Grid -->
+    <section class="py-16">
+      <Container>
+        <div class="max-w-6xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card 
+              v-for="resource in filteredResources" 
+              :key="resource.id"
+              class="hover:shadow-lg transition-shadow"
+            >
+              <div class="p-6">
+                <!-- Resource Type Icon -->
+                <div class="w-12 h-12 rounded-lg bg-primary-100 flex items-center justify-center mb-4">
+                  <svg v-if="resource.type === 'whitepaper'" class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  <svg v-else-if="resource.type === 'case-study'" class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                  <svg v-else-if="resource.type === 'webinar'" class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                  <svg v-else class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+
+                <!-- Content -->
+                <div class="mb-4">
+                  <span class="text-xs font-semibold text-primary-600 uppercase tracking-wide">
+                    {{ resource.category }}
+                  </span>
+                  <h3 class="text-lg font-bold text-gray-900 mt-2 mb-2">
+                    {{ resource.title }}
+                  </h3>
+                  <p class="text-gray-600 text-sm">
+                    {{ resource.description }}
+                  </p>
+                </div>
+
+                <!-- Meta Info -->
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                  <span>{{ resource.readTime }}</span>
+                  <span>{{ resource.date }}</span>
+                </div>
+
+                <!-- CTA -->
+                <Button 
+                  size="sm" 
+                  variant="outline" 
+                  class="w-full"
+                  @click="downloadResource(resource.id)"
+                >
+                  {{ resource.cta }}
+                </Button>
+              </div>
+            </Card>
+          </div>
+
+          <!-- Load More -->
+          <div v-if="hasMore" class="text-center mt-12">
+            <Button variant="outline" @click="loadMore">
+              Load More Resources
+            </Button>
+          </div>
+        </div>
+      </Container>
+    </section>
+
+    <!-- Newsletter Signup -->
     <section class="py-16 bg-primary-50">
       <Container>
-        <Card class="max-w-2xl mx-auto text-center p-8">
-          <h2 class="text-2xl font-bold text-gray-900 mb-4">
-            Stay Updated with EdTech Insights
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Stay Updated on EdTech Trends
           </h2>
-          <p class="text-gray-600 mb-6">
-            Get the latest articles and resources delivered to your inbox weekly
+          <p class="text-xl text-gray-600 mb-8">
+            Get our monthly newsletter with the latest research, best practices, 
+            and exclusive resources for educational leaders.
           </p>
-          <form @submit.prevent="subscribeNewsletter" class="flex gap-4 max-w-md mx-auto">
+          <form @submit.prevent="subscribeNewsletter" class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
-              v-model="newsletterEmail"
+              v-model="email"
               type="email"
               placeholder="Enter your email"
               required
-              class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+              class="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
             >
-            <Button type="submit" variant="primary">
+            <Button type="submit" size="lg">
               Subscribe
             </Button>
           </form>
-        </Card>
+          <p v-if="subscribeMessage" class="mt-4 text-sm" :class="subscribeSuccess ? 'text-green-600' : 'text-red-600'">
+            {{ subscribeMessage }}
+          </p>
+        </div>
+      </Container>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="py-16 bg-gray-900 text-white">
+      <Container>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Popular Whitepapers</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="#" class="hover:text-white">ROI of Campus Intelligence</a></li>
+              <li><a href="#" class="hover:text-white">FERPA Compliance Guide</a></li>
+              <li><a href="#" class="hover:text-white">AI in Education 2024</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Recent Case Studies</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="#" class="hover:text-white">Lincoln High: 47% Cost Reduction</a></li>
+              <li><a href="#" class="hover:text-white">State University: Retention Success</a></li>
+              <li><a href="#" class="hover:text-white">Tech Institute: 85% Placement Rate</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Upcoming Webinars</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="#" class="hover:text-white">AI Safety Tools Deep Dive</a></li>
+              <li><a href="#" class="hover:text-white">Maximizing Your ROI</a></li>
+              <li><a href="#" class="hover:text-white">Integration Best Practices</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Need Help?</h3>
+            <p class="text-gray-400 mb-4">
+              Can't find what you're looking for? Our team is here to help.
+            </p>
+            <router-link to="/contact">
+              <Button variant="secondary" size="sm">
+                Contact Us
+              </Button>
+            </router-link>
+          </div>
+        </div>
       </Container>
     </section>
   </div>
@@ -140,199 +215,195 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { Container, Card, Button } from '../components/ui'
+import { submitForm } from '../utils/formSubmission'
 
-// State
-const searchQuery = ref('')
-const selectedCategory = ref('')
-const sortBy = ref('newest')
-const newsletterEmail = ref('')
-const articlesPerPage = 9
-const currentPage = ref(1)
+// Resource categories
+const categories = ['All Resources', 'Whitepapers', 'Case Studies', 'Webinars', 'Guides']
+const activeCategory = ref('All Resources')
 
-// Categories
-const categories = [
-  'AI in Education',
-  'Campus Safety',
-  'Student Success',
-  'Operational Efficiency',
-  'Case Studies',
-  'Industry Trends'
-]
+// Newsletter form
+const email = ref('')
+const subscribeMessage = ref('')
+const subscribeSuccess = ref(false)
 
-// Real articles based on our expertise
-const articles = ref([
+// Resources data
+const resources = ref([
   {
-    id: 1,
-    title: 'How SIS and Operational Data Create Complete Campus Intelligence',
-    excerpt: 'Your SIS captures grades and enrollment. But what happens between classes? Learn how integrating operational data reveals the complete picture of student success, from cafeteria visits to lab usage patterns.',
-    category: 'AI in Education',
-    date: new Date('2025-01-15'),
-    readTime: 8,
-    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=400&fit=crop',
-    link: '#'
+    id: 'ai-advantage-study',
+    type: 'whitepaper',
+    category: 'Research Study',
+    title: 'The AI Advantage: How Machine Learning Transforms Campus Operations',
+    description: 'Comprehensive study of 250 institutions using AI to reduce costs and improve outcomes.',
+    readTime: '20 min read',
+    date: 'March 2024',
+    cta: 'Download Study'
   },
   {
-    id: 2,
-    title: 'Early Warning Systems: Identifying At-Risk Students Before Grades Drop',
-    excerpt: 'Case study: How State University used cafeteria and attendance patterns to identify 47 food-insecure students, improving retention from 72% to 85% through targeted interventions.',
-    category: 'Student Success',
-    date: new Date('2025-01-12'),
-    readTime: 10,
-    image: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800&h=400&fit=crop',
-    link: '#'
+    id: 'lincoln-high-case',
+    type: 'case-study',
+    category: 'K-12 Success',
+    title: 'Lincoln High: From Manual to Magical in 90 Days',
+    description: 'How one school district saved $1.2M annually with intelligent automation.',
+    readTime: '10 min read',
+    date: 'February 2024',
+    cta: 'Read Case Study'
   },
   {
-    id: 3,
-    title: 'Transforming School Cafeterias: 32% Waste Reduction Through AI',
-    excerpt: 'Metro Unified saved $180,000 annually by implementing predictive ordering. Learn how AI analyzes consumption patterns, weather, and events to optimize food preparation.',
-    category: 'Operational Efficiency',
-    date: new Date('2025-01-10'),
-    readTime: 6,
-    image: 'https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=800&h=400&fit=crop',
-    link: '#'
+    id: 'ferpa-compliance-guide',
+    type: 'whitepaper',
+    category: 'Compliance',
+    title: 'FERPA Compliance in the Age of AI: A Complete Guide',
+    description: 'Essential privacy and security practices for educational data management.',
+    readTime: '15 min read',
+    date: 'January 2024',
+    cta: 'Download Guide'
   },
   {
-    id: 4,
-    title: 'Clock Hour Tracking: Complete CTE Compliance Guide',
-    excerpt: 'Managing 90/10 compliance across multiple campuses? Allied Career Centers went from 3 compliance officers to 1, reducing audit prep from 3 weeks to 3 days. Here\'s how.',
-    category: 'Operational Efficiency',
-    date: new Date('2025-01-08'),
-    readTime: 12,
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=400&fit=crop',
-    link: '#'
+    id: 'retention-webinar',
+    type: 'webinar',
+    category: 'Higher Ed',
+    title: 'Predictive Analytics for Student Retention',
+    description: 'Live demonstration of AI-powered early warning systems.',
+    readTime: '45 min',
+    date: 'Upcoming - March 15',
+    cta: 'Register Now'
   },
   {
-    id: 5,
-    title: 'CDL Schools: In-Truck Attendance and DOT Compliance',
-    excerpt: 'Interstate Trucking Academy tracks 1,200 behind-the-wheel hours across 15 routes using GPS and rotating QR codes. Learn how to automate DOT compliance for your transportation program.',
-    category: 'Industry Trends',
-    date: new Date('2025-01-05'),
-    readTime: 9,
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=400&fit=crop',
-    link: '#'
+    id: 'vocational-partnerships',
+    type: 'case-study',
+    category: 'Vocational',
+    title: 'Building Industry Partnerships That Work',
+    description: 'Tech Institute achieves 85% job placement with AI-powered matching.',
+    readTime: '12 min read',
+    date: 'February 2024',
+    cta: 'Read Story'
   },
   {
-    id: 6,
-    title: 'Dental Schools: Implementing Per-Tooth Grading Systems',
-    excerpt: 'Regional Health Sciences improved state board pass rates from 78% to 94% using detailed competency tracking. Clinical supervisors save 20 hours weekly on assessments.',
-    category: 'Case Studies',
-    date: new Date('2025-01-03'),
-    readTime: 7,
-    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&h=400&fit=crop',
-    link: '#'
+    id: 'roi-calculator-guide',
+    type: 'whitepaper',
+    category: 'Planning',
+    title: 'Calculating Your Campus Intelligence ROI',
+    description: 'Framework for measuring the financial impact of educational technology.',
+    readTime: '8 min read',
+    date: 'December 2023',
+    cta: 'Get Framework'
   },
   {
-    id: 7,
-    title: 'Building Unified Dashboards from Scattered Campus Data',
-    excerpt: 'Connect grades (SIS) with cafeteria usage, library visits, and lab hours to predict student success. Natural language queries make complex data accessible to any administrator.',
-    category: 'AI in Education',
-    date: new Date('2025-01-02'),
-    readTime: 11,
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop',
-    link: '#'
+    id: 'safety-tools-demo',
+    type: 'webinar',
+    category: 'Safety',
+    title: 'Next-Gen Campus Safety: AI Tools in Action',
+    description: 'See how AI enhances campus security and emergency response.',
+    readTime: '30 min',
+    date: 'March 20, 2024',
+    cta: 'Save Your Spot'
   },
   {
-    id: 8,
-    title: 'Parent Portal Best Practices for Multi-Child Families',
-    excerpt: 'Westside K-12 increased parent engagement by 300% with consolidated views, automated alerts, and mobile-first design. Learn the features that matter most to busy parents.',
-    category: 'Student Success',
-    date: new Date('2025-01-01'),
-    readTime: 6,
-    image: 'https://images.unsplash.com/photo-1476234251651-f353703a034d?w=800&h=400&fit=crop',
-    link: '#'
+    id: 'food-waste-study',
+    type: 'case-study',
+    category: 'Operations',
+    title: 'Reducing Food Waste by 30% with Predictive Analytics',
+    description: 'State University saves $400K annually through intelligent meal planning.',
+    readTime: '8 min read',
+    date: 'January 2024',
+    cta: 'View Results'
   },
   {
-    id: 9,
-    title: 'Financial Aid Integration: Streamlining Student Payments',
-    excerpt: 'How universities connect bookstore purchases, meal plans, and campus services to financial aid. Reduce payment friction while maintaining compliance and preventing fraud.',
-    category: 'Operational Efficiency',
-    date: new Date('2024-12-28'),
-    readTime: 8,
-    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=400&fit=crop',
-    link: '#'
+    id: 'implementation-guide',
+    type: 'whitepaper',
+    category: 'Best Practices',
+    title: '90-Day Implementation Roadmap',
+    description: 'Step-by-step guide to deploying SchoolVision.AI across your campus.',
+    readTime: '25 min read',
+    date: 'November 2023',
+    cta: 'Download Roadmap'
   }
 ])
 
-// Computed
-const filteredArticles = computed(() => {
-  let filtered = articles.value
+// Pagination
+const pageSize = 9
+const currentPage = ref(1)
+const hasMore = computed(() => filteredResources.value.length < getFilteredResourcesTotal())
 
-  // Filter by search query
-  if (searchQuery.value) {
-    filtered = filtered.filter(article =>
-      article.title.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
-      article.excerpt.toLowerCase().includes(searchQuery.value.toLowerCase())
-    )
+// Filter resources based on category
+const filteredResources = computed(() => {
+  let filtered = resources.value
+  
+  if (activeCategory.value !== 'All Resources') {
+    const categoryMap = {
+      'Whitepapers': 'whitepaper',
+      'Case Studies': 'case-study',
+      'Webinars': 'webinar',
+      'Guides': 'whitepaper'
+    }
+    const type = categoryMap[activeCategory.value]
+    filtered = filtered.filter(r => r.type === type)
   }
-
-  // Filter by category
-  if (selectedCategory.value) {
-    filtered = filtered.filter(article => article.category === selectedCategory.value)
-  }
-
-  // Sort articles
-  if (sortBy.value === 'newest') {
-    filtered.sort((a, b) => b.date - a.date)
-  } else if (sortBy.value === 'popular') {
-    // In a real app, this would sort by view count or engagement
-    filtered.sort((a, b) => b.readTime - a.readTime)
-  } else if (sortBy.value === 'title') {
-    filtered.sort((a, b) => a.title.localeCompare(b.title))
-  }
-
-  // Paginate
-  return filtered.slice(0, currentPage.value * articlesPerPage)
+  
+  return filtered.slice(0, currentPage.value * pageSize)
 })
 
-const hasMoreArticles = computed(() => {
-  return filteredArticles.value.length < articles.value.length
-})
-
-// Methods
-const formatDate = (date) => {
-  return new Intl.DateTimeFormat('en-US', {
-    month: 'short',
-    day: 'numeric',
-    year: 'numeric'
-  }).format(date)
+const getFilteredResourcesTotal = () => {
+  if (activeCategory.value === 'All Resources') {
+    return resources.value.length
+  }
+  
+  const categoryMap = {
+    'Whitepapers': 'whitepaper',
+    'Case Studies': 'case-study',
+    'Webinars': 'webinar',
+    'Guides': 'whitepaper'
+  }
+  const type = categoryMap[activeCategory.value]
+  return resources.value.filter(r => r.type === type).length
 }
 
 const loadMore = () => {
   currentPage.value++
 }
 
-const subscribeNewsletter = () => {
-  // In a real app, this would submit to an API
-  alert(`Thank you for subscribing with email: ${newsletterEmail.value}`)
-  newsletterEmail.value = ''
+// Download resource handler
+const downloadResource = async (resourceId) => {
+  // Track download
+  console.log('Download requested:', resourceId)
+  
+  // In a real app, this would trigger a download or open a gated form
+  // For now, we'll just show an alert
+  const resource = resources.value.find(r => r.id === resourceId)
+  
+  // Submit to form handler for tracking
+  await submitForm({
+    type: 'resource_download',
+    resourceId,
+    resourceTitle: resource?.title,
+    timestamp: new Date().toISOString()
+  })
+  
+  // Simulate download
+  alert(`Thank you for your interest! "${resource?.title}" will begin downloading shortly.`)
+}
+
+// Newsletter subscription
+const subscribeNewsletter = async () => {
+  try {
+    subscribeMessage.value = ''
+    
+    const result = await submitForm({
+      type: 'newsletter_subscription',
+      email: email.value,
+      source: 'library_page',
+      timestamp: new Date().toISOString()
+    })
+    
+    if (result.success) {
+      subscribeSuccess.value = true
+      subscribeMessage.value = 'Thank you! Check your email to confirm your subscription.'
+      email.value = ''
+    }
+  } catch (error) {
+    subscribeSuccess.value = false
+    subscribeMessage.value = 'Something went wrong. Please try again.'
+  }
 }
 </script>
 
-<style scoped>
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.aspect-w-16 {
-  position: relative;
-  padding-bottom: calc(9 / 16 * 100%);
-}
-
-.aspect-w-16 > * {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-</style>

@@ -11,6 +11,7 @@ const routes = [
   { path: '/contact', priority: 0.8, changefreq: 'monthly' },
   { path: '/about', priority: 0.7, changefreq: 'monthly' },
   { path: '/library', priority: 0.7, changefreq: 'weekly' },
+  { path: '/resources', priority: 0.7, changefreq: 'weekly' },
   
   // Market pages
   { path: '/markets/k12', priority: 0.8, changefreq: 'weekly' },
