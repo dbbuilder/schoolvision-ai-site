@@ -199,6 +199,15 @@ const routes = [
       title: 'Sitemap - SchoolVision.AI',
       description: 'Navigate through all pages and resources available on SchoolVision.AI.'
     }
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import('../views/NotFound.vue'),
+    meta: {
+      title: '404 - Page Not Found - SchoolVision.AI',
+      description: 'The page you are looking for could not be found.'
+    }
   }
 ]
 
