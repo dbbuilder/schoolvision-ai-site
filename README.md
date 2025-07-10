@@ -4,9 +4,11 @@
 SchoolVision AI is an intelligent campus management platform that leverages artificial intelligence to transform educational operations. Building on 20+ years of experience serving over 500 campuses, we're enhancing our proven solutions with cutting-edge AI capabilities.
 
 ## Project Status
-- **Phase**: Planning and Development
+- **Phase**: Production
 - **Repository**: dbbuilder/schoolvision-ai-site
-- **Current Version**: 0.1.0
+- **Current Version**: 1.0.0
+- **Live Site**: https://schoolvisionaisite.vercel.app
+- **Last Updated**: January 10, 2025
 
 ## Key Features
 
@@ -159,19 +161,24 @@ SchoolVision AI is an intelligent campus management platform that leverages arti
 - Azure CLI
 - Git
 
+### Marketing Landing Pages
+
+The site includes specialized landing pages for vocational programs:
+- `/cdl` - CDL/Trucking Programs
+- `/cosmetology` - Cosmetology Schools
+- `/nursing` - Nursing Programs
+- `/dental` - Dental Programs
+
+Each landing page includes program-specific features, benefits, and conversion tracking.
+
 ### Installation
 ```bash
 # Clone the repository
 git clone https://github.com/dbbuilder/schoolvision-ai-site.git
 cd schoolvision-ai-site
 
-# Install frontend dependencies
-cd frontend
+# Install dependencies
 npm install
-
-# Install backend dependencies
-cd ../backend
-dotnet restore
 
 # Set up environment variables
 cp .env.example .env
@@ -180,24 +187,20 @@ cp .env.example .env
 
 ### Development
 ```bash
-# Run frontend development server
-cd frontend
+# Run development server
 npm run dev
 
-# Run backend API
-cd backend
-dotnet run
-```
-
-### Building for Production
-```bash
-# Build frontend
-cd frontend
+# Build for production
 npm run build
 
-# Build backend
-cd backend
-dotnet publish -c Release
+# Preview production build
+npm run preview
+
+# Run tests
+npm run test
+
+# Deploy to Vercel
+npm run deploy
 ```
 
 ## Architecture
